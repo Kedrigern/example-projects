@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{97EAC8A0-72E7-43F9-9ADD-964D3F00D9D4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>pacman</RootNamespace>
+    <AssemblyName>pacman</AssemblyName>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <Description>Just remake of Pacman.</Description>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="src\AI\BaseAI.cs" />
+    <Compile Include="src\AI\GhostAI.cs" />
+    <Compile Include="src\AI\GuardAI.cs" />
+    <Compile Include="src\AI\HunterAI.cs" />
+    <Compile Include="src\AI\Ways.cs" />
+    <Compile Include="src\Figure\Figure.cs" />
+    <Compile Include="src\Figure\Ghost.cs" />
+    <Compile Include="src\Figure\Pacman.cs" />
+    <Compile Include="src\Gui\AppMenu.cs" />
+    <Compile Include="src\Gui\MainWindow.cs" />
+    <Compile Include="src\Gui\SpeedChange.cs" />
+    <Compile Include="src\Type\Direction.cs" />
+    <Compile Include="src\Type\Speed.cs" />
+    <Compile Include="src\Map.cs" />
+    <Compile Include="src\ResourceManager.cs" />
+    <Compile Include="src\Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\coin.png" />
+    <EmbeddedResource Include="Resources\coin2.png" />
+    <EmbeddedResource Include="Resources\game.over.png" />
+    <EmbeddedResource Include="Resources\game.win.png" />
+    <EmbeddedResource Include="Resources\ghost.png" />
+    <EmbeddedResource Include="Resources\ghost.green.png" />
+    <EmbeddedResource Include="Resources\ghost.red.png" />
+    <EmbeddedResource Include="Resources\ghostR.png" />
+    <EmbeddedResource Include="Resources\logo.png" />
+    <EmbeddedResource Include="Resources\logoG.png" />
+    <EmbeddedResource Include="Resources\pac.ico" />
+    <EmbeddedResource Include="Resources\player.png" />
+    <EmbeddedResource Include="Resources\map-general.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.md" />
+    <None Include=".gitignore" />
+  </ItemGroup>
+</Project>

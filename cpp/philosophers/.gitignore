@@ -1,0 +1,13 @@
+
+*.run
+*.o
+*.html
+*.pdf
+*.aux
+*.log
+*.toc
+*.out
+*~
+dpp
+nbproject
+

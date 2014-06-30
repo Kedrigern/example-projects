@@ -1,0 +1,8 @@
+*.class
+*.jar
+
+build
+doc
+.idea
+
+.ant-targets-build.xml

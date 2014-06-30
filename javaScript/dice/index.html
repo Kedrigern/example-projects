@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Dices</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="author" content="Ondřej Profant" />
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script data-main="js/main" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js"></script>
+    <!-- <script data-main="js/main" src="js/lib/require.min.js"></script> -->
+</head>
+
+<body>
+    <div data-bind="text: name"></div>
+	<form data-bind="submit: cast">
+		<fieldset>
+		<dl>
+			<dt>Number of dices</dt>
+			<dd><input type="number" data-bind="value: repetition"></input></dd>
+			<dt>Dice type</dt>
+			<dd><select data-bind="options: types, value: selectType"></select></dd>
+			<dt>Note</dt>
+			<dd><input data-bind="value: note"></input></dd>
+		</dl>
+		<button type="submit">cast</button>
+		</fieldset>
+
+		<fieldset>
+			<legend>Results</legend>
+		<select multiple="multiple" data-bind="options: history" >
+		</select>
+		</fieldset>
+	</form
+</body>
+
+</html>
