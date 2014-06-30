@@ -8,7 +8,9 @@
 
 * callbacks (pointer at function etc.)
 * functors
-* anonymous function, you can create anonymous class:```
+* anonymous function, you can create anonymous class:
+
+```
 Comparator<String> c = new Comparator<String>() {
     int compare(String s, String s2) { ... }
 };

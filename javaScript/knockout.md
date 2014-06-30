@@ -4,6 +4,11 @@
 * Model je funkce (co jiného), kterou zaregistrujeme pomocí: `ko.applyBindings(new AppViewModel);`
 * Šablony tvoříme přímo v html pomocí atributu `data-bind`, v něm řetězíme jednotlivé bindy. Např.: `data="text: someVar, enable: someBool"`
 
+## Links
+* http://knockoutjs.com
+* http://www.knockmeout.net
+* [ko.utils functions (3.1)](https://gist.github.com/hyle/9363349)
+
 ## Observable
 
 ## Binding
