@@ -56,6 +56,7 @@ cat /etc/vsftpd/users/joe
 local_root=/var/ftp/joeplace
 ```
 
+Before version 3.0 root file of user cannot be writable.
 
 ### Links
 http://howto.gumph.org/content/setup-virtual-users-and-directories-in-vsftpd/
