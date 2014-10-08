@@ -85,6 +85,11 @@ Historie
 
 `git blame <file>` zobrazuje historii konkrétního souboru.
 
+Modifikace
+----------
+`git rebase --interactive HEAD~2` spojení 2 (obecně *n*) commitů dohromady a podobné věci.
+
+
 Tagy
 ====
 
