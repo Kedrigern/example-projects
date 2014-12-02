@@ -13,13 +13,15 @@ Je schéma dle kterého je graf sestavován. V `neo4j` je struktura volná.
 
 ## Instalace a spuštění
 
-Instalace:
+Instalace (Fedora):
 
-```yum install neo4j```
+```dnf install neo4j```
 
 Obsluhuje se jako jakýkoliv jiný démon:
 
 ```service neo4j start```
+
+popřípadě subpříkazy `stop` a `restart`.
 
 ## Příkazy
 
