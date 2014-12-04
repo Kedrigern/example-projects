@@ -12,20 +12,28 @@ diffpdf file1.pdf file2.pdf
 
 Merge:
 ```
-pdftk soubor1.pdf soubor2.pdf cat output vystup.pdf
+pdftk in1.pdf in2.pdf cat output out.pdf
 ```
 
-Split:
+Split (chosen pages):
 ```
-pdftk soubor.pdf cat 1-9 26-end output vystup.pdf
+pdftk in.pdf cat 1-9 26-end output out.pdf
 ```
 
 Split to the pages:
 ```
-pdftk soubor.pdf burst
+pdftk in.pdf burst
 ```
 
-### Check 
+Split and preserve bookmarks:
+http://unix.stackexchange.com/questions/17045/how-to-preserve-bookmarks-when-rearranging-pages-of-a-pdf-file-with-tools-like-p
+
+```
+pdftk in.pdf dump_data > in.info
+
+```
+
+### Check
 List of images:
 ```
 pdfimages -list file.pdf
@@ -65,7 +73,7 @@ odt2txt --raw example.odt | xmllint --format -
 ```
 Convert odf to markdown:
 ```
-unoconv -f mediawiki --stdout example.odt | pandoc -f mediawiki -t markdown --smart --normalize --preserve-tabs 
+unoconv -f mediawiki --stdout example.odt | pandoc -f mediawiki -t markdown --smart --normalize --preserve-tabs
 ```
 
 ### git diff for odt

@@ -16,8 +16,17 @@ Pro nainstalování módů je přiložena utilitka `pr-downloader`, která nám 
 ./pr-downloader --download-game "Balanced Annihilation v8.06"
 ```
 
+Nebo lze použít předefinované [tagy](http://springrts.com/wiki/Rapid_Tags):
+
 ```
 ./pr-downloader zk:stable
+./pr-downloader ba:stable
+```
+
+Popřípadě samozřejmě lze stáhnout mapy:
+
+```
+./pr-downloader --download-map "tropical"
 ```
 
 Odkazy
