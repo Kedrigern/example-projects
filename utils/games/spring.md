@@ -29,6 +29,8 @@ Popřípadě samozřejmě lze stáhnout mapy:
 ./pr-downloader --download-map "tropical"
 ```
 
+Další mapy vyhledávejte na sprinfiles, např. MoonQ10x, Spartan_Isle_v02, Vittra_v1, desert_plateaus
+
 Odkazy
 ------
 
