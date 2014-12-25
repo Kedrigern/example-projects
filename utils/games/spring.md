@@ -29,7 +29,11 @@ Popřípadě samozřejmě lze stáhnout mapy:
 ./pr-downloader --download-map "tropical"
 ```
 
+Soubory jsou ze serveru springfiles.com. Parametr je filename.
+
 Odkazy
 ------
 
 * [springrts.com](http://springrts.com)
+* [springfiles.com](http://springfiles.com)
+* [balancedannihilation.org](http://balancedannihilation.org)
