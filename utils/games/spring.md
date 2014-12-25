@@ -1,7 +1,7 @@
 Spring rts
 ==========
 
-Je velmi výkoný engine pro běh her podobných legendární Total Annihilation.
+[Spring rts][homepage] je velmi výkoný engine pro běh her podobných legendární Total Annihilation. Mód, který je nejvěrnější této legendě se jmenuje [Balanced annihilation][ba.org]
 
 Instalace
 ---------
@@ -31,9 +31,9 @@ Popřípadě samozřejmě lze stáhnout mapy:
 
 Soubory jsou ze serveru springfiles.com. Parametr je filename.
 
-Odkazy
-------
+Další mapy vyhledávejte na [sprinfiles][files], např. MoonQ10x, Spartan_Isle_v02, Vittra_v1, desert_plateaus
 
-* [springrts.com](http://springrts.com)
-* [springfiles.com](http://springfiles.com)
-* [balancedannihilation.org](http://balancedannihilation.org)
+
+[homepage]: http://springrts.com
+[files]: http://springfiles.com
+[ba.org]: http://balancedannihilation.org
