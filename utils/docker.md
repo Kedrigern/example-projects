@@ -10,6 +10,9 @@ Je systém pro izolaci aplikací pomocí lehkých vláken, cgroups etc. v Linuxu
 
 ## Ovládání
 
+Jedná se o běžného démona:
+`service docker start`
+
 Vyhledání obrazu:
 ```docker search <string>```
 
@@ -42,7 +45,7 @@ Tím pádem na původním systému máme data a logy a v dockeru běží jen apl
 
 ## Obrazy
 
-V centrálním repozitáři obrazů (hubu) je předpřipraveno mnoho obrazů. Velmi příjemné jsou různé linuxové distribuce. Nicméně máme zde samozřejmě i DB ([MySQL][mysql], [PostgreSQL][posgre]). A hotové aplikace ([Redmine][redmine], [ODOO][odoo], Helios). Výhodou je, že můžeme transparentně používat uložiště mimo docker image a vývojáři se starají opravdu jen o sladění komponent. Zatímco admin se stará o zálohu dat, místo na disku, porty etc.
+V centrálním repozitáři obrazů (hubu) je předpřipraveno mnoho obrazů. Velmi příjemné jsou různé linuxové distribuce. Nicméně máme zde samozřejmě i DB ([MySQL][mysql], [PostgreSQL][postgre]). A hotové aplikace ([Redmine][redmine], [ODOO][odoo], Helios). Výhodou je, že můžeme transparentně používat uložiště mimo docker image a vývojáři se starají opravdu jen o sladění komponent. Zatímco admin se stará o zálohu dat, místo na disku, porty etc.
 
 ## Instalace
 
@@ -55,8 +58,34 @@ Verze z repozitářů:
 | CoreOS          | 1.3.3 |
 | Ubuntu 14.10 UU | 1.2.0 |
 
+## Příklady a tipy
+
+### Lokální přístup
+
+Container můžeme používat i na běžném localhostu.
+
+Pokud použijeme
+```
+docker run -d --name mysql -p 127.0.0.1:3306:3306 sameersbn/mysql:latest
+```
+namísto
+```
+docker run -d --name mysql -p 3306:3306 sameersbn/mysql:latest
+```
+tak se k DB můžeme připojit na klasickém portu. Čili např. přes MySQL Workbench. Což nám jistě usnadní vývoj. A zároveň můžeme DB stále držet izolované. [Zdroj][s1]
+
+## Další
+
+* docker řízený skrz `systemd`: [doc][systemd]
+* [linkování kontejnerů][link]
+* [příklad s OwnCloud][exOwnCloud]
 
 [redmine]: https://registry.hub.docker.com/u/sameersbn/redmine/
 [mysql]: https://github.com/sameersbn/docker-mysql
 [postgre]: https://github.com/sameersbn/docker-postgresql
+[mysql]: https://github.com/sameersbn/docker-mysql
 [odoo]: https://registry.hub.docker.com/u/xcgd/odoo/
+[systemd]: https://docs.docker.com/articles/systemd/
+[link]: https://docs.docker.com/articles/ambassador_pattern_linking/
+[exOwnCloud]: http://dischord.org/blog/2013/07/10/docker-and-owncloud/  
+[s1]: http://serverfault.com/questions/565294/why-does-a-docker-container-running-a-server-expose-port-to-the-outside-world-ev

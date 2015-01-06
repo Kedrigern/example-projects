@@ -9,6 +9,7 @@ Utils
      * [cryptography](crypto.md)
 * [irc](irc.md)
 * [git](git/readme.md)
+* [Docker](docker.md)
 * Core
      * [lvm](lvm.md)
      * [selinux](permissions/selinux.md)

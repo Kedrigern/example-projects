@@ -4,7 +4,6 @@ Unixový systém oprávnění je [DAC][4] (discretionary access control), SELinu
 
 ## Jak funguje
 
-
 |Kdo, co?                          | Nazev   |
 |----------------------------------|---------|
 |proces                            | label   |
@@ -81,6 +80,12 @@ chcon --reference /var/www/html/ /var/www/html/myNewProject
 
 Ve Fedoře je grafická aplikace, která nás upozorní, pokud SELinux něco zamezoval (podezřelé chování). Pokud bychom ji neměli, tak zprávy najdeme v: `/var/log/messages`.
 
+### Fedora 21
+
+```/usr/sbin/getenforce```
+
+```/usr/sbin/setenforce [0|1]```
+
 ## Konfigurace
 
 Je v souboru `/etc/selinux/config`:
@@ -93,9 +98,9 @@ Je v souboru `/etc/selinux/config`:
 SELINUX=enforcing
 # SELINUXTYPE= can take one of these three values:
 #     targeted - Targeted processes are protected,
-#     minimum - Modification of targeted policy. Only selected processes are protected. 
+#     minimum - Modification of targeted policy. Only selected processes are protected.
 #     mls - Multi Level Security protection.
-SELINUXTYPE=targeted 
+SELINUXTYPE=targeted
 ```
 
 [2]: http://youtu.be/MxjenQ31b70 "YT1"
