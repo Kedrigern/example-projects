@@ -1,0 +1,46 @@
+OCR
+===
+
+## Převod pdf na obrázky
+Pro cmd utility je dobré nejdříve převést pdf na jednotlivé obrázky:
+
+```
+convert -density 288 in.pdf -background white -flatten +matte -depth 8 out.tiff
+```
+
+popř. lze samozřejmě i `out.jpg`.
+  
+Problém je s pdfky s alfa kanálem.
+
+## Tesseract
+
+```
+tesseract imagename [output] [-l lang] [-psm N]
+```
+
+`l` má hodnoty: `ces`, `eng`, `deu`
+  
+| psm | zpracování sazby                 |
+|-----|----------------------------------|
+| 1   | auto s OSD                       |
+| 3   | plně automatické bez OSD         | 
+| 4   | jeden sloupec                    |
+| 5   | blok textu zarovnaný vertikálně  |
+| 6   | blok textu                       |
+| 7   | jednořádkový tex                 |
+| 8   | jedno slovo                      |
+| 9   | jedno slovo v kruhu              |
+| 10  | jedno písmeno                    |
+
+ 
+Vícerosouborů:
+```
+for i in *.tif ; do tesseract $i outtext; done;
+```
+
+gui: `gImageReader`
+
+
+## Cuneiform
+
+gui: YAGF

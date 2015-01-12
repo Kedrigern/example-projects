@@ -72,13 +72,14 @@ namísto
 ```
 docker run -d --name mysql -p 3306:3306 sameersbn/mysql:latest
 ```
-tak se k DB můžeme připojit na klasickém portu. Čili např. přes MySQL Workbench. Což nám jistě usnadní vývoj. A zároveň můžeme DB stále držet izolované. [Zdroj][s1]
+tak se k DB můžeme připojit na klasickém portu. Čili např. přes MySQL Workbench. Což nám jistě usnadní vývoj. A zároveň můžeme DB stále držet izolované. [Zdroj][s1].
 
 ## Další
 
 * docker řízený skrz `systemd`: [doc][systemd]
 * [linkování kontejnerů][link]
 * [příklad s OwnCloud][exOwnCloud]
+* [CoreOS][] - distribuce přímo navržená pro provoz Dockeru (včetně decentralizace etc).
 
 [redmine]: https://registry.hub.docker.com/u/sameersbn/redmine/
 [mysql]: https://github.com/sameersbn/docker-mysql
@@ -89,3 +90,4 @@ tak se k DB můžeme připojit na klasickém portu. Čili např. přes MySQL Wor
 [link]: https://docs.docker.com/articles/ambassador_pattern_linking/
 [exOwnCloud]: http://dischord.org/blog/2013/07/10/docker-and-owncloud/  
 [s1]: http://serverfault.com/questions/565294/why-does-a-docker-container-running-a-server-expose-port-to-the-outside-world-ev
+[coreos]: https://coreos.com
