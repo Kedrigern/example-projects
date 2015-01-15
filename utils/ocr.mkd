@@ -64,8 +64,10 @@ gui: YAGF
 
 ```bash
 #!/bin/bash
+# Author: Ondřej Profant
+# OCR PDF
 
-if [ $# -ne ]; then
+if [ $# -ne 1 ]; then
   echo "Usage:";
   echo -e "\t$0 input.pdf"
   exit 1;
@@ -73,10 +75,13 @@ fi;
 
 input="$1";
 pid=$$;
+basename="out-$pid";
+output="${input%%.*}.txt"
 
-pdftocairo -jpeg "$1" out-"$pid"-
-for i in out-"$pid"-*.jpg ; do 
-  tesseract "$i" outtext; 
-  rm "$i";
+pdftocairo -jpeg "$1" basename
+for i in basename*.jpg ; do
+  tesseract $i tmp-outtext;
+  cat tmp-outtext* >> "$output";
+  rm "$i" "tmp-outtext"*;
 done;
 ```
