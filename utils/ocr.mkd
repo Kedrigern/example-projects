@@ -2,6 +2,18 @@ OCR
 ===
 
 ## Převod pdf na obrázky
+
+
+### PDFcairo
+
+```
+pdftocairo [-png|-jpeg|-svg] ing.pdf out
+```
+
+Vygeneruje obrázky v příslušném formátu.
+
+### ImageMagick
+
 Pro cmd utility je dobré nejdříve převést pdf na jednotlivé obrázky:
 
 ```
@@ -11,6 +23,8 @@ convert -density 288 in.pdf -background white -flatten +matte -depth 8 out.tiff
 popř. lze samozřejmě i `out.jpg`.
   
 Problém je s pdfky s alfa kanálem.
+
+
 
 ## Tesseract
 
@@ -44,3 +58,25 @@ gui: `gImageReader`
 ## Cuneiform
 
 gui: YAGF
+
+
+## Automatizace
+
+```bash
+#!/bin/bash
+
+if [ $# -ne ]; then
+  echo "Usage:";
+  echo -e "\t$0 input.pdf"
+  exit 1;
+fi;
+
+input="$1";
+pid=$$;
+
+pdftocairo -jpeg "$1" out-"$pid"-
+for i in out-"$pid"-*.jpg ; do 
+  tesseract "$i" outtext; 
+  rm "$i";
+done;
+```
