@@ -2,6 +2,7 @@ Utils
 =====
 
 * [Text processing](text.md)
+     * [ocr](ocr.md)
 * [Shell](shell.md)
      * [ssh](ssh.md)
      * [mc](mc.md)

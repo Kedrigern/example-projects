@@ -5,6 +5,8 @@ Text proccesing
 Pdf
 ---
 
+### pdftk
+
 Visual diff between 2 pdf files:
 ```
 diffpdf file1.pdf file2.pdf
@@ -30,8 +32,15 @@ http://unix.stackexchange.com/questions/17045/how-to-preserve-bookmarks-when-rea
 
 ```
 pdftk in.pdf dump_data > in.info
-
 ```
+
+### poppler-utils
+```
+pdfunite pdf1.pdf pdf2.pdf output.pdf
+```
+
+### pdfcairo
+[viz ocr](ocr.md)
 
 ### Check
 List of images:
