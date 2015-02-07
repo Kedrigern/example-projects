@@ -48,7 +48,6 @@ Pokud by chtěl proces přistoupit ke zdroji, který nemá povolen, tak by byl z
 
 ### Příklad 2
 
-
 Apache má label `httpd_t`.
 
 Webové soubory mají labely: `httpd_sys_content_t` a `httpd_sys_content_rw_t`.
@@ -57,6 +56,10 @@ MySQL databáze (soubory) májí label: `mysqld_data_t`.
 
 Pokud by byl Apache byl kompromitován, tak by útočník měl kontrolu nad `httpd_t`, číst by mohl
 `httpd_sys_content_t` a zapisovat do `httpd_sys_content_rw_t`, avšak nedostal by se k `mysqld_data_t` (i kdyby byl root).
+
+### Přiklad 3
+
+
 
 ## Ovládání
 Klasické unixové příkazy mají argument `-Z`, který nám dovoluje pracovat s SELinux labely. Takovými příkazy jsou např. `ls`, `id`, `ps`, `netstat`, `cp`, `mkdir`. Např.:
@@ -79,6 +82,8 @@ chcon --reference /var/www/html/ /var/www/html/myNewProject
 `getsebool -a`
 
 Ve Fedoře je grafická aplikace, která nás upozorní, pokud SELinux něco zamezoval (podezřelé chování). Pokud bychom ji neměli, tak zprávy najdeme v: `/var/log/messages`.
+
+Doporučuji také doinstalovat balík `setools-console`
 
 ### Fedora 21
 
