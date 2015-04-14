@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>Časová osa Praha</title>
+    <!-- jQuery -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <!-- BEGIN TimelineJS -->
+    <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
+    <script>
+        $(document).ready(function() {
+            createStoryJS({
+                type:       'timeline',
+                width:      '100%',
+                height:     '900',
+                source:     'https://docs.google.com/spreadsheet/pub?key=0AiHzv9n0uS9ndHBESlVrU085dkUtbnRvb0FnOGV3TXc&output=html',
+                embed_id:   'my-timeline',
+                lang:		'cz',
+                start_zoom_adjust: '+1'
+            });
+        });
+    </script>
+        <!-- END TimelineJS -->
+</head>
+<body>  
+        <div id="my-timeline"></div>
+</body>
+</html>
