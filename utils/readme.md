@@ -1,6 +1,8 @@
 Utils
 =====
 
+Pár poznámek k různým utilitkám.
+
 * [Text processing](text.md)
      * [ocr](ocr.md)
 * [Shell](shell.md)
@@ -10,14 +12,20 @@ Utils
      * [cryptography](crypto.md)
 * [irc](irc.md)
 * [git](git/readme.md)
-* [Docker](docker.md)
+* Server
+	* [localhost](server/localhost.md)
+	* [Apache](server/apache.md)
+	* [CoreOS](server/coreos.md)
+	* [Docker](server/docker.md)
+	* [Tomcat](server/tomcat.md)
+	* [midPoint](server/midpoint.md)
 * Core
-     * [lvm](lvm.md)
-     * [selinux](permissions/selinux.md)
+	* [lvm](lvm.md)
+	* [selinux](permissions/selinux.md)
 * DB
-     * [MySql](mysql.md)
-     * [Postgres](postgres.md)
-     * [neo4j](neo4j/readme.md)
+	* [MySql](mysql.md)
+	* [Postgres](postgres.md)
+	* [neo4j](neo4j/readme.md)
 * [Games](games/readme.md)
-     * [Spring RTS (Balance annihilation)](games/spring.md)
-     * [vcmi (HOMAM III)](games/vcmi.md)
+	* [Spring RTS (Balance annihilation)](games/spring.md)
+	* [vcmi (HOMAM III)](games/vcmi.md)

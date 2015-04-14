@@ -13,7 +13,8 @@ Je schéma dle kterého je graf sestavován. V `neo4j` je struktura volná.
 
 ## Instalace a spuštění
 
-Instalace (Fedora):
+### Fedora 20 a Debian
+Instalace:
 
 ```dnf install neo4j```
 
@@ -23,13 +24,40 @@ Obsluhuje se jako jakýkoliv jiný démon:
 
 popřípadě subpříkazy `stop` a `restart`.
 
+### Fedora 21
+
+Využil jsem docker:
+
+```
+docker pull tpires/neo4j:latest
+docker run -d --name neo4j --cap-add=SYS_RESOURCE -p 7474:7474 tpires/neo4j
+```
+
+
 ## Příkazy
 
 Základní klíčová slova jsou: `MATCH`, `WHERE`, `RETURN`, `CREATE`, `MERGE`, `DELETE`, `SET`, `FOREACH`, `WITH`, `LOAD CSV`, `UNWIND`, `START`, `CREATE UNIQUE`.
 Použití vypadá např. takto: ```MATCH <pattern> WHERE <conditions> RETURN <expressions>```
 
-
 V interaktivní příkazovém řádku můžeme zadat: `:help COMMAND` a dostaneme nápovědu.
+
+### Vytvoření uzlu
+```
+CREATE (jd:Person { name: "Joe", surname: "Doe", from: "Sweden", age: 27 })
+```
+
+`()` závorky značí uzel, `jd` je název proměnné (uzlu), `Person` je popis, `{key: "val", ...}` jsou vlastnosti uzlu.
+
+
+Popřípadě lze i více entit najednou:
+
+```
+CREATE (jd:Person { name: "Joe", surname: "Doe", age: 27 }),
+(jb:Person { name: "Joe", surname: "Brown", age: 28}),
+(ab:Person { name: "Anne", surname: "Brown", age: 26}),
+(jb)-[:KNOWS]->(ab)
+```
+
 
 Smazání uzlů i vztahů:
 ```MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n,r```

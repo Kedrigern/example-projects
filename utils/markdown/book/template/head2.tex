@@ -1,0 +1,60 @@
+
+\title{}
+\author{}
+\date{\today}
+
+\usepackage[unicode=true,
+	    bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+	    breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false,
+	    pdfauthor={},
+        pdftitle={},
+        pdfsubject={},
+        pdfkeywords={}]{hyperref}
+
+%papersize je bez ořezových značek
+%leftmargin - levý okraj
+%topmargin - horní okraj
+%headheight - velikost záhlaví
+%headsep - odskok záhlaví od těla
+%croplength - délka ořezové značky (jedné čáry)
+%cropgap - odskok od kříže
+%cropframe - rámeček
+%145x205
+%bez OKRAJŮ:
+%\usepackage[a5,
+%    leftmargin=21mm,rightmargin=13mm,topmargin=14mm,botmargin=15mm,
+%    headheight=4.5mm,headsep=2mm,adjustheadsep,footskip=10mm,
+%    croplength=0mm,cropgap=0mm,
+%    ]{zwpagelayout} 
+\usepackage[papersize={145mm,205mm},
+    leftmargin=21mm,rightmargin=18mm,topmargin=15mm,botmargin=19mm,
+    headheight=4.5mm,headsep=2mm,adjustheadsep,footskip=10mm,
+    croplength=5.5mm,cropgap=2mm,
+    cropmarks%,croptitle={; Verze:\ Final (\today);\ Strana:}
+    ]{zwpagelayout}    
+
+
+\setlength{\footnotemargin}{0.3cm}          % odsazení footnote
+\setlength{\parindent}{0.24cm}              % odsazení odstavce
+
+\setcounter{tocdepth}{3}                    % do obsahu patří jen section
+
+\usepackage{caption}			      % práce s popisky	
+\captionsetup{font=footnotesize,labelformat=empty}            % globální nastavení velikosti popisků
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\defaultfontfeatures{Ligatures=TeX}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{czech}
+\setotherlanguage{greek}
+
+\setmainfont[Scale=1.1]{Latin Modern Roman}        % default font
+\newfontfamily\russianfont{CMU Serif}
+\newfontfamily\greekfont{CMU Serif}
+
+\usepackage{index}                          		% rejstřík
+\usepackage[initsep=18pt,unbalanced=false]{idxlayout}
+\newindex{default}{idx}{ind}{Rejstřík}      	% inicializace rejstříku
+
+\begin{document}

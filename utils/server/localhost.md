@@ -11,7 +11,14 @@ Pokud používáte nějakou složitější konfiguraci (více jazyků, nástroj�
 1. firewall
 1. máte nainstalované a zkompilované všechny komponenty projektu (`composer install`, `bower install`)
 1. jsou připravené všechny konfigy (např. example změněn na ostrý, vyplněna DB)
-1. přístupová práva (`/etc/httpd/logs`)
+1. přístupová práva (`/etc/httpd/logs`), uživatelé a skupiny
 1. selinux (log: `/var/logs/messages`, více o [selinux](permissions/selinux.md))
+1. php/apache: `mod_rewrite` krom nalodování musí být i `AllowOverride All` v configu pro danou složku
 
-PS: Používám Fedoru, např. na debianu bude namísto `httpd` `apache`.
+## Distribuce
+  
+| Distribuce      | Démon / User       | Entita       | Config                          | 
+|-----------------|--------------------|--------------|---------------------------------|
+| Fedora          | `httpd` / `apache` | server démon | `/etc/httpd/conf/httpd.conf`    | 
+|                 | `mysqld` / -       | db démon     | `/etc/my.cnf`                   |
+| Debian / Ubuntu | `apache2`          | server démon | |
