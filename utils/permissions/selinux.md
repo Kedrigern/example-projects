@@ -87,13 +87,18 @@ Doporučuji také doinstalovat balík `setools-console`
 
 ### Fedora 21
 
-```/usr/sbin/getenforce```
+```
+/usr/sbin/getenforce
+```
 
-```/usr/sbin/setenforce [0|1]```
+```
+/usr/sbin/setenforce [0|1]
+```
 
 ## Konfigurace
 
 Je v souboru `/etc/selinux/config`:
+
 ```
 # This file controls the state of SELinux on the system.
 # SELINUX= can take one of these three values:
