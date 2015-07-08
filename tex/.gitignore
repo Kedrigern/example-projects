@@ -1,0 +1,7 @@
+# Latex tmp
+*.aux
+*.log
+*.out
+
+# Outputs
+*.pdf
