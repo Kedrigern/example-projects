@@ -27,3 +27,8 @@ Decrypt:
 ```
 steghide extract --stegofile obrazek.plus.jpg --extractfile tajna.zprava.txt
 ```
+
+Links
+-----
+
+* [Komunikujeme a ukládáme data bezpečně s PGP/GPG](http://www.linuxexpres.cz/software/komunikujeme-a-ukladame-data-bezpecne-s-pgp-gpg-1-uvod)

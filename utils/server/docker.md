@@ -31,10 +31,15 @@ Nainstalované obrazy:
 
 `-d` zapne container jako démona a vrátí nám container ID.
 
-`-p` namapuje porty, mapuje na rozsah 49153-65535. Můžeme předat jako argument `-p <containerPort>:<hostPort>`. Zjistit namapování lze například pomocí `docker ps -l` nebo `docker port <image>`
+`-p` namapuje porty, mapuje na rozsah 49153-65535. 
+Můžeme předat jako argument `-p <vnější>:<vnitřní>` (typicky třeba `-p 8182:80`).
+Zjistit namapování lze například pomocí `docker ps -l` nebo `docker port <image>`
 
 `-v <host/path>:<container/path>` připojí nějaký svazek (třeba data DB, log). 
 Tím pádem na původním systému máme data a logy a v dockeru běží jen aplikace.
+
+`--restart [always|no|on-failure[:max-retries] ]` na testování se tedy hodi `no`,
+zatímco na produkci `always`.
 
 ### Další příkazy
 `ps` procesy / seznam běžících container, má běžné přepínače jako `-l`, `-a` (i neběžící obrazy).
@@ -53,6 +58,7 @@ Verze z repozitářů:
 
 | Disribuce       | Verze |
 |-----------------|-------|
+| Fedora 22		  | 1.6.0 |
 | Fedora 21       | 1.4.0 |
 | Debian 8 Jessie | 1.3.2 |
 | CoreOS          | 1.3.3 |
@@ -64,14 +70,18 @@ Verze z repozitářů:
 
 Container můžeme používat i na běžném localhostu.
 
-Pokud použijeme
+Pokud použijeme"
+
 ```
 docker run -d --name mysql -p 127.0.0.1:3306:3306 sameersbn/mysql:latest
 ```
-namísto
+
+namísto:
+
 ```
 docker run -d --name mysql -p 3306:3306 sameersbn/mysql:latest
 ```
+
 tak se k DB můžeme připojit na klasickém portu. Čili např. přes MySQL Workbench. Což nám jistě usnadní vývoj. A zároveň můžeme DB stále držet izolované. [Zdroj][s1].
 
 ## Další

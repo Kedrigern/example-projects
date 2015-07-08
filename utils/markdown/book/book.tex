@@ -1,0 +1,230 @@
+\input{template/head1}
+\def\mytitle{Example book}
+\def\myauthor{John Doe}
+\def\latexmode{memoir}
+\def\blackandwhite{true}
+\def\usexelatex{true}
+\usepackage{tabularx}
+\input{template/head2}
+
+\chapter{Preface}
+\label{preface}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis elit commodo, sagittis massa eget, feugiat justo. Vivamus cursus tortor at rhoncus pharetra. Aliquam eu libero metus. Mauris sed imperdiet felis. Proin eget velit quis risus euismod hendrerit non quis orci. Donec tempus dui at purus faucibus, non sodales nisi sagittis. Nunc vitae maximus neque. In nec tortor eget justo gravida aliquet viverra eu ligula. Mauris consectetur euismod lacus. Maecenas in quam aliquam, hendrerit magna in, dapibus orci. Nunc tincidunt aliquam lorem vel ultrices. Etiam est ipsum, venenatis quis diam fermentum, dapibus fermentum enim.
+
+Ondřej Profant, Prague 2015
+
+\chapter{Chapter A}
+\label{chaptera}
+
+With footnote and literature citation.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis elit commodo, sagittis massa eget, feugiat justo. Vivamus cursus tortor at rhoncus pharetra. Aliquam eu libero metus. Mauris sed imperdiet felis. Proin eget velit quis risus euismod hendrerit non quis orci. Donec tempus dui at purus faucibus, non sodales nisi sagittis. Nunc vitae maximus neque. In nec tortor eget justo gravida aliquet viverra eu ligula. Mauris consectetur euismod lacus. Maecenas in quam aliquam, hendrerit magna in, dapibus orci. Nunc tincidunt aliquam lorem vel ultrices. Etiam est ipsum, venenatis quis diam fermentum, dapibus fermentum enim.\footnote{Footnote 1 text}
+
+Morbi eu ante sit amet ex congue ullamcorper. Sed in consectetur nisl. Nullam vitae dictum augue. Phasellus odio purus, volutpat at ligula quis, elementum consequat ipsum. Mauris cursus, ligula ut ornare mollis, elit orci scelerisque tortor, vel sollicitudin sem justo nec velit. Proin nulla risus, gravida congue elit ac, semper malesuada risus. Cras dignissim velit ut sagittis elementum. Phasellus elementum finibus massa.\footnote{Footnote 2 text}
+
+\section{Section I}
+\label{sectioni}
+
+Curabitur iaculis imperdiet sapien sit amet ultricies. Suspendisse imperdiet lacus quis erat porta, suscipit porttitor erat aliquam. Donec ut ligula eu mi condimentum commodo. In hac habitasse platea dictumst. Quisque posuere massa ac faucibus viverra. Sed dui ante, rutrum id posuere at, vestibulum nec nulla. Proin et quam orci. Nulla justo nisi, maximus eu urna at, aliquet auctor ligula. Fusce ultrices tellus odio, eu blandit nisi pretium eget. Nullam odio erat, scelerisque sit amet consectetur ullamcorper, pulvinar at arcu. Phasellus suscipit faucibus erat vitae faucibus. Duis et urna eu arcu bibendum feugiat sed vitae leo.\footnote{Footnote 3 text\footnote{Footnote 4 text}}
+
+Nullam rhoncus mauris eget ex condimentum mollis. Maecenas ultricies neque nibh, a venenatis risus fermentum vel. Ut luctus egestas magna. In mi nisi, elementum sit amet feugiat vitae, aliquam at sapien. Fusce elementum maximus sem, quis consequat est pellentesque nec. Suspendisse a justo non leo elementum dignissim. Ut eget lacus dolor. Nulla malesuada vitae mauris ac laoreet. Pellentesque eget est eu libero pulvinar pretium sed vulputate neque. Sed egestas, odio et porta congue, dui est rutrum leo, eget pretium sapien erat eleifend est.~%\citep[p. 10]{Doe:2006}
+
+\section{Section II}
+\label{sectionii}
+
+Proin congue at leo id laoreet. Nullam vitae tortor eu nisi hendrerit lobortis. Aliquam mattis lacinia accumsan. Vivamus vehicula fermentum varius. Suspendisse mollis placerat est, non aliquam nulla rhoncus quis. Pellentesque pretium neque luctus sapien accumsan vulputate. Duis ut quam in metus hendrerit faucibus. Nam a purus facilisis arcu dignissim commodo. Etiam molestie arcu pretium tellus mattis pulvinar ut sit amet lorem. 
+
+\chapter{Chapter B}
+\label{chapterb}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis elit commodo, sagittis massa eget, feugiat justo. Vivamus cursus tortor at rhoncus pharetra. Aliquam eu libero metus. Mauris sed imperdiet felis. Proin eget velit quis risus euismod hendrerit non quis orci. Donec tempus dui at purus faucibus, non sodales nisi sagittis. Nunc vitae maximus neque. In nec tortor eget justo gravida aliquet viverra eu ligula. Mauris consectetur euismod lacus. Maecenas in quam aliquam, hendrerit magna in, dapibus orci. Nunc tincidunt aliquam lorem vel ultrices. Etiam est ipsum, venenatis quis diam fermentum, dapibus fermentum enim.
+
+Morbi eu ante sit amet ex congue ullamcorper. Sed in consectetur nisl. Nullam vitae dictum augue. Phasellus odio purus, volutpat at ligula quis, elementum consequat ipsum. Mauris cursus, ligula ut ornare mollis, elit orci scelerisque tortor, vel sollicitudin sem justo nec velit. Proin nulla risus, gravida congue elit ac, semper malesuada risus. Cras dignissim velit ut sagittis elementum. Phasellus elementum finibus massa.
+
+\begin{quote}
+
+Curabitur iaculis imperdiet sapien sit amet ultricies. Suspendisse imperdiet lacus quis erat porta, suscipit porttitor erat aliquam. Donec ut ligula eu mi condimentum commodo. In hac habitasse platea dictumst. Quisque posuere massa ac faucibus viverra. Sed dui ante, rutrum id posuere at, vestibulum nec nulla. Proin et quam orci. Nulla justo nisi, maximus eu urna at, aliquet auctor ligula. Fusce ultrices tellus odio, eu blandit nisi pretium eget. Nullam odio erat, scelerisque sit amet consectetur ullamcorper, pulvinar at arcu. Phasellus suscipit faucibus erat vitae faucibus. Duis et urna eu arcu bibendum feugiat sed vitae leo.~%\citep[p. 15]{Doe:2007}
+\end{quote}
+
+Nullam rhoncus mauris eget ex condimentum mollis. Maecenas ultricies neque nibh, a venenatis risus fermentum vel. Ut luctus egestas magna. In mi nisi, elementum sit amet feugiat vitae, aliquam at sapien. Fusce elementum maximus sem, quis consequat est pellentesque nec. Suspendisse a justo non leo elementum dignissim. Ut eget lacus dolor. Nulla malesuada vitae mauris ac laoreet. Pellentesque eget est eu libero pulvinar pretium sed vulputate neque. Sed egestas, odio et porta congue, dui est rutrum leo, eget pretium sapien erat eleifend est.
+
+Proin congue at leo id laoreet. Nullam vitae tortor eu nisi hendrerit lobortis. Aliquam mattis lacinia accumsan. Vivamus vehicula fermentum varius. Suspendisse mollis placerat est, non aliquam nulla rhoncus quis. Pellentesque pretium neque luctus sapien accumsan vulputate. Duis ut quam in metus hendrerit faucibus. Nam a purus facilisis arcu dignissim commodo. Etiam molestie arcu pretium tellus mattis pulvinar ut sit amet lorem. 
+
+\section{Section I}
+\label{sectioni}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis elit commodo, sagittis massa eget, feugiat justo. Vivamus cursus tortor at rhoncus pharetra. Aliquam eu libero metus. Mauris sed imperdiet felis. Proin eget velit quis risus euismod hendrerit non quis orci. Donec tempus dui at purus faucibus, non sodales nisi sagittis. Nunc vitae maximus neque. In nec tortor eget justo gravida aliquet viverra eu ligula. Mauris consectetur euismod lacus. Maecenas in quam aliquam, hendrerit magna in, dapibus orci. Nunc tincidunt aliquam lorem vel ultrices. Etiam est ipsum, venenatis quis diam fermentum, dapibus fermentum enim.
+
+Morbi eu ante sit amet ex congue ullamcorper. Sed in consectetur nisl. Nullam vitae dictum augue. Phasellus odio purus, volutpat at ligula quis, elementum consequat ipsum. Mauris cursus, ligula ut ornare mollis, elit orci scelerisque tortor, vel sollicitudin sem justo nec velit. Proin nulla risus, gravida congue elit ac, semper malesuada risus. Cras dignissim velit ut sagittis elementum. Phasellus elementum finibus massa.
+
+\chapter{Features}
+\label{features}
+
+\subsection{Text}
+\label{text}
+
+\textbf{Bold text}, \emph{italic text}
+
+\subsection{Lists}
+\label{lists}
+
+Unordered:
+
+\begin{itemize}
+\item Milk
+
+\item Bread
+
+\item Cheese
+
+\item Cheddar
+
+\item Camembert
+
+\item Rice
+
+\end{itemize}
+
+Ordered:
+
+\begin{enumerate}
+\item Milk
+
+\item Bread
+
+\item Cheese
+
+\item Cheddar
+
+\item Camembert
+
+\item Rice
+
+\end{enumerate}
+
+\subsection{Definition list}
+\label{definitionlist}
+
+When you are making you definitions you should note the white space.
+
+\begin{description}
+
+\item[Apple]
+
+Pomaceous fruit of plants of the genus Malus in
+ the family Rosaceae.
+
+Also the makers of really great products.
+
+\item[Banana]
+
+\begin{enumerate}
+\item A~delicious fruit that can be hazardous
+if left on the ground.
+
+\item A~fruit that comes with it's own packaging
+
+\end{enumerate}
+
+\item[Orange]
+
+The fruit of an evergreen tree of the genus Citrus.
+\end{description}
+
+\subsection{Blockquotes}
+\label{blockquotes}
+
+Here is the a normal paragraph.
+
+\begin{quote}
+
+This is the first level of quoting.
+
+\begin{quote}
+
+This is nested blockquote
+that runs onto the next line.
+\end{quote}
+
+Back to the first level.
+\end{quote}
+
+Notice the spaces when we start a new paragraph or separate the different blockquotes.
+
+\subsection{Images}
+\label{images}
+
+\subsection{Tables}
+\label{tables}
+
+\begin{table}[htbp]
+\begin{minipage}{\linewidth}
+\setlength{\tymax}{0.5\linewidth}
+\centering
+\small
+\caption{simple\_table}
+\label{simple_table}
+\begin{tabulary}{\textwidth}{@{}LCR@{}} \toprule
+First Header&Second Header&Third Header\\
+\midrule
+First row&Data&Very long data entry\\
+Second row&\textbf{Cell}&\emph{Cell}\\
+
+\bottomrule
+
+\end{tabulary}
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\begin{minipage}{\linewidth}
+\setlength{\tymax}{0.5\linewidth}
+\centering
+\small
+\caption{Prototype table}
+\label{reference_table}
+\begin{tabulary}{\textwidth}{@{}LCR@{}} \toprule
+&\multicolumn{2}{c}{Grouping}\\
+First Header&Second Header&Third Header\\
+\midrule
+Content&\multicolumn{2}{c}{\emph{Long Cell}}\\
+Content&\textbf{Cell}&Cell\\
+New section&More&Data\\
+
+\bottomrule
+
+\end{tabulary}
+\end{minipage}
+\end{table}
+
+\begin{thebibliography}{0}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bibitem{Doe:2006}
+John Doe. \emph{Some Big Fancy Book}. Vanity Press, 2006.
+\bibitem{Doe:2007}
+John Doe. \emph{Some Big Fancy Book 2}. Vanity Press, 2007.
+
+\end{thebibliography}
+
+\input{template/foot}
+
+\end{document}

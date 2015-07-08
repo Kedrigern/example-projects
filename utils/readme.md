@@ -29,3 +29,5 @@ Pár poznámek k různým utilitkám.
 * [Games](games/readme.md)
 	* [Spring RTS (Balance annihilation)](games/spring.md)
 	* [vcmi (HOMAM III)](games/vcmi.md)
+* HW
+	* [Rozlišení](resolution.md)

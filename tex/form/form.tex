@@ -1,0 +1,36 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{xltxtra}
+\setmainfont[Ligatures=TeX]{Latin Modern Roman} %default font
+
+\usepackage{polyglossia}
+\setdefaultlanguage{czech}
+
+\usepackage[xetex,
+            unicode=true,
+            pdfauthor={author}
+            pdftitle={title},
+            pdfsubject={- subject -},
+            pdfkeywords={key1, key2}]{hyperref}
+
+\newdimen\longline
+\longline=\textwidth\advance\longline-4cm
+
+\def\LayoutTextField#1#2{#2} % override default in hyperref
+
+\def\lbl#1{\hbox to 4cm{#1\dotfill\strut}}%
+\def\labelline#1#2{\lbl{#1}\vbox{\hbox{\TextField[name=#1,width=#2]{\null}}\kern2pt\hrule}}
+
+\def\q#1{\hbox to \hsize{\labelline{#1}{\longline}}\vskip1.4ex}
+
+\begin{document}
+  \begin{Form}
+    \q{Jméno}
+    \q{Příjmení}
+    \q{Email}
+    \noindent
+    Souhlasím s licenčním ujednáním
+    \CheckBox[bordercolor={0 0 0},height=1.5ex,width=1.5ex, name=ch1]{Yes}\quad
+    \CheckBox[bordercolor={0 0 0},height=1.5ex,width=1.5ex, name=ch2]{No}\quad
+   \end{Form}
+ \end{document}
