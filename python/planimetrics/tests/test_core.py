@@ -1,7 +1,8 @@
 import unittest
 import math
 
-from planimetrics.point import Point
+from planimetrics.core import (Point, Line)
+
 
 class Construct(unittest.TestCase):
     def test_constructor(self):
@@ -13,6 +14,7 @@ class Construct(unittest.TestCase):
         self.assertEqual(point.x, 10)
         self.assertEqual(point.y, 13)
         self.assertEqual(point.label, "Actual position")
+
 
 class Methods(unittest.TestCase):
     p0  = Point(0,0)
@@ -56,6 +58,15 @@ class Methods(unittest.TestCase):
                 a,
                 "Angle should be {0} (between {1} and {2}".format(a, self.p0, p)
             )
+
+
+class LineTest(unittest.TestCase):
+    def test_construct(self):
+        l = Line((0,0), (1,0))
+        self.assertEqual(str(l.start), "[0, 0]")
+        self.assertEqual(l.distance(), 1)
+        self.assertEqual(l.angle(), 0)
+
 
 if __name__ == '__main__':
     unittest.main()

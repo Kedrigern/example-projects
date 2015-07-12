@@ -8,7 +8,7 @@ Moduly (soubory `<file>.hs`) načteme pomocí: `:l <file>.hs`.
 
 ## Ukázky
 
-* [Stráže]
+* [Stráže](guards.hs)
 * [Binární vyhledávácí strom](bst.hs)
 
 ## Odkazy
