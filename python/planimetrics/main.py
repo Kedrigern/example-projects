@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # encoding: utf8
+
 """
 Initial point of app
 """
