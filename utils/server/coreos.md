@@ -11,5 +11,4 @@ Na prvním řádku musí být `#cloud-config`. Nejvyšší direktivy jsou: `core
 
 Přidá uživateli `core` daný klíč.
 
-
-postbelum
+* [](http://www.linuxexpres.cz/software/coreos-proc-byste-o-nem-meli-uvazovat)
