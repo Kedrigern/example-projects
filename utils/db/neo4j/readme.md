@@ -1,11 +1,12 @@
-#Neo4j
+Neo4j
+=====
 
 [Neo4j](http://neo4j.com) je grafová databáze s velmi příjemným uživatelským rozhraním.
 
 Pokud ji máme nainstalovanou, tak naslouchá na portu `7474`, popřípadě má velmi hezké webové rozhraní: `http://localhost:7474/browser/`, resp `/webadmin/`
 
-
-## Grafové databáze
+Grafové databáze
+----------------
 
 ### Ontologie
 
@@ -34,7 +35,8 @@ docker run -d --name neo4j --cap-add=SYS_RESOURCE -p 7474:7474 tpires/neo4j
 ```
 
 
-## Příkazy
+Příkazy
+-------
 
 Základní klíčová slova jsou: `MATCH`, `WHERE`, `RETURN`, `CREATE`, `MERGE`, `DELETE`, `SET`, `FOREACH`, `WITH`, `LOAD CSV`, `UNWIND`, `START`, `CREATE UNIQUE`.
 Použití vypadá např. takto: ```MATCH <pattern> WHERE <conditions> RETURN <expressions>```
@@ -62,10 +64,42 @@ CREATE (jd:Person { name: "Joe", surname: "Doe", age: 27 }),
 Smazání uzlů i vztahů:
 ```MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n,r```
 
-## Links
+Nástroje
+--------
+
+### Py2Neo
+
+Install: `pip install py2neo`
+
+
+```python
+from py2neo import Graph, Path
+graph = Graph()
+
+tx = graph.cypher.begin()
+for name in ["Alice", "Bob", "Carol"]:
+    tx.append("CREATE (person:Person {name:{name}}) RETURN person", name=name)
+alice, bob, carol = [result.one for result in tx.commit()]
+
+friends = Path(alice, "KNOWS", bob, "KNOWS", carol)
+graph.create(friends)
+```
+
+
+
+Links
+-----
+
+### Obecné
 
 * [neo4j.cz](neo4j.cz)
 * [seriál Zdroják](http://www.zdrojak.cz/clanky/grafova-terminologie-a-dostupne-technologie/)
 * [dokumentace](http://docs.spring.io/spring-data/neo4j/docs/current/reference/html/)
 * [dokumentace rozcestník](http://neo4j.com/docs/milestone/)
 * [blog](http://jexp.de/blog/2013/04/cool-first-neo4j-2-0-milestone-now-with-labels-and-real-indexes/)
+
+### Konkrétní
+
+* [Identity and Access Management](http://gist.neo4j.org/?4471127413fd724ed0a3)
+* [Resources](http://gist.neo4j.org/?8141937)
+[](http://gist.neo4j.org/?8141937)
