@@ -8,19 +8,21 @@ Je systém pro izolaci aplikací pomocí lehkých vláken, cgroups etc. v Linuxu
  * daemon: stará se o běh klientů
  * client
 
-## Ovládání
+Pozor na rozdíl mezi obraz (image) a container.
+Container je instancí obrazu.
 
-Jedná se o běžného démona:
-`service docker start`
+Ovládání
+--------
 
-Vyhledání obrazu:
-```docker search <string>```
+Jedná se o běžného démona: `service docker start`
 
-Stažení obrazu: 
-```docker pull learn/tutorial```
+Vyhledání obrazu: `docker search <string>`
 
-Nainstalované obrazy:
-```docker images```
+Stažení obrazu: `docker pull learn/tutorial`
+
+Nainstalované obrazy: `docker images`
+
+Běžící containery: `docker ps` s `-a` i vypnuté.
 
 
 ### Run
@@ -41,36 +43,73 @@ Tím pádem na původním systému máme data a logy a v dockeru běží jen apl
 `--restart [always|no|on-failure[:max-retries] ]` na testování se tedy hodi `no`,
 zatímco na produkci `always`.
 
+
 ### Další příkazy
+
 `ps` procesy / seznam běžících container, má běžné přepínače jako `-l`, `-a` (i neběžící obrazy).
 
 `logs` stdout containeru
 
 `stop` zastaví container
 
-## Obrazy
+
+### Tipy
+
+Zkopírování souborů z containaru do hostu (např. získání konfiguráku):
+
+```
+{host} docker run -v /path/to/hostdir:/mnt --name my_container my_image
+{host} docker exec -it my_container bash
+{container} cp /mnt/sourcefile /path/to/destfile
+```
+
+
+Obrazy
+------
 
 V centrálním repozitáři obrazů (hubu) je předpřipraveno mnoho obrazů. Velmi příjemné jsou různé linuxové distribuce. Nicméně máme zde samozřejmě i DB ([MySQL][mysql], [PostgreSQL][postgre]). A hotové aplikace ([Redmine][redmine], [ODOO][odoo], Helios). Výhodou je, že můžeme transparentně používat uložiště mimo docker image a vývojáři se starají opravdu jen o sladění komponent. Zatímco admin se stará o zálohu dat, místo na disku, porty etc.
 
-## Instalace
+
+Údržba
+------
+
+Pokud s dockerem více experimentujete, tak se vám začnou hromadit obrazy i containery.
+
+```bash
+> docker ps -a
+CONTAINER ID   IMAGE         COMMAND      CREATED             STATUS                         PORTS                    NAMES
+9f7e465dd3be   neo4j/neo4j   "/neo4j.sh"  About an hour ago   Restarting (0) 1 seconds ago   0.0.0.0:8475->7473/tcp   neo4j
+> docker rm -f 9f7e465dd3be
+> # nebo 
+> docker rm neo4j 
+> docker images
+REPOSITORY              TAG      IMAGE ID         CREATED           VIRTUAL SIZE
+docker.io/neo4j/neo4j   latest   5aff38694e3d     8 weeks ago       880.8 MB
+> docker rmi 5aff38694e3d
+```
+
+Instalace
+---------
 
 Verze z repozitářů:
 
 | Disribuce       | Verze |
 |-----------------|-------|
-| Fedora 22		  | 1.6.0 |
+| Fedora 22	  | 1.6.0 |
 | Fedora 21       | 1.4.0 |
 | Debian 8 Jessie | 1.3.2 |
 | CoreOS          | 1.3.3 |
 | Ubuntu 14.10 UU | 1.2.0 |
 
-## Příklady a tipy
+
+Příklady a tipy
+---------------
 
 ### Lokální přístup
 
 Container můžeme používat i na běžném localhostu.
 
-Pokud použijeme"
+Pokud použijeme:
 
 ```
 docker run -d --name mysql -p 127.0.0.1:3306:3306 sameersbn/mysql:latest
@@ -84,12 +123,16 @@ docker run -d --name mysql -p 3306:3306 sameersbn/mysql:latest
 
 tak se k DB můžeme připojit na klasickém portu. Čili např. přes MySQL Workbench. Což nám jistě usnadní vývoj. A zároveň můžeme DB stále držet izolované. [Zdroj][s1].
 
-## Další
+
+Další
+-----
 
 * docker řízený skrz `systemd`: [doc][systemd]
 * [linkování kontejnerů][link]
 * [příklad s OwnCloud][exOwnCloud]
 * [CoreOS][] - distribuce přímo navržená pro provoz Dockeru (včetně decentralizace etc).
+
+
 
 [redmine]: https://registry.hub.docker.com/u/sameersbn/redmine/
 [mysql]: https://github.com/sameersbn/docker-mysql

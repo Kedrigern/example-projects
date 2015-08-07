@@ -5,6 +5,7 @@ Neo4j
 
 Pokud ji máme nainstalovanou, tak naslouchá na portu `7474`, popřípadě má velmi hezké webové rozhraní: `http://localhost:7474/browser/`, resp `/webadmin/`
 
+
 Grafové databáze
 ----------------
 
@@ -12,7 +13,9 @@ Grafové databáze
 
 Je schéma dle kterého je graf sestavován. V `neo4j` je struktura volná.
 
-## Instalace a spuštění
+
+Instalace a spuštění
+--------------------
 
 ### Fedora 20 a Debian
 Instalace:
@@ -25,14 +28,19 @@ Obsluhuje se jako jakýkoliv jiný démon:
 
 popřípadě subpříkazy `stop` a `restart`.
 
-### Fedora 21
+### Fedora 21 a 22
 
-Využil jsem docker:
+http://yum.neo4j.org/
+
+
+### Docker
 
 ```
 docker pull tpires/neo4j:latest
 docker run -d --name neo4j --cap-add=SYS_RESOURCE -p 7474:7474 tpires/neo4j
 ```
+Bohužel tento obraz založený na Debianu obsahuje velmi starou verzi 2.1.*.
+
 
 
 Příkazy
@@ -42,6 +50,7 @@ Základní klíčová slova jsou: `MATCH`, `WHERE`, `RETURN`, `CREATE`, `MERGE`,
 Použití vypadá např. takto: ```MATCH <pattern> WHERE <conditions> RETURN <expressions>```
 
 V interaktivní příkazovém řádku můžeme zadat: `:help COMMAND` a dostaneme nápovědu.
+
 
 ### Vytvoření uzlu
 ```
@@ -63,6 +72,7 @@ CREATE (jd:Person { name: "Joe", surname: "Doe", age: 27 }),
 
 Smazání uzlů i vztahů:
 ```MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n,r```
+
 
 Nástroje
 --------
