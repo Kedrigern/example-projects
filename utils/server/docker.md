@@ -95,10 +95,10 @@ Verze z repozitářů:
 
 | Disribuce       | Verze |
 |-----------------|-------|
-| Fedora 22	  | 1.6.0 |
+| Fedora 22	  | 1.7.1 |
 | Fedora 21       | 1.4.0 |
 | Debian 8 Jessie | 1.3.2 |
-| CoreOS          | 1.3.3 |
+| CoreOS          | 1.6.2 |
 | Ubuntu 14.10 UU | 1.2.0 |
 
 
