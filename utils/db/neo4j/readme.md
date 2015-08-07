@@ -17,10 +17,14 @@ Je schéma dle kterého je graf sestavován. V `neo4j` je struktura volná.
 Instalace a spuštění
 --------------------
 
-### Fedora 20 a Debian
-Instalace:
+### Debian
 
-```dnf install neo4j```
+Repozitář: `http://debian.neo4j.org/`
+
+```
+apt-get update
+apt-get install neo4j
+```
 
 Obsluhuje se jako jakýkoliv jiný démon:
 
@@ -30,7 +34,7 @@ popřípadě subpříkazy `stop` a `restart`.
 
 ### Fedora 21 a 22
 
-http://yum.neo4j.org/
+`http://yum.neo4j.org/`
 
 
 ### Docker
@@ -39,9 +43,10 @@ http://yum.neo4j.org/
 docker pull tpires/neo4j:latest
 docker run -d --name neo4j --cap-add=SYS_RESOURCE -p 7474:7474 tpires/neo4j
 ```
+
 Bohužel tento obraz založený na Debianu obsahuje velmi starou verzi 2.1.*.
 
-
+Existuje i oficiální obraz: `docker pull neo4j/neo4j`
 
 Příkazy
 -------
