@@ -10,6 +10,12 @@ bin=pandoc
 output=""
 tmpdir="textmpdir"
 
+function end() {
+        rm -rf "$tmpdir"
+        zenity --text "$1" --error;
+        exit 1
+}
+
 function input() {
 	if [ -z "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS" ]; then
 		echo "Nautilus doesn't not pass any data, use readme instead"
@@ -28,26 +34,26 @@ function convert() {
 		mkdir -p "$tmpdir"	
 		errorFile=errors.txt
 		
+                # Todo: multiple files input
+                files=$(basename "${NAUTILUS_SCRIPT_SELECTED_FILE_PATHS[0]}")
+		
 		$bin -f markdown -t latex --latex-engine=xelatex \
 			--smart --normalize -s \
-			-o - ${NAUTILUS_SCRIPT_SELECTED_FILE_PATHS[@]} \
+			-o - "$files" \
 			2> "$errorFile" | \
 		vlna -f -v KkSsVvZzOoUuAaI 2>> "$errorFile" | \
 		xelatex -output-directory="$tmpdir" >> "$errorFile" 2>&1; \
 		rets=(${PIPESTATUS[*]})
 
 		if [ ${rets[0]} -ne 0 ]; then
-			zenity --text "Pandoc vrátil kód ${rets[0]} pro $file ($output), podrobnosti v $errorFile" --error;
-			exit 1		
-		fi;
-		if [ ${rets[1]} -ne 0 ]; then
-			zenity --text "vlna vrátil kód ${rets[1]} pro $file ($output), podrobnosti v $errorFile" --error;
-			exit 1
-		fi;
-		if [ ${rets[2]} -ne 0 ]; then
-			zenity --text "xelatex vrátil kód ${rets[2]} pro $file ($output), podrobnosti v $errorFile" --error;
-			exit 1
-		fi;
+                        end "Pandoc vrátil kód ${rets[0]} pro $files ($output), podrobnosti v $errorFile"       
+                fi;
+                if [ ${rets[1]} -ne 0 ]; then
+                        end "vlna vrátil kód ${rets[1]} pro $files ($output), podrobnosti v $errorFile"
+                fi;
+                if [ ${rets[2]} -ne 0 ]; then
+                        end "xelatex vrátil kód ${rets[2]} pro $files ($output), podrobnosti v $errorFile"
+                fi;
 		
 		mv "$tmpdir/texput.pdf" "$output"
 		rm "$errorFile"
