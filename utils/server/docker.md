@@ -53,7 +53,11 @@ zatímco na produkci `always`.
 `stop` zastaví container
 
 
+
 ### Tipy
+
+
+#### Zkopírování souborů
 
 Zkopírování souborů z containaru do hostu (např. získání konfiguráku):
 
@@ -61,6 +65,34 @@ Zkopírování souborů z containaru do hostu (např. získání konfiguráku):
 {host} docker run -v /path/to/hostdir:/mnt --name my_container my_image
 {host} docker exec -it my_container bash
 {container} cp /mnt/sourcefile /path/to/destfile
+```
+
+
+#### Záloha DB
+
+
+```bash
+# Spustíme mysql container:
+docker run --name mysql -d sameersbn/mysql:latest
+
+# Práce s mysql containerem (linkování s dalšími containery etc.)
+# ...
+# Záloha:
+docker run -it --rm --volumes-from=mysql sameersbn/mysql:latest mysqldump <db> <table> > dump.sql
+# Při použití parametru -rm se dumpovací container ihned po použití smaže
+# dump.sql bude uložen na hostu
+```
+
+Popřípadě přístup k konzoli DB:
+
+```
+docker run -it --rm --volumes-from=mysql sameersbn/mysql:latest mysql -uroot
+```
+
+Spuštění mysql skriptu:
+```
+touch example.sql
+docker run -it --rm --volumes-from=mysql -v $PWD:/host sameersbn/mysql:latest mysql -uroot --default-character-set=utf8 -e "source /host/example.sql"
 ```
 
 

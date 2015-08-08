@@ -1,12 +1,18 @@
 
-# Mysql
+Mysql
+=====
 
-##Design, optimalization
+
+Design, optimalization
+----------------------
+
 [MySQL Workbrench](http://www.mysql.com/products/workbench) is pretty EER schema creater, SQL editor, DB connector etc. Clear choice for developmnet.
 
 [Adminer](http://www.adminer.org) is small PHP app which allow you to compfortable access to the DB via web browser.
 
-## Poznámky
+
+Poznámky
+--------
 
 1. První timestap dostane speciální hodnotu `CURRENT_TIMESTAMP` .
 1. DELETE a SELECT nejde použít nad stejnou tabulkou.
@@ -15,7 +21,8 @@
 1. MySQL LIKE etc. funkce mohou nerozlišovat velikost písměn (což je zbytečné, když existuje ILIKE), ale hlavně mohou správně ignorovat diakritiku. Je k tomu třeba nastavit kódování na `utf8_general_ci`
 
 
-## Typy tabulek
+Typy tabulek
+------------
 
 `InnoDB` podoporuje klíče, vícesloupcové indexy etc.
 
@@ -23,14 +30,86 @@
 
 `BLACKHOLE` podporuje vše, ale nic neukládá, tudíž se dá použít pro testování či vyprázděnní tabulky typu `ARCHIVE`.
 
-## CLI
+
+CLI
+---
+
 `mysqlimport --local -u <user> -p<heslo> --fields-terminated-by=, --default-character-set=utf8 category <tablename>.csv`
 
+```bash
+mysqldump <dbname> > <file>.sql     # no use db
+mysqldump <dbname> <table> > <file>.sql
+```
+
+### Mysql console
+
+```bash
+mysql -uroot
+```
+
+```mysql
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
++--------------------+
+
+mysql> use mysql;
+Database changed
+
+mysql> show tables;
++---------------------------+
+| Tables_in_mysql           |
++---------------------------+
+| columns_priv              |
+| db                        |
+| event                     |
+| func                      |
+| general_log               |
+| help_category             |
+| help_keyword              |
+| help_relation             |
+| help_topic                |
+| host                      |
+| ndb_binlog_index          |
+| plugin                    |
+| proc                      |
+| procs_priv                |
+| proxies_priv              |
+| servers                   |
+| slow_log                  |
+| tables_priv               |
+| time_zone                 |
+| time_zone_leap_second     |
+| time_zone_name            |
+| time_zone_transition      |
+| time_zone_transition_type |
+| user                      |
++---------------------------+
+24 rows in set (0.00 sec)
+
+mysql> describe plugin;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| name  | varchar(64)  | NO   | PRI |         |       |
+| dl    | varchar(128) | NO   |     |         |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> exit;
+Bye
+```
 
 
-##Triggers
+Triggers
+--------
 
 * [Error](http://stackoverflow.com/questions/24/throw-an-error-in-a-mysql-trigger):
+
 ```sql
 declare msg varchar(255);
 if new.id < 0 then
