@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 #
 # Convert asciidoc file (*.adoc) into markdown.
 # Main goal is better processing with file (power of padoc)
