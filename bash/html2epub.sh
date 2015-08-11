@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Author: Ondřej Profant, 2012
 # Email: ondrej.profant <> gmail.com
 # Licence: GPLv3 http://www.gnu.org/copyleft/gpl.html

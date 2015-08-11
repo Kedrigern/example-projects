@@ -1,5 +1,5 @@
-#!/usr/bin/bash
-# Title=Search in PDFs
+#!/usr/bin/env bash
+# Title: Search in PDFs
 # Author: Ondřej Profant, 2011
 # Email: ondrej.profant -at- gmail.com
 # Licence: GPL

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 ## Author: Ondřej Profant
 ## Licence: GPL
 ## Dependencies: pandoc, zenity, vlna
