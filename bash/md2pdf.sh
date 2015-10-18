@@ -39,7 +39,7 @@ function convert() {
                         --smart --normalize -s \
                         -o - "$files" \
                         2> "$errorFile" | \
-                vlna -f -v KkSsVvZzOoUuAaI 2>> "$errorFile" | \
+                vlna -f -r -v KkSsVvZzOoUuAaI 2>> "$errorFile" | \
                 xelatex -output-directory="$tmpdir" >> "$errorFile" 2>&1; \
                 rets=(${PIPESTATUS[*]})
 
