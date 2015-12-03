@@ -78,7 +78,46 @@ Todo: All funcionality
 
 ### Proměnné
 
+```bash
+HELLO=Hello 
+function hello {
+	local HELLO=World
+}
+```
+
+Proměnná se vyvolá s `$<nazev>`, pokud by hrozila záměna s jinou[^1], tak se lze použít `${<nazev>}`.
+
+```bash
+filecount=$( ls /etc | wc -l )
+filename=${1%.txt}.md		# odebere z proměnné sufix ".txt" a přidá ".md" 
+```
+
+#### Předdefinované
+
+|----|---------------------------------------------|
+| $* | Všechny poziční parametry.                  |
+| $@ | Všechny poziční parametry.                  |
+| $# | Počet parametrů                             |
+| $? | Návratová hodnota posledního volání.        |
+| $$ | ID procesu daného shellu                    |
+| $! | ID procesu spuštěného v pozadí (posledního) |
+| $0 | Jméno shellu / skriptu                      |
+| $n | *n* je číslo 1-9, daný poziční parametr     |
+| $_ | Z počátku skriptu je v ní plná cesta ke skriptu. Později v ní je poslední argument posledního příkazu. |
+| $USER    | Uživatel pod kterým je shell spuštěn  |
+| $HOSTNAME| Hostname systému                      |
+| $SECONDS | Vteřin od spuštění skriptu            |
+| $RANDOM  | Náhodné číslo                         |
+| $LINENO  | Současná řádka skriptu                |
+
 ### Wildecards
+
+|-----|--------|----------------|--------------------------------------------|
+| *   | a*     | a, aa, a1, ... | jakýkoliv počet jakýhkoliv znaků (výjma .) |
+| ?   | a?     | aa, ab, ...    | jeden libovolný znak                       |
+| []  | a[b-e] | ab, ac, ad, ae | interval znaků                             |
+| [!] | a[!c]  | nebude: ac     | negace předchozí možnosti                  |
+| {}  | a{a,b} | aa, ab         | nebo                                       |
 
 ### Řízení běhu
 
