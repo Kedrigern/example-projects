@@ -94,6 +94,7 @@ filename=${1%.txt}.md		# odebere z proměnné sufix ".txt" a přidá ".md"
 
 #### Předdefinované
 
+|    | popis                                       |
 |----|---------------------------------------------|
 | $* | Všechny poziční parametry.                  |
 | $@ | Všechny poziční parametry.                  |
@@ -110,14 +111,18 @@ filename=${1%.txt}.md		# odebere z proměnné sufix ".txt" a přidá ".md"
 | $RANDOM  | Náhodné číslo                         |
 | $LINENO  | Současná řádka skriptu                |
 
+
 ### Wildecards
 
+
+|     | příklad| výsledek       | popis                                      |
 |-----|--------|----------------|--------------------------------------------|
 | *   | a*     | a, aa, a1, ... | jakýkoliv počet jakýhkoliv znaků (výjma .) |
 | ?   | a?     | aa, ab, ...    | jeden libovolný znak                       |
 | []  | a[b-e] | ab, ac, ad, ae | interval znaků                             |
 | [!] | a[!c]  | nebude: ac     | negace předchozí možnosti                  |
 | {}  | a{a,b} | aa, ab         | nebo                                       |
+
 
 ### Řízení běhu
 
