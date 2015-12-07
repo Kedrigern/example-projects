@@ -42,13 +42,14 @@ Na druhou stranu je zbytečné jednodušší shelly používat pro skript, kter�
 |--------|----------------------------|--------|----------------|
 | ls     | vylistování složky         | man    | manual         |
 | mv     | move: přesun souboru       | sudo   | super user do  |
-| cp     | copy: zkopírování souboru  | echo   | |
-| rm     | remove: smazání souboru    | true   | |
-| cd     | change dir: změna adresáře | false  | |
-| tr     | translate: nahrazení znaků | shift  | posun parametru |
-| wc     | word count: počet slov     |        | |
-| ln     | link:vytváří odkazy        |        | |
-| su     | přepnutí uživatele         |        | |
+| cp     | copy: zkopírování souboru  | echo   | vypíše řetězec |
+| rm     | remove: smazání souboru    | true   | vrátí true	|
+| cd     | change dir: změna adresáře | false  | vratí false    |
+| tr     | translate: nahrazení znaků | shift n| posun parametru o n|
+| wc     | word count: počet slov     | du     | využití místa  |
+| ln     | link:vytváří odkazy        | fg     | |
+| su     | přepnutí uživatele         | bg     | |
+| ps     | procesy v daném terminálu  |
 
 A do jisté míry jakýkoliv další příkaz, který máme v systému.
 Spustit z bashe můžeme i ty s grafickým rozhraním.
@@ -56,7 +57,16 @@ A velmi často je můžeme spustit bez grafického rozhraní - a využít je k d
 
 #### man
 
+Příkazy mají manuálové stránky, které nás seznámí se základní funcionalitou a přepínačemi.
+Proto si nemusíme detaily pamatovat, ale stačí zadat např. `man ls`.
+
 #### sed, vim
+
+Vim je textový editor v terminálu. Sed se ovládá stejně a jedná se o proudový editor textu.
+
+```
+sed [-n] 'script' [inputfile]
+```
 
 #### awk
 
@@ -89,7 +99,10 @@ Proměnná se vyvolá s `$<nazev>`, pokud by hrozila záměna s jinou[^1], tak s
 
 ```bash
 filecount=$( ls /etc | wc -l )
-filename=${1%.txt}.md		# odebere z proměnné sufix ".txt" a přidá ".md" 
+filename=${1%.txt}.md		# odebere z proměnné sufix ".txt" a přidá ".md" (nejkratší)
+filename=${1%%.txt}.md		# odebere z proměnné sufix ".txt" a přidá ".md" (nejdelší)
+filename=${1#hello}		# odebere z proměnné text "hello" (nejkratší)
+filename=${1##hello}		# odebere z proměnné text "hello" (nejdelší)
 ```
 
 #### Předdefinované
