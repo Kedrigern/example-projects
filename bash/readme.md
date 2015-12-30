@@ -4,7 +4,7 @@ Bash scripts
 
 * [md2pdf](md2pdf.sh): Convertor for nautilus scripts
 * [adoc2md](adoc2md.sh):
-* [findPdf](findPdf.sh):  Search pattern in all pdf files in actual directory. Use pdftotext for convert - it`s main limit of this script. 
+* [findPdf](findPdf.sh):  Search pattern in all pdf files in actual directory. Use pdftotext for convert - it`s main limit of this script.
 * [html2epub](html2epub.sh): html2epub via pandoc with GUI (Zenity). Some mechanism for cleaning html code.
 
 
@@ -49,7 +49,7 @@ Na druhou stranu je zbytečné jednodušší shelly používat pro skript, kter�
 | wc     | word count: počet slov     | du     | využití místa  |
 | ln     | link:vytváří odkazy        | fg     | |
 | su     | přepnutí uživatele         | bg     | |
-| ps     | procesy v daném terminálu  |
+| ps     | procesy v daném terminálu  | pwd    | print working dir |
 
 A do jisté míry jakýkoliv další příkaz, který máme v systému.
 Spustit z bashe můžeme i ty s grafickým rozhraním.
@@ -89,7 +89,7 @@ Todo: All funcionality
 ### Proměnné
 
 ```bash
-HELLO=Hello 
+HELLO=Hello
 function hello {
 	local HELLO=World
 }
@@ -251,6 +251,11 @@ Občas se hodí daná zalomení odstranit:
 cat file | echo -n `sed 's/^$/STARTPARA/'`|sed 's/STARTPARA/\n/g'
 ```
 
+### Úkoly k procvičení
 
-
-
+1. Zjistěte v jaké jste složce.
+2. Vytvořte složku `tmp` a v 2 soubory. Jeden prázdný, druhý s obsahem `Hello world!`. Pojmenujte je: `1-empty.md` a `2-hello.md`
+3. Změňte working directory na `tmp`
+4. Vypiště obsah složky
+5. Vypište soubory končící příponou `.md`
+6. Vypiště soubory začínajcí číslicí `1`
