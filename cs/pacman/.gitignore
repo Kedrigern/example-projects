@@ -3,4 +3,5 @@ obj
 
 *.exe
 *.sln
-*.userprefs 
+*.userprefs
+pacman.userprefs
