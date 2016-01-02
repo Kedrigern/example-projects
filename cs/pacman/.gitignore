@@ -3,5 +3,6 @@ obj/
 
 *.exe
 *.sln
+*.mdb
 *.userprefs
 pacman.userprefs

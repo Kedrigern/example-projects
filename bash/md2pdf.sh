@@ -14,7 +14,7 @@ errorFile=".md2pdf-errors.txt"
 function end() {
         rm -rf "$tmpdir"
         zenity --text "$1" --error;
-        exit 1 
+        exit 1
 }
 
 function input() {
@@ -31,8 +31,8 @@ function input() {
 function convert() {
 
         if $bin -v > /dev/null; then
-                mkdir -p "$tmpdir"      
-                
+                mkdir -p "$tmpdir"
+
                 # Todo: multiple files input
                 files=$(basename "${NAUTILUS_SCRIPT_SELECTED_FILE_PATHS[0]}")
                 $bin -f markdown -t latex --latex-engine=xelatex \
@@ -52,11 +52,11 @@ function convert() {
                 if [ ${rets[2]} -ne 0 ]; then
                         end "xelatex returns code ${rets[2]} for: $files ($output), more info in file: $errorFile"
                 fi;
-                
+
                 mv "$tmpdir/texput.pdf" "$output"
                 rm "$errorFile"
                 rm -rf "$tmpdir"
-        
+                
         else
                 end "Pandoc not found, path: $bin"
         fi;
