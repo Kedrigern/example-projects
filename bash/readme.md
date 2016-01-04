@@ -124,6 +124,53 @@ filename=${1##hello}		# odebere z proměnné text "hello" (nejdelší)
 | $RANDOM  | Náhodné číslo                         |
 | $LINENO  | Současná řádka skriptu                |
 
+#### Argumenty
+
+Argumenty (parametry) skriptu jsou již zmíněné `$*`. Zpracovávají se pomocí příkazu `shift`. 
+
+Spustíme: `./run.sh --prvni a --druhy b`
+
+Zpracujeme je:
+
+```bash
+if [ $# -gt 0 ]; then
+	while [ $# -gt 0 ]; do
+		case "$1" in
+		"-p" | "--prvni")
+			prvni="$2";
+			shift 2;
+		;;
+		"-d" | "--druhy")
+			druhy="$2";
+			shift 2;
+		;;
+		*)
+			echo "Unknow parametr";
+			exit 1;
+		;;
+		esac;
+	done;
+else
+	# Without parameters?
+	:
+fi;
+```
+
+#### Předání globálních parametrů
+
+Scriptu můžeme předat globální parametr takto (předáváme proměnnou `LC_ALL`):
+
+```
+$ date
+Po led  4 19:16:41 CET 2016
+$ LC_ALL=cs_CZ.utf8 date
+Po led  4 19:16:37 CET 2016
+$ LC_ALL=de_DE.utf8 date
+Mo 4. Jan 19:16:29 CET 2016
+$ LC_ALL=en_US.utf8 date
+Mon Jan  4 19:17:27 CET 2016
+```
+
 
 ### Wildecards
 
