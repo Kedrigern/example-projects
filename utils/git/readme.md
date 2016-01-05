@@ -49,9 +49,12 @@ věci využít grafickou nádstavbu, např. `git-cola` (v Linuxu) nebo zcela uni
 Oprava
 ------
 
-`git reset --hard head`: vrátí vše do stavu posledního commitu.
+`git reset --hard HEAD`: vrátí vše do stavu posledního commitu.
 
 `git commit --amend`: připojí commit k poslednímu (např. když jsme něco zapomněli). S dodáním parametrů `-C HEAD` nás nebude otravovat editor a použije se message minulého commitu.
+
+Pokud se chceme zbavit netrackovaných souborů (např. tmp), tak v kořeni repozitáře zadáme:
+`git clean -f -n` pro seznam a následně odebereme `-n` pro smazání.
 
 Push
 ====
@@ -111,7 +114,7 @@ mají ignorovat. Typicky binární soubory, dočasné a tak.
 
 Pro definici se používají wildcardy jako `*.o` a také máme přítomen operátor negace `!important.o`.
 
-Odložení rozdělané práce 
+Odložení rozdělané práce
 ========================
 
 Pokud implementujeme složitou funkci a najdeme drobnou chybu, tak chceme
@@ -139,7 +142,7 @@ Smazaní posledního commitu (lokálně, nastavení větve na předposlední com
 
 Spojování větví
 ---------------
-`git merge <branch>` spojí aktuální větev s větví v parametru. Pokud nastane konflikt dostaneme se do speciální "větvě", kde jsou v konfliktních souborech úpravy z obou verzí. Tyto konflikty můžeme vyřešit v normálním textovém editoru či specializovaném (např. meld). Poté změny (náš merge) commitneme. 
+`git merge <branch>` spojí aktuální větev s větví v parametru. Pokud nastane konflikt dostaneme se do speciální "větvě", kde jsou v konfliktních souborech úpravy z obou verzí. Tyto konflikty můžeme vyřešit v normálním textovém editoru či specializovaném (např. meld). Poté změny (náš merge) commitneme.
 
 Při složitějším slučování je důležitý parametr `--no-commit`, který nesloučí "nekonfliktní" soubory automaticky.
 
@@ -150,10 +153,14 @@ Začali jsme pracovat na úpravách projektu ve vlastní větvi - my_work_branch
 
 Smazání větve ve vzdáleném rpeositáři
 -------------------------------------
-```git push origin :<branch_to_del>```
+
+```
+git push origin :<branch_to_del>
+```
 
 Rebase
 ------
+
 Se také používá k spojení větví, ale nespojuje je jako aktuální větvě (jejich HEAD commit), ale spojuje je chronologicky po commitech. Což může být v mnoha případech přehlednější (vidíme jak se věci měnily). Proces vypadá takto:
  1. `git rebase <branch_to_rebas>` zahájíme rebase
  2. Opravíme konflikty (jsou normálně v diff formátu)
@@ -163,7 +170,11 @@ Se také používá k spojení větví, ale nespojuje je jako aktuální větvě
 
 Cherry pick
 -----------
-```git cherry-pick <commit>```
+
+```
+git cherry-pick <commit>
+```
+
 Pokud je commit HEAD nějaké větve, tak lze použít název větve.
 
 Ukázka
@@ -198,6 +209,7 @@ Pokročilé
 
 Odkazy
 ======
-* [Pět důvodů proč zvolit git](http://www.zdrojak.cz/serialy/pet-duvodu-proc-zvolit-git) 
+* [Pět důvodů proč zvolit git](http://www.zdrojak.cz/serialy/pet-duvodu-proc-zvolit-git)
 * [Homepage](http://git-scm.com) s rozsahlou dokumentací
 * [Deploy](http://markdotto.com/2011/11/02/how-to-deploy-sites-via-github)
+* [Interaktivní návod](http://www.ndpsoftware.com/git-cheatsheet.html)
