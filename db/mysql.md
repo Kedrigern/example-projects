@@ -128,3 +128,14 @@ begin
 	end if;
 end;
 ```
+
+
+Odkazy
+------
+
+Import csv to mysql:
+http://stackoverflow.com/questions/11077801/import-csv-to-mysql-table
+
+Python 3 a MySQL:
+http://stackoverflow.com/questions/20049590/pip-3-3-install-mysql-python
+http://stackoverflow.com/questions/27748556/python3-4-cant-install-mysql-python

@@ -37,6 +37,20 @@ podporován Github pages, čili vše můžete hostovat na Githubu.
 
 [Dokumentace](http://jekyllrb.com/docs/structure/)
 
+## Proměnné
+
+```
+assign item = site.tags["featured"].first
+```
+
+## Vlastní kolekce
+
+Pozor: Jedná se o nestabilní API.
+
+Jedná se o vlsatní
+
+[Dokumentace](http://jekyllrb.com/docs/collections/)
+
 ## Tipy
 
 ### Vypsání jen určitých kategorii
