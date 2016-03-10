@@ -78,11 +78,8 @@ Více: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
 
 ### Cykly
 
-Rozdělení cyklu na dvojice:
-http://stackoverflow.com/questions/20924471/for-loop-wrap-every-two-posts-in-a-div
-
-Sudé/liché položky:
-http://stackoverflow.com/questions/8980192/liquid-templates-even-odd-items-in-for-loop
+- [Rozdělení cyklu na dvojice](http://stackoverflow.com/questions/20924471/for-loop-wrap-every-two-posts-in-a-div)
+- [Sudé/liché položky](http://stackoverflow.com/questions/8980192/liquid-templates-even-odd-items-in-for-loop)
 
 ## Vlastní kolekce
 
