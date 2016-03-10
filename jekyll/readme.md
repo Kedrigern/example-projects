@@ -37,11 +37,52 @@ podporován Github pages, čili vše můžete hostovat na Githubu.
 
 [Dokumentace](http://jekyllrb.com/docs/structure/)
 
-## Proměnné
+## Liquid
+
+Dva typy závorek:
+
+`{{ x }}` - vyhodnotí se na text (output)
+
+`{% if %}` - syntax (tagy)
+
+Příklad outputu:
 
 ```
-assign item = site.tags["featured"].first
+Hello {{name}}
+Hello {{user.name}}
+Hello {{ 'tobi' }}
+Hello {{ 'tobi' | upcase }}
+Hello tobi has {{ 'tobi' | size }} letters!
+Hello {{ '*tobi*' | textilize | upcase }}
+Hello {{ 'now' | date: "%Y %h" }}
 ```
+Tagy:
+
+- `assign` - Assigns some value to a variable:
+    ```
+    assign item = site.tags["featured"].first
+    ```
+- `capture` - Block tag that captures text into a variable
+- `case` - Block tag, its the standard case...when block
+- `comment` - Block tag, comments out the text in the block
+- `cycle` - Cycle is usually used within a loop to alternate between values, like colors or DOM classes.
+- `for` - For loop
+- `break` - Exits a for loop
+- `continue` Skips the remaining code in the current for loop and continues with the next loop
+- `if` - Standard if/else block
+- `include` - Includes another template; useful for partials
+- `raw` - temporarily disable tag processing to avoid syntax conflicts.
+- `unless` - Mirror of if statement
+
+Více: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
+
+### Cykly
+
+Rozdělení cyklu na dvojice:
+http://stackoverflow.com/questions/20924471/for-loop-wrap-every-two-posts-in-a-div
+
+Sudé/liché položky:
+http://stackoverflow.com/questions/8980192/liquid-templates-even-odd-items-in-for-loop
 
 ## Vlastní kolekce
 
