@@ -74,7 +74,7 @@ Tagy:
 - `raw` - temporarily disable tag processing to avoid syntax conflicts.
 - `unless` - Mirror of if statement
 
-Více: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
+[Více](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)
 
 ### Cykly
 
