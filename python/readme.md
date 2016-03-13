@@ -1,7 +1,12 @@
 
 # Python
 
-Výborná kniha pro seznámení s Pythonem je [Ponořme se do Python(u)](http://knihy.nic.cz/). 
+Python je interpretovaný multiparadigmatický slabě typováný programovací jazyk. Jeho hlavním moty jsou **Explicit is better than implicit**, **Beautiful is better than ugly** a **Errors should never pass silently**.
+
+## Základní zdroje
+
+- Výborná kniha pro seznámení s Pythonem je [Ponořme se do Python(u)](http://knihy.nic.cz/)
+- [30 Python Language Features and Tricks You May Not Know About](http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html)
 
 ## modules
 

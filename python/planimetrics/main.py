@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # encoding: utf8
 
-"""
+__doc__ = """
 Initial point of app
 """
 

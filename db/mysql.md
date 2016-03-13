@@ -34,6 +34,8 @@ Typy tabulek
 CLI
 ---
 
+### Utilitky
+
 `mysqlimport --local -u <user> -p<heslo> --fields-terminated-by=, --default-character-set=utf8 category <tablename>.csv`
 
 ```bash
@@ -44,8 +46,10 @@ mysqldump <dbname> <table> > <file>.sql
 ### Mysql console
 
 ```bash
-mysql -uroot
+mysql -u root -p -h host dbname < script.sql
 ```
+přepínač `-p` bez ničeho vyvolá prompt s heslem.
+
 
 ```mysql
 mysql> show databases;
@@ -104,6 +108,15 @@ mysql> exit;
 Bye
 ```
 
+### Import CSV
+
+```
+LOAD DATA LOCAL INFILE 'file.csv' INTO TABLE `table_name` COLUMNS TERMINATED BY ';' ENCLOSED BY '"' IGNORE 1 LINES;
+```
+
+popřípadě wrapper nad tímto příkazem `mysqlimport`
+
+* [How to load date data in MySQL when using LOAD DATA](http://stackoverflow.com/questions/18927249/how-to-load-date-data-in-mysql-when-using-load-data)
 
 Triggers
 --------
