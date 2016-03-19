@@ -13,6 +13,7 @@ Pár poznámek k různým utilitkám.
 * [irc](irc.md)
 * [git](git/readme.md)
 * Server
+	* [systemD](server/systemd.md)
 	* [localhost](server/localhost.md)
 	* [Apache](server/apache.md)
 	* [CoreOS](server/coreos.md)
