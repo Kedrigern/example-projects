@@ -1,5 +1,23 @@
 # Terminal
 
+## Instalace
+
+Samotná instalace:
+```
+sudo dnf install postgresql-server postgresql-contrib
+sudo systemctl enable postgresql
+sudo postgresql-setup --initdb --unit postgresql
+sudo systemctl status postgresql
+```
+
+Konfigurace:
+```
+su root
+su - postgres
+```
+
+
+
 ## commands
 `Copy (Select * From <table>) To '/tmp/<name>.csv' With CSV;`
 
@@ -249,4 +267,7 @@ Popřípadě se občas hodí nahradit `cs` za `simple`, pokud nechceme lexikáln
 
 
 # Odkazy
+
+* [Fedora doc](https://fedoraproject.org/wiki/PostgreSQL)
+* [Po instalaci](http://stackoverflow.com/questions/1471571/how-to-configure-postgresql-for-the-first-time)
 * [Článek z roku 2003](http://www.abclinuxu.cz/clanky/navody/prakticky-navod-k-pgsql)
