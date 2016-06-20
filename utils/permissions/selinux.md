@@ -57,6 +57,8 @@ MySQL databáze (soubory) májí label: `mysqld_data_t`.
 Pokud by byl Apache byl kompromitován, tak by útočník měl kontrolu nad `httpd_t`, číst by mohl
 `httpd_sys_content_t` a zapisovat do `httpd_sys_content_rw_t`, avšak nedostal by se k `mysqld_data_t` (i kdyby byl root).
 
+Více o nastavení [webserveru](http://www.serverlab.ca/tutorials/linux/web-servers-linux/configuring-selinux-policies-for-apache-web-servers/).
+
 ### Přiklad 3
 
 
@@ -74,6 +76,9 @@ drwxr-xr-x. root root system_u:object_r:httpd_sys_content_t:s0 html
 
 Hlavním nástrojem je `chcon` (change context), popřípadě `restorecon`.
 
+```
+chcon -R --type=httpd_sys_content_rw_t log/ temp/ www/webtemp/
+```
 
 ```
 chcon --reference /var/www/html/ /var/www/html/myNewProject

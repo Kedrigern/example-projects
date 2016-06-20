@@ -1,8 +1,8 @@
-# Terminal
+# PostgreSQL
 
 ## Instalace
 
-Samotná instalace:
+Samotná instalace Fedora 23:
 ```
 sudo dnf install postgresql-server postgresql-contrib
 sudo systemctl enable postgresql
@@ -16,16 +16,36 @@ su root
 su - postgres
 ```
 
+Konfigy:
+```
+/var/lib/pgsql/data/postgresql.conf	# obecný konfig
+/var/lib/pgsql/data/pg_hba.conf 	# nastavení přístupů
+```
 
+### Autentifikace
 
-## commands
+- trust: kdokoliv z daného os
+- password: nehashované heslo (ošetřuje se pomocí SSL)
+- md5: hashované heslo
+- GSSAPI: SSO, kerberos
+- SSPI: SSO windows,
+- ident: ident server, dobrý pro TCP/IP
+- peer: pouze loakální
+- ldap
+- radius
+- certificate
+- pam
+
+## Terminal
+
+### commands
 `Copy (Select * From <table>) To '/tmp/<name>.csv' With CSV;`
 
-## pgsql
+### pgsql
 
 `psql -U <username> -h <hostname> -d <dbname>` nás připojí k serveru, můžeme zde normálmě zadávat SQL příkazy. Vypneme ho příkazem `\q`.
 
-## pg_dump
+### pg_dump
 
 
 `pg_dump -U <username> -h <hostname> <dbname>` dumpne DB na stdout. Užitečné parametry:
@@ -48,13 +68,13 @@ su - postgres
 
 `-O` přeskočí vlastnictví
 
-## pg_restore
+### pg_restore
 
 `pg_dump -U <username> -h <hostname> -d <dbname> <filename>` obnoví soubor filename, který jsme předtím získali skrze `pg_dump`.
 
 `--help` nápověda
 
-## .pgpass
+### .pgpass
 
 Je soubor s přístupovými údaji. Musí mít správná oprávnění (přístup jen vlastník) a má následující formát:
 
@@ -65,7 +85,7 @@ hostname:port:database:username:password
 lze v něm psát komentáře skrze `#`.
 
 
-## Příklad zálohy
+### Příklad zálohy
 
 ```bash
 pg_dump -h <host> -U <user> -s <dbname> > schema.sql # zaloha schematu db
@@ -75,7 +95,7 @@ pg_dump -h <host> -U <user> --data-only <dbname> > data.sql # zaloha dat z db
 jelikož si spojení uložíme do .pgpass, tak nemusíme ani zadávat heslo.
 
 
-# Práva
+## Práva
 Postgres velmi využivá uživatleských práv a rolí.
 
 
@@ -87,7 +107,7 @@ Postgres velmi využivá uživatleských práv a rolí.
 
 `DROP ROLE <name>;`
 
-# Datové typy
+## Datové typy
 
 * [Souhrn](http://www.postgresql.org/docs/9.2/static/datatype.html)
 
@@ -101,15 +121,15 @@ Zajimavé je, že Postgres umí pole, geometrii, síťové adresy, xml, json, ..
 
 `uuid` dle [RFC 4122](http://www.ietf.org/rfc/rfc4122.txt), čili sequence of lower-case hexadecimal digits, for a total of 32 digits representing the 128 bits
 
-## Důležité definice
+### Důležité definice
 
 ```sql
 CREATE TYPE mood AS ENUM ('sad', 'ok', 'happy');
 ```
 
-# Postrgres v Nette
+## Postrgres v Nette
 
-## bootstrap.php
+### bootstrap.php
 
 ```php
 // DIBI
@@ -118,7 +138,7 @@ $configurator->onCompile[] = function($configurator, \Nette\Config\Compiler $com
 };
 ```
 
-## dibi.neon
+dibi.neon:
 
 ```
 dibi:
@@ -129,13 +149,13 @@ dibi:
     database: 
     lazy: true
 ```
-## config.neon
+config.neon:
 
 ```
 	includes:
 		- dibi.neon
 ```
-## composer.json
+composer.json:
 
 ```json
  "require": {
@@ -147,16 +167,16 @@ dibi:
 
 Nezapomenout nahradit: `Nette\Database\Connection` na `DibiConnection`.
 
-# Grafičtí správci
+## Grafičtí správci
 
-## tora
+### tora
 `sudo apt-get instal tora libqt4-sql-psql`
 
-# Integrované funkce
+## Integrované funkce
 
 Lze použít spoustu jazyků, já zvolil Python. 
 
-## Inicializace
+### Inicializace
 
 U DB je třeba nejdříve jazyk načíst:
 
@@ -180,9 +200,9 @@ CREATE LANGUAGE plpython3u
 
 Odteď máme jazyk inicializovaný.
 
-## Práce s funkcemi
+### Práce s funkcemi
 
-### Seznam všech uložených funkcí:
+#### Seznam všech uložených funkcí:
 
 ```sql
 SELECT  proname
@@ -192,7 +212,7 @@ ON      pronamespace = n.oid
 WHERE   nspname = 'public'
 ```
 
-### Nová funkce
+#### Nová funkce
 
 ```sql
 CREATE OR REPLACE FUNCTION pymax (a integer, b integer)
@@ -211,8 +231,8 @@ Pro editaci a testování doporučuji PGadmin, který umí funkce docela dobře 
 
 * [prezentace k tématu](http://www.postgresqlconference.org/sites/default/files/PLPython.pdf)
 
-## Fulltext search via Tsearch
-### Instalace 
+### Fulltext search via Tsearch
+####  Instalace 
 ```bash
 cd /usr/share/postgresql/9.2/tsearch_data/ # path for v9.2 in Ubuntu 12.10
 wget -qO- http://www.pgsql.cz/data/czech.tar.gz | tar xz
@@ -228,7 +248,7 @@ ALTER TEXT SEARCH CONFIGURATION cs
    ALTER MAPPING FOR word, asciiword WITH cspell, simple;
 ```
 
-### Tvorba indexu
+#### Tvorba indexu
 Index nad sloupcem připravíme:
 
 ```sql
@@ -246,7 +266,7 @@ CREATE INDEX <tabulka>_<sloupec>_ftx ON <tabulka>
 Abychom sloupcům zachovali význam (nadpis důležitější než popis), tak jim můžeme nastavit váhu:
 
 
-### Hledání
+#### Hledání
 
 Použití pro hledání:
 ```sql
@@ -259,14 +279,14 @@ Hledání je case insensitive. Používají se logické operátory `&` (and), `|
 
 Popřípadě se občas hodí nahradit `cs` za `simple`, pokud nechceme lexikální vyhodnocování (to je občas poněkud neočekávané).
 
-### Odkazy
+#### Odkazy
 * Souhrn fulltextových technologii a provonání rychlosti:
 [full-text-search-in-postgresql](http://www.slideshare.net/billkarwin/full-text-search-in-postgresql)
 * [Dokumentace Tsearch](http://www.postgresql.org/docs/9.0/interactive/textsearch-controls.html)
 * [Triggers for Automatic Updates](http://www.postgresql.org/docs/8.3/static/textsearch-features.html#TEXTSEARCH-UPDATE-TRIGGERS) (kompletní ukázka)
 
 
-# Odkazy
+## Odkazy
 
 * [Fedora doc](https://fedoraproject.org/wiki/PostgreSQL)
 * [Po instalaci](http://stackoverflow.com/questions/1471571/how-to-configure-postgresql-for-the-first-time)
