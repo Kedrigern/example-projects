@@ -5,12 +5,14 @@ In this epubs are inline styles.
 This script removes this inline styles.
 """
 
-__version__ = "v0.1.0"
+__version__ = "v0.1.1"
 __author__ = "Ondřej Profant"
 
+import os
 import re
 import zipfile
 import argparse
+import tkinter as tk
 from tkinter import filedialog, messagebox
 
 def copyNameWith(name):
@@ -62,7 +64,11 @@ def main():
 	args = parser.parse_args()
 
 	if args.subparser_name == 'gui':
-		infile = filedialog.askopenfilename(filetypes=[('Epub', "*.epub")])
+		root = tk.Tk()
+		root.withdraw()
+		infile = filedialog.askopenfilename(
+				filetypes=[('Epub', "*.epub")],
+				initialdir=os.path.expanduser('~') )
 	else:
 		infile = args.infile
 
