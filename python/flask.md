@@ -1,6 +1,66 @@
 
 # Flask
 
+## Quickstart
+
+Naklonujeme si a spustíme velmi pěkný aplikační skeleton:
+
+```
+git clone https://github.com/realpython/flask-skeleton.git
+cd flask-skeleton
+pip install -r requirements.txt
+chmod +x manage.py
+./manage.py test
+./manage.py create_db
+./manage.py runserver
+```
+Ten má strukturu:
+
+```
+├── LICENSE
+├── manage.py
+├── project
+│   ├── client
+│   │   ├── static
+│   │   │   ├── main.css
+│   │   │   └── main.js
+│   │   └── templates
+│   │       ├── _base.html
+│   │       ├── errors
+│   │       │   ├── 401.html
+│   │       │   ├── 403.html
+│   │       │   ├── 404.html
+│   │       │   └── 500.html
+│   │       ├── footer.html
+│   │       ├── header.html
+│   │       ├── main
+│   │       │   ├── about.html
+│   │       │   └── home.html
+│   │       └── user
+│   │           ├── login.html
+│   │           ├── members.html
+│   │           └── register.html
+│   ├── __init__.py
+│   ├── server
+│   │   ├── config.py
+│   │   ├── dev.sqlite
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   └── user
+│   │       ├── forms.py
+│   │       ├── __init__.py
+│   │       └── views.py
+│   └── tests
+│       ├── base.py
+│       ├── helpers.py
+│       ├── __init__.py
+│       ├── test__config.py
+│       ├── test_main.py
+│       └── test_user.py
+├── README.md
+└── requirements.txt
+```
+
 ## Jinja
 
 LOOP - rekurze
@@ -15,8 +75,13 @@ LOOP - rekurze
 
 ## Libtree
 
-Obecná práce nad stromy za využití PostgreSQL
+Obecná práce nad stromy za využití PostgreSQL. [libtree][] 
 
 ## Odkazy
 
-ZODB.org
+- app [skeleton][]
+
+
+[libtree]: https://github.com/conceptsandtraining/libtree
+[skeleton]: https://github.com/realpython/flask-skeleton
+[zodb]: ZODB.org
