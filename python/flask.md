@@ -8,11 +8,10 @@ Naklonujeme si a spustíme velmi pěkný aplikační skeleton:
 ```
 git clone https://github.com/realpython/flask-skeleton.git
 cd flask-skeleton
-pip install -r requirements.txt
-chmod +x manage.py
-./manage.py test
-./manage.py create_db
-./manage.py runserver
+pip3 install -r requirements.txt
+python3 test
+python3 create_db
+python3 runserver
 ```
 Ten má strukturu:
 
