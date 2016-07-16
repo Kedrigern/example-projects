@@ -3,6 +3,9 @@
 Fix epubs generate by Google docs.
 In this epubs are inline styles.
 This script removes this inline styles.
+
+requirements.txt: 
+- EbookLib
 """
 
 __version__ = "v0.2.0"
