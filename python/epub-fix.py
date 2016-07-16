@@ -4,11 +4,11 @@ Fix epubs generate by Google docs.
 In this epubs are inline styles.
 This script removes this inline styles.
 
-requirements.txt: 
+requirements.txt:
 - EbookLib
 """
 
-__version__ = "v0.2.0"
+__version__ = "v0.2.1"
 __author__ = "Ondřej Profant"
 
 import os
@@ -78,6 +78,9 @@ def main() -> None:
 		infile = filedialog.askopenfilename(
 				filetypes=[('Epub', "*.epub")],
 				initialdir=os.path.expanduser('~') )
+		if not infile:
+			messagebox.showerror('Chyba', 'Nevybrali jste žádný soubor.')
+			sys.exit('File not chosen')
 	else:
 		infile = args.infile
 
