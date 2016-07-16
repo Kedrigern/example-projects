@@ -5,53 +5,57 @@ In this epubs are inline styles.
 This script removes this inline styles.
 """
 
-__version__ = "v0.1.1"
+__version__ = "v0.2.0"
 __author__ = "Ondřej Profant"
 
 import os
 import re
-import zipfile
+import sys
 import argparse
+import ebooklib
+from typing import List
+from ebooklib import epub
 import tkinter as tk
 from tkinter import filedialog, messagebox
 
-def copyNameWith(name):
+def copyNameWith(name: str) -> str:
 	return re.sub(r'([\w-]*).epub', r'\1-clean.epub', name)
 
-def preview(zf):
-	""" Preview of epub printed into terminal """
-	texts = [f for f in zf.namelist() if f.startswith('OEBPS/Text/') and f.endswith('.xhtml')]
-	styles = [f for f in zf.namelist() if f.startswith('OEBPS/Styles/') and f.endswith('.css')]
-	print('Texts files in epub:', texts)
-	print('Styles files in epub:', styles)
-	with zf.open(texts[0], 'r') as fo:
-		chars = 5000
-		print('First %d chars:' % chars, fo.read(chars).decode('UTF-8'))
+def load_epub(filename: str) -> ebooklib.epub.EpubBook:
+	try:
+		return epub.read_epub(filename)
+	except(FileNotFoundError):
+		sys.exit('File not found: ' + filename)
+	except(IsADirectoryError):
+		sys.exit('File is directory:: ' + filename)
+	except(ebooklib.epub.EpubException):
+		sys.exit('File is not valid epub: ' + filename)
 
-def copyZipExcept(zin, zout, exceptList):
-	""" Copy zipfile into another zipfile """
-	zout.comment = zin.comment # preserve the comment
-	for item in zin.infolist():
-		if not item.filename in exceptList:
-			zout.writestr(item, zin.read(item.filename))
+def get_content_file(ebook: ebooklib.epub.EpubBook) -> List[ebooklib.epub.EpubHtml]:
+	return [f for f in ebook.items if isinstance(f, ebooklib.epub.EpubHtml)]
 
-def fix(zin, newname):
-	""" Substitute inline style """
+def preview(filename: str, chars = 1500) -> None:
+	ebook = load_epub(filename)
+	texts = get_content_file(ebook)
+	for t in texts:
+		print(':: TITLE :: %s, %s ; first %d chars:' % (t.id, t.title, chars))
+		print(t.content[:chars].decode('UTF-8'))
+
+def fix(filename: str, newname: str) -> None:
 	remove1 = r'( class="[a-zA-Z0-9 ]*"| style="[a-zA-Z0-9:; -]*")'
 	remove2 = r'(<span>|</span>)'
-	texts = [f for f in zin.namelist() if f.startswith('OEBPS/Text/') and f.endswith('.xhtml')]
-	# copy archive without text files
-	with zipfile.ZipFile(newname, 'w') as zout:
-		copyZipExcept(zin, zout, texts)
-		# modify text files
-		for f in texts:
-			with zin.open(f, 'r') as fo:
-				t1 = fo.read().decode('UTF-8')
-				t2 = re.sub(remove1, r'', t1)
-				t3 = re.sub(remove2, r'', t2)
-				zout.writestr(f, t3)
+	remove3 = r'<style>[a-zA-Z0-9:; -]*</style>'
+	ebook = load_epub(filename)
+	texts = get_content_file(ebook)
+	for i, t in enumerate(texts):
+		t1 = re.sub(remove1, r'', t.content.decode('UTF-8'))
+		t2 = re.sub(remove2, r'', t1)
+		t3 = re.sub(remove3, r'', t2)
+		# TODO: for some reason without " " there is no content
+		texts[i].set_content(" " + t3)
+	epub.write_epub(newname, ebook)
 
-def main():
+def main() -> None:
 	parser = argparse.ArgumentParser(description=__doc__, epilog='Author: ' + __author__ + ', version: ' + __version__)
 	sub = parser.add_subparsers(dest='subparser_name')
 	parser_g = sub.add_parser('gui', help='Run with simple GUI.')
@@ -63,7 +67,9 @@ def main():
 	parser_f.add_argument('infile', help='Input file (epub with inline styles)')
 	args = parser.parse_args()
 
-	if args.subparser_name == 'gui':
+	if args.subparser_name == None:
+		parser.print_help()
+	elif args.subparser_name == 'gui':
 		root = tk.Tk()
 		root.withdraw()
 		infile = filedialog.askopenfilename(
@@ -72,19 +78,12 @@ def main():
 	else:
 		infile = args.infile
 
-	if not zipfile.is_zipfile(infile):
-		print('Error: %s is not a zip / epub')
-		if args.subparser_name == 'gui':
-			messagebox.showwarning('Chyba', 'Soubor nemá správný formát: %s ' % infile)
-		return
-
-	with zipfile.ZipFile(infile) as zin:
-		if args.subparser_name == 'view':
-			preview(zin)
-		elif args.subparser_name in ['fix', 'gui']:
-			if not args.out:
-				outfile = copyNameWith(infile)
-			fix(zin, outfile)
+	if args.subparser_name == 'view':
+			preview(infile)
+	elif args.subparser_name in ['fix', 'gui']:
+		if not args.out:
+			outfile = copyNameWith(infile)
+		fix(infile, outfile)
 
 if __name__ == '__main__':
 	main()
