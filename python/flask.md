@@ -5,13 +5,13 @@
 
 Naklonujeme si a spustíme velmi pěkný aplikační skeleton:
 
-```
+```bash
 git clone https://github.com/realpython/flask-skeleton.git
 cd flask-skeleton
 pip3 install -r requirements.txt
-python3 test
-python3 create_db
-python3 runserver
+python3 manage.py test
+python3 manage.py create_db
+python3 manage.py runserver
 ```
 Ten má strukturu:
 

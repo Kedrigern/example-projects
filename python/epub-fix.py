@@ -8,7 +8,7 @@ requirements.txt:
 - EbookLib
 """
 
-__version__ = "v0.2.1"
+__version__ = "v0.2.2"
 __author__ = "Ondřej Profant"
 
 import os
@@ -90,6 +90,8 @@ def main() -> None:
 		if not args.out:
 			outfile = copyNameWith(infile)
 		fix(infile, outfile)
+		if args.subparser_name == 'gui':
+			messagebox.showinfo('Podařilo se', 'Podařilo se. Soubor:\n%s byl úspěšně opraven jako soubor: \n%s' % (infile, outfile))
 
 if __name__ == '__main__':
 	main()
