@@ -186,6 +186,17 @@ Ukázka
  5. Spojíme větve `git merge dev`, pokud jsme v master neprovedli změny, tak vše proběhne ok.
 
 
+Submoduly
+=========
+
+```
+git submodule add <git_repo_url> <path/in/repo>
+```
+
+Git repo url může být url či lokální cesta.
+
+Path in repo je vlastně cesta a jméno jak bude submodule zobrazen.
+
 Github
 ======
 
