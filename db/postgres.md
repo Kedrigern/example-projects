@@ -291,3 +291,4 @@ Popřípadě se občas hodí nahradit `cs` za `simple`, pokud nechceme lexikáln
 * [Fedora doc](https://fedoraproject.org/wiki/PostgreSQL)
 * [Po instalaci](http://stackoverflow.com/questions/1471571/how-to-configure-postgresql-for-the-first-time)
 * [Článek z roku 2003](http://www.abclinuxu.cz/clanky/navody/prakticky-navod-k-pgsql)
+* [Správa uživatelů](http://www.davidpashley.com/articles/postgresql-user-administration/)

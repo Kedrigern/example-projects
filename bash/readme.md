@@ -306,3 +306,12 @@ cat file | echo -n `sed 's/^$/STARTPARA/'`|sed 's/STARTPARA/\n/g'
 4. Vypiště obsah složky
 5. Vypište soubory končící příponou `.md`
 6. Vypiště soubory začínajcí číslicí `1`
+
+
+# Další zdroje
+
+- [writing-robust-shell-scripts][]
+- [bash-promts][]
+
+[writing-robust-shell-scripts]: http://www.davidpashley.com/articles/writing-robust-shell-scripts/
+[bash-promts]: http://www.davidpashley.com/articles/bash-prompts/
