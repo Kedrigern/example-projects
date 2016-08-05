@@ -29,21 +29,49 @@ Matoucí je, že objekty mohou být více jak jednou třídou. Třídy:
 | LDAP    | Lightweight directory protocol | | |
 | LDIF    | LDAP Data interchange files | | |
 
-Démon se jmenuje `slapd`
+## Fedora 24
+
+### Install
+
+```bash
+dnf -y install openldap-servers openldap-clients
+cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
+chown ldap. /var/lib/ldap/DB_CONFIG
+systemctl start slapd
+systemctl enable slapd 
+```
+
+### Configure
+
+```bash
+# generate encrypted password
+slappasswd 
+
 
 ```
-            DC = CZ
-               |
-            DC = Pirati
-           /           \
-          /             \
-         /               \
-OU = Users          OU = Systems
-|-CN=John Doe      /      |    \     
-|-...       CN=Redmine CN=Forum CN=Wiki
+
+### Grafická správa
+
+Luma
+
+## Schéma
+
+```
+                       DC = CZ
+                          |
+                      DC = Pirati
+	__________________|_______________________	
+       /                  |                       \
+OU = Users          OU = Systems             OU = organization
+|-CN=John Doe      /      |    \                      |      
+|-...       CN=Redmine CN=Forum CN=Wiki            OU = CF  
+                                     _________________|______________
+                                    /             |           |      \
+                                OU=Praha   OU=Jihomoravsky  OU=Zlin   ...
 ```
 
 [ldap-basics]: http://www.davidpashley.com/articles/ldap-basics/
 [ldap-a-gentle-introduction]: https://hynek.me/articles/ldap-a-gentle-introduction/
 [what-are-cn-ou-dc-in-an-ldap-search]: http://stackoverflow.com/questions/18756688/what-are-cn-ou-dc-in-an-ldap-search
 [ldap]: http://www.zytrax.com/books/ldap/ch2/
+[fedora23]: https://www.server-world.info/en/note?os=Fedora_23&p=openldap
