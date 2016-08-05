@@ -44,15 +44,14 @@ systemctl enable slapd
 ### Configure
 
 ```bash
-# generate encrypted password
-slappasswd 
-
-
+# generate encrypted password into cli
+slappasswd
 ```
 
 ### Grafická správa
 
-Luma
+- [Luma][http://luma.sourceforge.net] LDAP browser napsaný v Pythonu (PyQt).
+- [Apache directory studio][] robustní řešení postavené nad Eclipse
 
 ## Schéma
 
@@ -60,7 +59,7 @@ Luma
                        DC = CZ
                           |
                       DC = Pirati
-	__________________|_______________________	
+       	__________________|_______________________	
        /                  |                       \
 OU = Users          OU = Systems             OU = organization
 |-CN=John Doe      /      |    \                      |      
@@ -75,3 +74,5 @@ OU = Users          OU = Systems             OU = organization
 [what-are-cn-ou-dc-in-an-ldap-search]: http://stackoverflow.com/questions/18756688/what-are-cn-ou-dc-in-an-ldap-search
 [ldap]: http://www.zytrax.com/books/ldap/ch2/
 [fedora23]: https://www.server-world.info/en/note?os=Fedora_23&p=openldap
+[Luma]: http://luma.sourceforge.net
+[Apache directory studio]: http://directory.apache.org/studio/
