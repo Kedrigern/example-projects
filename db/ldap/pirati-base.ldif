@@ -1,0 +1,47 @@
+## DEFINE DIT ROOT/BASE/SUFFIX ####
+## uses RFC 2377 format
+## replace idevelopment and info as necessary below
+## or for experimentation, leave as is
+
+## dcObject is an AUXILIARY objectclass and MUST
+## have a STRUCTURAL objectclass (organization in this case)
+
+dn: dc=pirati,dc=cz
+dc: pirati
+o: pirati.cz LDAP Server
+description: Root entry for Pirati.cz.
+ Pirati.cz is czech political party.
+objectClass: top
+objectclass: dcObject
+objectclass: organization
+
+## FIRST Level hierarchy - People
+
+dn: ou=People,dc=pirati,dc=cz
+ou: People
+description: All people in pirati.cz
+objectClass: top
+objectClass: organizationalUnit
+
+## FIRST Level hierarchy - Group
+
+dn: ou=Group,dc=pirati,dc=cz
+ou: Group
+description: All groups in pirati.cz
+objectClass: top
+objectClass: organizationalUnit
+
+## FIRST Level hierarchy - Hosts
+
+dn: ou=Hosts,dc=pirati,dc=cz
+ou: Hosts
+description: All hosts in pirati.cz
+objectClass: top
+objectClass: organizationalUnit
+
+## FIRST Level hierarchy - Manager
+
+dn: cn=Manager,dc=pirati,dc=cz
+cn: Manager
+description: Rootdn
+objectclass: organizationalRole

@@ -43,6 +43,15 @@ systemctl enable slapd
 
 ### Configure
 
+| Cesta                          | Význam                                            |
+|--------------------------------|---------------------------------------------------|
+| `/etc/openldap/`               | adresář s konfigurací                             |
+| `/etc/openldap/ldap.conf`      | konfigurace v rámci systému, např. default search | 
+| `/etc/openldap/schema/`        | adresář se základními objekty                     |
+| `/var/lib/ldap/*`              | data                                              |
+| `/usr/share/openldap-servers/` | example configy                                   |
+
+
 ```bash
 # generate encrypted password into cli
 slappasswd
@@ -50,7 +59,7 @@ slappasswd
 
 ### Grafická správa
 
-- [Luma][http://luma.sourceforge.net] LDAP browser napsaný v Pythonu (PyQt).
+- [Luma][] LDAP browser napsaný v Pythonu (PyQt).
 - [Apache directory studio][] robustní řešení postavené nad Eclipse
 
 ## Schéma
