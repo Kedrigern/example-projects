@@ -279,6 +279,8 @@ EOF
 Tipy
 ----
 
+### Odstanění zalomení
+
 Máme soubor:
 
 ```
@@ -295,8 +297,13 @@ A v rámci odstavce jsou zalomení.
 Občas se hodí daná zalomení odstranit:
 
 ```
-cat file | echo -n `sed 's/^$/STARTPARA/'`|sed 's/STARTPARA/\n/g'
+cat file | echo -n `sed 's/^$/STARTPARA/'` | sed 's/STARTPARA/\n/g'
 ```
+
+### Rozdělení skriptu do více souborů
+
+`base.sh` ukazuje jak můžeme načíst část skriptu (např. proměnné, funkce) z jiného skriptu. Což velmi pomůže čistotě kódu a např. i testování.
+
 
 ### Úkoly k procvičení
 
