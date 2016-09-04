@@ -1,12 +1,12 @@
 
 # Tetra
 
-1. Nainstalujeme závislosti:
+Tetra je radiová síť. Mimojiné využíváná HMP pro potřeby MP, DPP...
 
+1. Nainstalujeme závislosti:
 	- `sudo dnf install libosmocore gnuradio gr-osmosdr python3 python2`
 
 2. Nainstalujeme [tetra-listener][]:
-
 	- `git clone https://github.com/itds-consulting/tetra-listener.git`
 	- `cd tetra-listener`
 	- `git submodule init`
@@ -14,7 +14,6 @@
 	- `./build.sh`
 
 3. Nainstalujeme [tetra-multiframe-sds][]:
-
 	- `git clone https://github.com/itds-consulting/tetra-multiframe-sds.git`
 	- `cd tetra-multiframe-sds`
 	- `cp tetra-listener.patch ../tetra-listener/`
@@ -25,13 +24,11 @@
 	- `./build.sh`
 
 4. Konfigurace
-	
 	- `cd tetra-listener/radio-tetra`
 	- `cp config.sh config.sh.bak`
 	- zeditujeme `config.sh`
 
 5. Provoz v terminálech spustíme:
-	
 	- `tshark -i lo`
 	- `tetra-listener/radio-tetra/tetra.sh`
 	- `tetra-multiframe-sds/sds-parser.py -p /tmp/fifos`
@@ -39,7 +36,7 @@
 
 6. Data jsou ukládána:
 	- `~/tetra-rec` (formát ogg)
-	- `tetra-multiframe-sds/sds.db`, čili s tím můžeme pracovat: `sqlite3 sds.db 'select * from sds'`
+	- `tetra-multiframe-sds/sds.db`, čili s tím můžeme pracovat v [sqlite][../db/sqlite.md]: `sqlite3 sds.db 'select * from sds'`
 
 
 [tetra-listener]: https://github.com/itds-consulting/tetra-listener
