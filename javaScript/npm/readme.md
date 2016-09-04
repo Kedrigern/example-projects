@@ -35,3 +35,8 @@ Využívá noje.js streams a díky tomu nevytváří lokální soubory.
 ```
 npm install gulp -g
 ```
+
+[gulp quickstart][]
+
+[gulp quickstart]: https://markgoodyear.com/2014/01/getting-started-with-gulp/
+
