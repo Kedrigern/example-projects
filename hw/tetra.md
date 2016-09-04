@@ -26,7 +26,11 @@ Tetra je radiová síť. Mimojiné využíváná HMP pro potřeby MP, DPP...
 4. Konfigurace
 	- `cd tetra-listener/radio-tetra`
 	- `cp config.sh config.sh.bak`
-	- zeditujeme `config.sh`
+	- zeditujeme `config.sh`:
+		- `STREAMS` počet streamů, doporučuji 25-30
+		- TUNE_FREQ=424400e3
+		- TUNE_PPM=36
+	- občas je třeba změnit `tetra-multiframe-sds/config.py`, kde jsou 2 verze tshark příkazu
 
 5. Provoz v terminálech spustíme:
 	- `tshark -i lo`
