@@ -25,9 +25,9 @@ Matoucí je, že objekty mohou být více jak jednou třídou. Třídy:
 | CN      | Common name        |                                             |  |
 | OID     | Object ID          | 1.3.6.1.4.1.1466.115.121.1.15{16}           | 16-character sized Unicode string |
 | UID     | Unique ID          | ISBN; ID; URI                               | jednoznačný identifikator |
-| DIT     | Directory Information tree | | |
-| LDAP    | Lightweight directory protocol | | |
-| LDIF    | LDAP Data interchange files | | |
+| DIT     | Directory Information tree |                                     | |
+| LDAP    | Lightweight directory protocol |                                 | LDAP |
+| LDIF    | LDAP Data interchange files | <filename>.ldif                    | Soubor s konfigurací pro LDAP |
 
 ## Fedora 24
 
@@ -41,16 +41,18 @@ systemctl start slapd
 systemctl enable slapd 
 ```
 
-### Configure
+### Configure F24
 
-| Cesta                          | Význam                                            |
-|--------------------------------|---------------------------------------------------|
-| `/etc/openldap/`               | adresář s konfigurací                             |
-| `/etc/openldap/ldap.conf`      | konfigurace v rámci systému, např. default search | 
-| `/etc/openldap/schema/`        | adresář se základními objekty                     |
-| `/var/lib/ldap/*`              | data                                              |
-| `/usr/share/openldap-servers/` | example configy                                   |
-
+| Cesta                              | Význam                                            |
+|------------------------------------|---------------------------------------------------|
+| `/etc/openldap/`                   | adresář s konfigurací                             |
+| `/etc/openldap/ldap.conf`          | konfigurace v rámci systému, např. default search | 
+| `/etc/openldap/slapd.ldif`         | hlavní LDIF soubor importuje `schema/core.ldif`   | 
+| `/etc/openldap/schema/`            | adresář se základními objekty                     |
+| `/etc/openldap/schema/core.ldif`   |                  |
+| `/var/lib/ldap/*`                  | data                                              |
+| `/usr/share/openldap-servers/`     | example configy                                   |
+| `/usr/share/doc/openldap-servers/guide.html` | velmi podrobný návod                |
 
 ```bash
 # generate encrypted password into cli
@@ -82,6 +84,6 @@ OU = Users          OU = Systems             OU = organization
 [ldap-a-gentle-introduction]: https://hynek.me/articles/ldap-a-gentle-introduction/
 [what-are-cn-ou-dc-in-an-ldap-search]: http://stackoverflow.com/questions/18756688/what-are-cn-ou-dc-in-an-ldap-search
 [ldap]: http://www.zytrax.com/books/ldap/ch2/
-[fedora23]: https://www.server-world.info/en/note?os=Fedora_23&p=openldap
+[fedora24]: https://www.server-world.info/en/note?os=Fedora_24&p=openldap
 [Luma]: http://luma.sourceforge.net
 [Apache directory studio]: http://directory.apache.org/studio/

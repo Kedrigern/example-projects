@@ -1,0 +1,22 @@
+# replace to your own domain name for "dc=***,dc=***" section
+dn: d=cz,dc=pirati
+objectClass: top
+objectClass: dcObject
+objectclass: organization
+o: Server World
+dc: Srv
+
+dn: cn=Manager,dc=pirati,dc=cz
+objectClass: organizationalRole
+cn: Manager
+description: Directory Manager
+
+dn: ou=People,dc=pirati,dc=cz
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Group,dc=pirati,dc=cz
+objectClass: organizationalUnit
+ou: Group
+
+
