@@ -46,7 +46,10 @@ K jejímu poslechu potřebujeme RTL-SDR, tedy nějaký DVBT+FM usb dongle. Stoj�
 
 6. Data jsou ukládána:
 	- `~/tetra-rec` (formát ogg)
-	- `tetra-multiframe-sds/sds.db`, čili s tím můžeme pracovat v [sqlite][]: `sqlite3 sds.db 'select * from sds;`. Zajímavý je též sloupec `DS_T4_TRANSFER_USER_DATA_ASCII_INDEX `, který udává míru textu v SDS.
+	- `tetra-multiframe-sds/sds.db`
+		- schéma tabulky zobrazíme: `sqlite3 sds.db .schema`
+		- čili s tím můžeme pracovat v [sqlite][]: `sqlite3 sds.db 'select * from sds;`
+		- zajímavý je též sloupec `DS_T4_TRANSFER_USER_DATA_ASCII_INDEX `, který udává míru textu v SDS
 
 [sqlite]: ../db/sqlite.md
 [RTL2832U]: https://www.google.cz/search?q=Realtek+RTL2832U&ie=utf-8&oe=utf-8&gws_rd=cr&ei=t8jWV6ewOoKnad24uKAK#q=Realtek+RTL2832U&tbm=shop
