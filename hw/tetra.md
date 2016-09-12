@@ -5,7 +5,7 @@ Tetra je radiová síť. Mimojiné využíváná HMP pro potřeby MP, DPP...
 
 ## HW
 
-K jejímu poslechu potřebujeme RTL-SDR, tedy nějaký DVBT+FM usb dongle. Stojí 250-400 Kč. My samozřejmě nepotřebujeme dalkové ovládání.
+K jejímu poslechu potřebujeme RTL-SDR, tedy nějaký DVBT+FM usb dongle. Stojí 250-400 Kč. My samozřejmě nepotřebujeme dalkové ovládání. Já osobně používám Realtek [RTL2832U][].
 
 ## Návod
 
@@ -46,9 +46,10 @@ K jejímu poslechu potřebujeme RTL-SDR, tedy nějaký DVBT+FM usb dongle. Stoj�
 
 6. Data jsou ukládána:
 	- `~/tetra-rec` (formát ogg)
-	- `tetra-multiframe-sds/sds.db`, čili s tím můžeme pracovat v [sqlite][../db/sqlite.md]: `sqlite3 sds.db 'select * from sds'`
+	- `tetra-multiframe-sds/sds.db`, čili s tím můžeme pracovat v [sqlite][]: `sqlite3 sds.db 'select * from sds;`. Zajímavý je též sloupec `DS_T4_TRANSFER_USER_DATA_ASCII_INDEX `, který udává míru textu v SDS.
 
-
+[sqlite]: ../db/sqlite.md
+[RTL2832U]: https://www.google.cz/search?q=Realtek+RTL2832U&ie=utf-8&oe=utf-8&gws_rd=cr&ei=t8jWV6ewOoKnad24uKAK#q=Realtek+RTL2832U&tbm=shop
 [alza]: https://www.alza.cz/evolve-mars-d198735.htm?kampan=adpla_obecna_komponenty&gclid=Cj0KEQjwjK--BRCzv-Wyu4OTosEBEiQAgFp5OChOH8GS2KgZo-VjhYVAL5O4DaUlQVfk0yV1dRpIXhMaAhh98P8HAQ#fotovideo
 [czc]: https://www.czc.cz/evolveo-mars/84110/produkt?gclid=Cj0KEQjwjK--BRCzv-Wyu4OTosEBEiQAgFp5OCbP66Np11z6kO5Q1swGQNGLh2roJeC-kJok9vF_3vcaAh-08P8HAQ
 [product1]: http://www.ebay.com/itm/100KHz-1-7GHz-Full-band-UV-HF-RTL-SDR-USB-Tuner-Receiver-R820T-8232-Ham-Radio-/201258847047
