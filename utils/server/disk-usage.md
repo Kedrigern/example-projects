@@ -1,8 +1,8 @@
 # Diskový prostor
 
-	Disk usage / využití disku. Na desktopu řeší software `baobab`.
+Disk usage / využití disku. Na desktopu řeší software `baobab`.
 
-Odshora dolu:
+Odshora dolu (od overview po konkrétní adresář):
 
 ## OS
 
@@ -10,7 +10,7 @@ Odshora dolu:
 df -h
 ```
 
-|    |                |
+|    | argument       |
 |----|----------------|
 | -h | lidsky čitelné |
 | -l |  pouze lokální |
@@ -42,7 +42,7 @@ ls -hS
 
 Nezapomínat na alias `ll` (`ls -l`).
 
-|    |                         |
+|    | argument                |
 |----|-------------------------|
 | -l | vypiš tabulku s atributy (nejen prostý seznam jmen) |
 | -a | vše, včetně skrytých    |
