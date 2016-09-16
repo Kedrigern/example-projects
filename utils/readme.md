@@ -20,6 +20,7 @@ Pár poznámek k různým utilitkám.
 	* [Docker](server/docker.md)
 	* [Tomcat](server/tomcat.md)
 	* [midPoint](server/midpoint.md)
+	* [disk usage](server/disk-usage.md)
 * Core
 	* [lvm](lvm.md)
 	* [selinux](permissions/selinux.md)
