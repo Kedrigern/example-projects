@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-__version__ = "v2.0.0"
+__version__ = "v1.0.0"
 __author__ = "Ondřej Profant"
 __description__ = """
 Parse availability and count of visitors in aquapark Šutka: sutka.eu
@@ -8,12 +8,10 @@ Parse availability and count of visitors in aquapark Šutka: sutka.eu
 
 import re
 import string
-from bs4 import BeautifulSoup
+from lxml import html
 
 url = "http://www.sutka.eu"
-soup = BeautifulSoup(html)
-
-soup.find('div', {'id': 'header-info_availability'})
+tree = html.parse(url)
 
 div = tree.xpath("//div[@id='header-info_availability']")[0]
 availability_text = div.xpath("p[2]/text()")[0].strip('\n\t ')
