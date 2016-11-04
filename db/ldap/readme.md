@@ -3,7 +3,7 @@
 
 Jedná se sice o prastarý a nepřiliš přívětivý protokol, avšak nejvíce rozšířenou autentifikační vrstvu.
 
-LDAP je *lightweight protocol for accessing directory servers*. *Directory server* je *hierarchical object orientated database*. 
+LDAP je *lightweight protocol for accessing directory servers*. *Directory server* je *hierarchical object orientated database*.
 
 V praxi to znamená, že správce si určuje komplexní DB schéma víceméně pomocí **objektů**. Lightweight protože je jednoduší než X.500 protokol. Je optimalizovaný pro čtení (proto strom). Je case insensitive.
 
@@ -20,6 +20,7 @@ Matoucí je, že objekty mohou být více jak jednou třídou. Třídy:
 | Zkratka | Význam             | Příklad                                     | Vysvětlení                                               |
 |---------|--------------------|---------------------------------------------|----------------------------------------------------------|
 | DN      | Distinguished Name | DC=cz,DC=pirati,OU=people,cn=ondrej.profant | jednoznačné určení v rámci stormu (hiearchie)            |
+| RDN     | Relative Distinguished Name | rdn = cn = ondrej.profant          | relativn9 jednoznačné označení (např. mezi usery) |
 | DC      | Domain component   | google; com; cz; pirati                     | lze používat i geografické specifikace, ale DNS je lepší |
 | OU      | Organization unit  | people; groups                              |  |
 | CN      | Common name        |                                             |  |
@@ -28,6 +29,50 @@ Matoucí je, že objekty mohou být více jak jednou třídou. Třídy:
 | DIT     | Directory Information tree |                                     | |
 | LDAP    | Lightweight directory protocol |                                 | LDAP |
 | LDIF    | LDAP Data interchange files | <filename>.ldif                    | Soubor s konfigurací pro LDAP |
+
+### Grafická správa
+
+- [Luma][] LDAP browser napsaný v Pythonu (PyQt).
+- [Apache directory studio][] robustní řešení postavené nad Eclipse
+
+## Schéma
+
+Strom (není schéma):
+```
+                       DC = CZ
+                          |
+                      DC = Pirati
+       	__________________|__________________________________________
+       /                  |                       \                  \
+OU = users          OU = systems            OU = organization    cn = admin
+|-CN=John Doe      /      |    \                   |      
+|-...       CN=Redmine CN=Forum CN=Wiki         OU = CF  
+                                     ______________|_________________
+                                    /             |           |      \                                
+                                  OU=Praha   OU=Jihomoravsky  OU=Zlin   ...
+```
+
+Základní používaná schémata (předpřipravené množiny tříd):
+```
+include /etc/openldap/schema/core.schema
+include /etc/openldap/schema/cosine.schema
+include /etc/openldap/schema/inteorgperson.schema
+include /etc/openldap/schema/misc.schema
+include /etc/openldap/schema/nis.schema
+```
+
+
+## Docker      
+
+`osixia/openldap:1.1.6 `
+
+```
+sudo docker run --env LDAP_ORGANISATION="Piratska strana" --env LDAP_DOMAIN="pirati.cz" --env LDAP_ADMIN_PASSWORD="admin" --volume data:/var/lib/ldap:Z --volume config:/etc/ldap/slapd.d:Z -p 3890:389 osixia/openldap:1.1.6
+```
+
+```
+sudo docker exec ldap ldapsearch -x -h localhost -b dc=pirati,dc=cz -D "cn=admin,dc=pirati,dc=cz" -w <passwd>
+```
 
 ## Fedora 24
 
@@ -38,7 +83,7 @@ dnf -y install openldap-servers openldap-clients
 cp /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
 chown ldap. /var/lib/ldap/DB_CONFIG
 systemctl start slapd
-systemctl enable slapd 
+systemctl enable slapd
 ```
 
 ### Configure F24
@@ -46,8 +91,8 @@ systemctl enable slapd
 | Cesta                              | Význam                                            |
 |------------------------------------|---------------------------------------------------|
 | `/etc/openldap/`                   | adresář s konfigurací                             |
-| `/etc/openldap/ldap.conf`          | konfigurace v rámci systému, např. default search | 
-| `/etc/openldap/slapd.ldif`         | hlavní LDIF soubor importuje `schema/core.ldif`   | 
+| `/etc/openldap/ldap.conf`          | konfigurace v rámci systému, např. default search |
+| `/etc/openldap/slapd.ldif`         | hlavní LDIF soubor importuje `schema/core.ldif`   |
 | `/etc/openldap/schema/`            | adresář se základními objekty                     |
 | `/etc/openldap/schema/core.ldif`   |                  |
 | `/var/lib/ldap/*`                  | data                                              |
@@ -59,27 +104,6 @@ systemctl enable slapd
 slappasswd
 ```
 
-### Grafická správa
-
-- [Luma][] LDAP browser napsaný v Pythonu (PyQt).
-- [Apache directory studio][] robustní řešení postavené nad Eclipse
-
-## Schéma
-
-```
-                       DC = CZ
-                          |
-                      DC = Pirati
-       	__________________|_______________________	
-       /                  |                       \
-OU = Users          OU = Systems             OU = organization
-|-CN=John Doe      /      |    \                      |      
-|-...       CN=Redmine CN=Forum CN=Wiki            OU = CF  
-                                     _________________|______________
-                                    /             |           |      \
-                                OU=Praha   OU=Jihomoravsky  OU=Zlin   ...
-```
-
 [ldap-basics]: http://www.davidpashley.com/articles/ldap-basics/
 [ldap-a-gentle-introduction]: https://hynek.me/articles/ldap-a-gentle-introduction/
 [what-are-cn-ou-dc-in-an-ldap-search]: http://stackoverflow.com/questions/18756688/what-are-cn-ou-dc-in-an-ldap-search
@@ -87,3 +111,4 @@ OU = Users          OU = Systems             OU = organization
 [fedora24]: https://www.server-world.info/en/note?os=Fedora_24&p=openldap
 [Luma]: http://luma.sourceforge.net
 [Apache directory studio]: http://directory.apache.org/studio/
+[osixia]: https://hub.docker.com/r/osixia/openldap/
