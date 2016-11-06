@@ -1,28 +1,50 @@
+
 Docker
 ======
 
-Je systém pro izolaci aplikací pomocí lehkých vláken, cgroups etc. v Linuxu. Všichni používají kernel hosta, ale zbytek (plus zdroje - porty, file descriptory) je již izolován. To se velmi hodí pro různorodé webové aplikace, které potřebují různé verze Rails, Pythonů, DB, PHP etc. Výhodou je, že každý programátor si může integrovat na OS, které má rád a pak se udělá jednoduchý deployment. 
+Je jedním z nejrozšířenějších containerovacích systémů (popř. též os level virtualization). Využívá k tomu základní nástroje obsažené přímo v kernelu Linuxu (namespace, cgroups, ...). V praxi je důležité, že každý container využivá kernel hosta, popř. dokonce i základní knihovny.
 
-2 části:
+Kontejner si nese knihovny a samotnou aplikaci (vlastně se chová jako složitější binárka). Tím pádem nám odpadají různá dependecy hell. Např. kompilování nativ modulů v Pythonu a instalace věcí z pipu.
 
- * daemon: stará se o běh klientů
- * client
+Kontejnery mají vlastní síť a Docker nám dovoluje jí docela lehce ovládat. Dovolí nám snadno vystrčit porty na hosta (čili webová aplikace v kontejneru vám chodí na localhostu), dovolí nám umístit některé kontejnery do stejné sítě.
 
-Pozor na rozdíl mezi obraz (image) a container.
-Container je instancí obrazu.
+Pozor na rozdíl mezi obraz (image) a container. Container je instancí obrazu.
+Obdobný vztah jako soubor (binárka) vs proces.
+
+Docker image má vrstvy. Ty jsou read-only. Díky tomu stahuje vrsty právě jednou. Např. když stáhnete dva kontejnery založené na fedoře, tak základní kontejner Fedory (resp. i jeho vrstvy) se stáhne jen jednou.
+
+Běžící kontejner má volumes. To jsou speciální složky v questu u kterých se počítá, že se do nich zapisuje a že je budeme chtít mít persistentní.
+
+**Persistentní uložiště** (volume): namountované složky, které jsou persistentní mezi běhy. Mohou být:
+ * nepojmenované: vytvoří se složka ve `/var/lib/docker/volumes/`, ale bude pojmenavaná hashem
+ * pojmenovaný: vytvoří se pojmenovaná složka ve `/var/lib/docker/volumes/`
+ * mountovaný: využije se konkrétně zadaná složka v hostovi
+
 
 Ovládání
 --------
 
 Jedná se o běžného démona: `service docker start`
 
-Vyhledání obrazu: `docker search <string>`
 
-Stažení obrazu: `docker pull learn/tutorial`
-
-Nainstalované obrazy: `docker images`
-
-Běžící containery: `docker ps` s `-a` i vypnuté.
+| Cmd         | Parametry           | Popis                        |
+|-------------|---------------------|------------------------------|
+| **cp**      | container:path path | zkopíruje soubor z hosta     |
+| **images**  |                     | nainstalované obrazy         |
+| **inspect** | `<container_id>`    | podrobnosti o kontejneru     |
+| **logs**    |                     | std. výstup kontjneru        |
+| **ps**      | `-a` vypnuté, `-l`  | výpis běžících kontjnerů     |
+| **pull**    | `<image>:<version>` | stáhne obraz                 |
+| **rename**  | `<old> <new>`       | přejmenuje                   |
+| **restart** | `<container_id>`    | restaruje                    |
+| **rm**      | `<container_id>`    | smaže kontejner              |
+| **rmi**     | `<image_id>`        | smaže obraz                  |
+| **run**     | `<image_id>`        | zapne image, viz dále        |
+| **search**  | `<string>`          | vyhledává na `hub.docker.io` |
+| **start**   | `<container_id>`    | nastartuje kontejner         |
+| **stats**   |                     |                              |
+| **stop**    | `<container_id>`    | zastaví kontejner            |
+| **volume**  |                     | zobrazí volumes              |
 
 
 ### Run
@@ -44,29 +66,7 @@ Tím pádem na původním systému máme data a logy a v dockeru běží jen apl
 zatímco na produkci `always`.
 
 
-### Další příkazy
-
-`ps` procesy / seznam běžících container, má běžné přepínače jako `-l`, `-a` (i neběžící obrazy).
-
-`logs` stdout containeru
-
-`stop` zastaví container
-
-
-
 ### Tipy
-
-
-#### Zkopírování souborů
-
-Zkopírování souborů z containaru do hostu (např. získání konfiguráku):
-
-```
-{host} docker run -v /path/to/hostdir:/mnt --name my_container my_image
-{host} docker exec -it my_container bash
-{container} cp /mnt/sourcefile /path/to/destfile
-```
-
 
 #### Záloha DB
 
@@ -125,13 +125,12 @@ Instalace
 
 Verze z repozitářů:
 
-| Disribuce       | Verze |
-|-----------------|-------|
-| Fedora 22	  | 1.7.1 |
-| Fedora 21       | 1.4.0 |
-| Debian 8 Jessie | 1.3.2 |
-| CoreOS          | 1.6.2 |
-| Ubuntu 14.10 UU | 1.2.0 |
+| Disribuce       | Verze  |
+|-----------------|-------:|
+| Fedora 24       | 1.10.3 |
+| Debian 8 Jessie |  1.3.2 |
+| CoreOS          |  1.6.2 |
+| Ubuntu 14.10 UU |  1.2.0 |
 
 
 Příklady a tipy
