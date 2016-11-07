@@ -33,6 +33,7 @@ Jedná se o běžného démona: `service docker start`
 | **images**  |                     | nainstalované obrazy         |
 | **inspect** | `<container_id>`    | podrobnosti o kontejneru     |
 | **logs**    |                     | std. výstup kontjneru        |
+| **network** | create, rm, ls, ... | ovládá síťování              |
 | **ps**      | `-a` vypnuté, `-l`  | výpis běžících kontjnerů     |
 | **pull**    | `<image>:<version>` | stáhne obraz                 |
 | **rename**  | `<old> <new>`       | přejmenuje                   |
@@ -65,6 +66,29 @@ Tím pádem na původním systému máme data a logy a v dockeru běží jen apl
 `--restart [always|no|on-failure[:max-retries] ]` na testování se tedy hodi `no`,
 zatímco na produkci `always`.
 
+Jednoduchý příklad:
+
+```
+sudo docker run --rm -p 8181:80 nginx:stable-alpine
+```
+
+A následně v prohlížeči zadáme `localhost:8181`
+
+## Networking
+
+### Přímé linkování
+
+Kontejnery lze přímo linkovat. To už je silně nedoporučená metoda.
+
+### Net
+
+Lze vytvářet přímo sítě v kterých je několik docker kontejnerů:
+
+```
+docker network create my-net
+docker run --net my-net --net-alias mysql -e MYSQL_ROOT_PASSWORD=pw mariadb:10.1
+docker run --net my net --net-alias wp -p 8080:80 -e WORDPRESS_DB_PASSWORD=pw  wordpress:4.6
+```
 
 ### Tipy
 
