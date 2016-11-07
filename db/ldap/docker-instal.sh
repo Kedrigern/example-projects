@@ -23,3 +23,5 @@ echo "Run Redmine at port $rm_port"
 docker run -d --name redmine -p "${rm_port}:80" -v redmine-data:/home/redmine/data:Z --net docker-ldap --net-alias redmine \
  -e 'DB_TYPE=mysql' --env="DB_HOST=${ip}" -e 'DB_NAME=redmine' -e 'DB_USER=redmine' --env='DB_PASS=redmine' \
  sameersbn/redmine:3.3.0-4
+
+echo "Configure LDAP by http://www.redmine.org/projects/redmine/wiki/RedmineLDAP"
