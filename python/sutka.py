@@ -8,20 +8,23 @@ Parse availability and count of visitors in aquapark Šutka: sutka.eu
 
 import re
 import string
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 url = "http://www.sutka.eu"
-soup = BeautifulSoup(html)
+html = urlopen(url)
+soup = BeautifulSoup(html, "lxml")
 
-soup.find('div', {'id': 'header-info_availability'})
+div = soup.find('div', {'id': 'header-info_availability'})
 
-div = tree.xpath("//div[@id='header-info_availability']")[0]
-availability_text = div.xpath("p[2]/text()")[0].strip('\n\t ')
-apattern = '^\w*: (\d+(.\d+)*)%$'
-availability_raw = re.search(apattern, availability_text).groups()[0]
+visitors_text = div.find('p').text # e.g. Aktuální počet návštěvníků: 45 (Bazén), 0 (Aquapark)
+obsazenost_text = div.findAll('p')[1].text # Obsazenost: 11% 
 
-visitors_text = div.xpath("p[1]/text()")[0].strip('\n\t ')
-vpattern = '\w+ \w+ \w+: (\d+) \((\w+)\), (\d+) \((\w+)\)'
-visitors_arr = re.search(vpattern, visitors_text).groups()
+vpattern = r'\w+ \w+ \w+: (\d+) \((\w+)\), (\d+) \((\w+)\)'
+apattern = r'\w*: (\d+[.\d+]*)%'
 
-print(availability_raw, '%', visitors_arr[1], visitors_arr[0], ':', visitors_arr[3], ':', visitors_arr[2])
+(bazen, _, aquapark, _) = re.search(vpattern, visitors_text ).groups()
+procent = re.search(apattern, obsazenost_text ).groups()[0]
+
+print('Bazén: %s, Aquapark: %s, procent: %s%%' % (bazen, aquapark, procent))
+

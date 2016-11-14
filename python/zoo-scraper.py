@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3 
 # -*- coding: utf-8 -*-
 """
 Created on Sat Oct  1 10:41:57 2016
@@ -17,7 +17,7 @@ infile = "in.html"
 output = "zoo_funds.csv"
 
 html = urlopen(url)
-soup = BeautifulSoup(html)
+soup = BeautifulSoup(html, "lxml")
 tables = soup.find_all("table")
 
 with open(output, 'w', encoding='utf-8') as fd:
