@@ -145,7 +145,8 @@ U MySQL je třeba nahradit typ `serial` za `int` (autoincrement je doplněn auto
     <td><code>\COPY people FROM 'data.csv' WITH CSV HEADER;</code></td>
     <td><code>
     LOAD DATA INFILE "data.csv" INTO TABLE people IGNORE 1 LINES;</code></td>
-    <td><code>.import data.csv people</code></td>
+    <td><code>.separator ","
+    .import data.csv people</code></td>
   </tr>
   <tr>
     <td>export</td>
@@ -183,4 +184,5 @@ SELECT * FROM people WHERE born BETWEEN '1987-01-01' AND '1989-01-01';
 
 ```sql
 UPDATE people SET salary = 22900 WHERE id = 5;
+UPDATE people SET id = id + 100;
 ```
