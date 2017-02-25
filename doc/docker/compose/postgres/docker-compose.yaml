@@ -16,14 +16,12 @@ services:
                 environment:
                         POSTGRES_USER: keddie
                         POSTGRES_PASSWORD: keddie
-#        api:
-#                image: begriffs/postgrest:v0.3.2.0
-#                restart: always
-#                ports:
-#                        - "3000:3000"
-#                depends_on:
-#                        - db
-#                volumes:
-#                        - ./config.conf:/etc/postgrest.conf
-
-
+        api:
+                image: begriffs/postgrest:v0.3.2.0
+                restart: always
+                ports:
+                        - "3000:3000"
+                depends_on:
+                        - db
+                volumes:
+                        - ./config.conf:/etc/postgrest.conf
