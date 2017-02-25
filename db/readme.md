@@ -114,7 +114,7 @@ Budeme pracovat s ukázkovou tabulkou:
 
 ### Create DB and insert
 
-```
+```sql
 CREATE TABLE people (
  id serial primary key,
  name varchar(50),
@@ -142,34 +142,25 @@ U MySQL je třeba nahradit typ `serial` za `int` (autoincrement je doplněn auto
   </thead>
   <tr>
     <td>import</td>
-    <td>
-    ```
-    \COPY people FROM 'data.csv' WITH CSV HEADER;
-    ```
-    </td>
-    <td>
-    ```
-    LOAD DATA INFILE "data.csv" INTO TABLE people IGNORE 1 LINES;
-    ```
-    </td>
-    <td>
-    `.import data.csv people`
-    </td>
+    <td><code>\COPY people FROM 'data.csv' WITH CSV HEADER;</code></td>
+    <td><code>
+    LOAD DATA INFILE "data.csv" INTO TABLE people IGNORE 1 LINES;</code></td>
+    <td><code>.import data.csv people</code></td>
   </tr>
   <tr>
     <td>export</td>
-    <td>`\COPY people TO 'data2.csv' WITH CSV HEADER;`</td>
-    <td>`mysql -e 'select * from people' -B > data2.tsv`</td>
-    <td>`.mode csv
-    .output data2.csv`</td>
+    <td><code>\COPY people TO 'data2.csv' WITH CSV HEADER;</code></td>
+    <td><code>mysql -e 'select * from people' -B > data2.tsv</code></td>
+    <td><code>.mode csv
+    .output data2.csv</code></td>
   </tr>
   <tr>
     <td>note</td>
     <td>
-    `COPY` vs `\COPY`: Mají identickou syntax. Avšak `COPY` je interní, běží na DB stroji, zatímco `\COPY` běží pod userem s kterého jsme připojeni (který zadal `psql`).
+    <code>COPY</code> je interní, běží na DB stroji, zatímco <code>\COPY</code> běží pod userem s kterého jsme připojeni (který zadal <code>psql</code>).
     </td>
     <td>
-    U MySQL je třeba nastavit příslušná práva uživateli: `grant file on *.* to keddie identified by 'keddie';`
+    U MySQL je třeba nastavit příslušná práva uživateli: <code>grant file on *.* to keddie identified by 'keddie';</code>
     </td>
     <td/>
   </tr>
@@ -177,7 +168,7 @@ U MySQL je třeba nahradit typ `serial` za `int` (autoincrement je doplněn auto
 
 ### Select
 
-```
+```sql
 SELECT * FROM people ORDER BY salary DESC;
 
 SELECT * FROM people WHERE name LIKE 'Ala%';
@@ -190,6 +181,6 @@ SELECT * FROM people WHERE born BETWEEN '1987-01-01' AND '1989-01-01';
 
 ### Update
 
-```
+```sql
 UPDATE people SET salary = 22900 WHERE id = 5;
 ```
