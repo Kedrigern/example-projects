@@ -1,0 +1,15 @@
+# mysql -h localhost -P 3306 --protocol=tcp -p
+
+version: '2'
+
+services:
+        db:
+                image: mariadb:10.1
+                restart: always
+                ports:
+                        - "3306:3306"
+                environment:
+                        MYSQL_ROOT_PASSWORD: keddie
+                        MYSQL_USER: keddie
+                        MYSQL_PASSWORD: keddie
+                        MYSQL_DATABASE: keddie

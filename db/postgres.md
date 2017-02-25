@@ -38,8 +38,16 @@ Konfigy:
 
 ## Terminal
 
-### commands
-`Copy (Select * From <table>) To '/tmp/<name>.csv' With CSV;`
+### pqsl
+
+
+| PG         | Description       |
+|------------|-------------------|
+| \q  	     | quit              |
+| \l  	     | list of databases |
+| \dt        | list of tables    |
+| \c <dbname>| connect to dbname |
+| \h <cmd>   | help for comand   |
 
 ### pgsql
 
@@ -144,9 +152,9 @@ dibi.neon:
 dibi:
     driver: postgre
     host: localhost
-    username: 
-    password: 
-    database: 
+    username:
+    password:
+    database:
     lazy: true
 ```
 config.neon:
@@ -174,7 +182,7 @@ Nezapomenout nahradit: `Nette\Database\Connection` na `DibiConnection`.
 
 ## Integrované funkce
 
-Lze použít spoustu jazyků, já zvolil Python. 
+Lze použít spoustu jazyků, já zvolil Python.
 
 ### Inicializace
 
@@ -187,8 +195,8 @@ sudo apt-get install postgresql-plpython-9.2
 Zda máme Python správně nainstalovaný v DB zjistíme:
 
 ```sql
-SELECT * 
-FROM pg_pltemplate 
+SELECT *
+FROM pg_pltemplate
 WHERE tmplname LIKE 'plpython%'
 ```
 
@@ -232,7 +240,7 @@ Pro editaci a testování doporučuji PGadmin, který umí funkce docela dobře 
 * [prezentace k tématu](http://www.postgresqlconference.org/sites/default/files/PLPython.pdf)
 
 ### Fulltext search via Tsearch
-####  Instalace 
+####  Instalace
 ```bash
 cd /usr/share/postgresql/9.2/tsearch_data/ # path for v9.2 in Ubuntu 12.10
 wget -qO- http://www.pgsql.cz/data/czech.tar.gz | tar xz
@@ -271,11 +279,11 @@ Abychom sloupcům zachovali význam (nadpis důležitější než popis), tak ji
 Použití pro hledání:
 ```sql
 SELECT * FROM <tabulka>
-  WHERE 
+  WHERE
 to_tsvector('cs',<sloupec>) @@ to_tsquery('<term1> & <term2>')
 ```
 
-Hledání je case insensitive. Používají se logické operátory `&` (and), `|` (or), `!` (not). 
+Hledání je case insensitive. Používají se logické operátory `&` (and), `|` (or), `!` (not).
 
 Popřípadě se občas hodí nahradit `cs` za `simple`, pokud nechceme lexikální vyhodnocování (to je občas poněkud neočekávané).
 

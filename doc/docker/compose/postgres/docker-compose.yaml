@@ -1,0 +1,29 @@
+# Postgres:
+# psql -U keddie -h localhost -W -d <database> - připojení z hostu
+# \l - show databases;
+# \dt - show tables;
+# Postgrest:
+# https://github.com/begriffs/postgrest/tree/master/docker
+
+version: '2'
+
+services:
+        db:
+                image: postgres:9.6
+                restart: always
+                ports:
+                        - "5432:5432"
+                environment:
+                        POSTGRES_USER: keddie
+                        POSTGRES_PASSWORD: keddie
+#        api:
+#                image: begriffs/postgrest:v0.3.2.0
+#                restart: always
+#                ports:
+#                        - "3000:3000"
+#                depends_on:
+#                        - db
+#                volumes:
+#                        - ./config.conf:/etc/postgrest.conf
+
+
