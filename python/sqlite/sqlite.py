@@ -14,6 +14,7 @@ Data about czech municipalities are from MVČR.
 
 import csv
 import sqlite3
+import datetime
 
 def load(file_obce, file_orp, connection):
     c = connection.cursor()
@@ -69,8 +70,8 @@ def load(file_obce, file_orp, connection):
     c.executemany('INSERT INTO people VALUES (?,?,?)', people)
 
     more_people = [
-        {'name': 'Jana', 'salary': 22100, 'born': '1990-03-03'},
-        {'name': 'Dana', 'salary': 22100, 'born': '1990-03-03'}
+        {'name': 'Jana', 'salary': 22100, 'born': datetime.date(1990, 3, 3)},
+        {'name': 'Dana', 'salary': 22100, 'born': datetime.date(1990, 3, 3)}
     ]
     c.executemany('INSERT INTO people VALUES (:name, :salary, :born)', more_people)
     connection.commit()
