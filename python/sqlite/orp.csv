@@ -1,0 +1,537 @@
+Kod ,Pověřená obec,Kod úřadu ČSÚ,Typ úřadu,Kod okresu
+3431,Aš                                           ,4101,N,3402
+3201,Benešov,2101,N,3201
+3202,Beroun,2102,N,3202
+3565,Bílina,4201,N,3509
+3840,Bílovec                                      ,8101,N,3804
+3701,Blansko                                      ,6201,N,3701
+3355,Blatná                                       ,3101,N,3307
+3450,Blovice,3201,N,3406
+3835,Bohumín                                      ,8102,N,3803
+3725,Boskovice                                    ,6202,N,3701
+3265,Brandýs nad Labem-Stará Boleslav,2103,N,3209
+3730,Brno                                         ,6203,N,3702
+3645,Broumov                                      ,5201,N,3605
+3801,Bruntál                                      ,8103,N,3801
+3704,Břeclav                                      ,6204,N,3704
+3780,Bučovice                                     ,6205,N,3712
+3790,Bystřice nad Pernštejnem,6101,N,3714
+3760,Bystřice pod Hostýnem,7201,N,3708
+3245,Čáslav,2104,N,3205
+3270,Černošice,2105,N,3210
+3501,Česká Lípa                                   ,5101,N,3501
+3675,Česká Třebová                                ,5301,N,3611
+3301,České Budějovice                             ,3102,N,3301
+3240,Český Brod,2106,N,3204
+3302,Český Krumlov                                ,3103,N,3302
+3836,Český Těšín                                  ,8104,N,3803
+3000,ČR,,R,0
+3335,Dačice                                       ,3104,N,3303
+3502,Děčín,4202,N,3502
+3655,Dobruška                                     ,5202,N,3607
+3275,Dobříš,2107,N,3211
+3401,Domažlice,3202,N,3401
+3670,Dvůr Králové nad Labem                       ,5203,N,3610
+0,fiktivní úřad,,F,0
+3841,Frenštát pod Radhoštěm                       ,8105,N,3804
+3802,Frýdek-Místek                                ,8106,N,3802
+3545,Frýdlant                                     ,5102,N,3505
+3830,Frýdlant nad Ostravicí                       ,8107,N,3802
+3837,Havířov                                      ,8108,N,3803
+3601,Havlíčkův Brod,6102,N,3601
+14,Hlavní Město Praha                           ,,K,3100
+3635,Hlinsko                                      ,5302,N,3603
+3850,Hlučín                                       ,8109,N,3806
+3706,Hodonín                                      ,6206,N,3706
+3761,Holešov,7202,N,3708
+3650,Holice                                       ,5303,N,3606
+3440,Horažďovice,3203,N,3404
+3425,Horšovský Týn,3204,N,3401
+3640,Hořice                                       ,5204,N,3604
+3230,Hořovice,2108,N,3202
+3602,Hradec Králové                               ,5205,N,3602
+3860,Hranice                                      ,7101,N,3808
+3340,Humpolec,6103,N,3304
+3740,Hustopeče                                    ,6207,N,3704
+3402,Cheb                                         ,4102,N,3402
+3503,Chomutov,4203,N,3503
+3625,Chotěboř,6104,N,3601
+3603,Chrudim                                      ,5304,N,3603
+3735,Ivančice                                     ,6208,N,3703
+3504,Jablonec nad Nisou                           ,5103,N,3504
+3831,Jablunkov                                    ,8110,N,3802
+3646,Jaroměř                                      ,5206,N,3605
+3811,Jeseník                                      ,7102,N,3811
+3604,Jičín                                        ,5207,N,3604
+3707,Jihlava,6105,N,3707
+1,Jihočeský kraj                               ,,K,3301
+2,Jihomoravský kraj                            ,,K,3702
+3660,Jilemnice                                    ,5104,N,3608
+3303,Jindřichův Hradec                            ,3105,N,3303
+3535,Kadaň,4204,N,3503
+3330,Kaplice                                      ,3106,N,3302
+3,Karlovarský kraj                             ,,K,3403
+3403,Karlovy Vary                                 ,4103,N,3403
+3803,Karviná                                      ,8111,N,3803
+3203,Kladno,2109,N,3203
+3404,Klatovy,3205,N,3404
+3204,Kolín,2110,N,3204
+3765,Konice                                       ,7103,N,3709
+3842,Kopřivnice                                   ,8112,N,3804
+3656,Kostelec nad Orlicí                          ,5208,N,3607
+3455,Kralovice,3206,N,3407
+3250,Kralupy nad Vltavou,2111,N,3206
+3465,Kraslice                                     ,4104,N,3409
+3851,Kravaře                                      ,8113,N,3806
+3676,Králíky                                      ,5305,N,3611
+4,Královéhradecký kraj                         ,,K,3602
+3825,Krnov                                        ,8114,N,3801
+3708,Kroměříž,7203,N,3708
+3736,Kuřim                                        ,6209,N,3703
+3205,Kutná Hora,2112,N,3205
+3750,Kyjov                                        ,6210,N,3706
+3677,Lanškroun                                    ,5306,N,3611
+3505,Liberec                                      ,5105,N,3505
+5,Liberecký kraj                               ,,K,3505
+3861,Lipník nad Bečvou                            ,7104,N,3808
+3506,Litoměřice,4205,N,3506
+3665,Litomyšl                                     ,5307,N,3609
+3845,Litovel                                      ,7105,N,3805
+3560,Litvínov,4206,N,3508
+3507,Louny,4207,N,3507
+3550,Lovosice,4208,N,3506
+3745,Luhačovice,7204,N,3705
+3260,Lysá nad Labem,2113,N,3208
+3430,Mariánské Lázně                              ,4105,N,3402
+3206,Mělník,2114,N,3206
+3741,Mikulov                                      ,6211,N,3704
+3345,Milevsko                                     ,3107,N,3305
+3207,Mladá Boleslav,2115,N,3207
+3255,Mnichovo Hradiště,2116,N,3207
+3865,Mohelnice                                    ,7106,N,3809
+3666,Moravská Třebová,5308,N,3609
+3770,Moravské Budějovice,6106,N,3710
+6,Moravskoslezský kraj                         ,,K,3807
+3785,Moravský Krumlov                             ,6212,N,3713
+3508,Most,4209,N,3508
+3605,Náchod                                       ,5209,N,3605
+3771,Náměšť nad Oslavou,6107,N,3710
+3451,Nepomuk,3207,N,3406
+3251,Neratovice,2117,N,3206
+3641,Nová Paka                                    ,5210,N,3604
+3791,Nové Město na Moravě,6108,N,3714
+3647,Nové Město nad Metují                        ,5211,N,3605
+3525,Nový Bor                                     ,5106,N,3501
+3630,Nový Bydžov                                  ,5212,N,3602
+3804,Nový Jičín                                   ,8115,N,3804
+3208,Nymburk,2118,N,3208
+3456,Nýřany,3208,N,3407
+3843,Odry                                         ,8116,N,3804
+3805,Olomouc                                      ,7107,N,3805
+7,Olomoucký kraj                               ,,K,3805
+3806,Opava                                        ,8117,N,3806
+3838,Orlová                                       ,8118,N,3803
+3855,Ostrava                                      ,8119,N,3807
+3435,Ostrov                                       ,4106,N,3403
+3746,Otrokovice,7205,N,3705
+3341,Pacov,6109,N,3304
+3606,Pardubice,5309,N,3606
+8,Pardubický kraj                              ,,K,3606
+3304,Pelhřimov,6110,N,3304
+3305,Písek                                        ,3108,N,3305
+3445,Plzeň,3209,N,3405
+9,Plzeňský kraj                                ,,K,3405
+3555,Podbořany,4210,N,3507
+3261,Poděbrady,2119,N,3208
+3742,Pohořelice                                   ,6213,N,3703
+3667,Polička,5310,N,3609
+3100,Praha,,D,3100
+3101,Praha 1,1101,P,3101
+3110,Praha 10,1110,P,3110
+3111,Praha 11                                     ,1111,P,3104
+3112,Praha 12                                     ,1112,P,3104
+3113,Praha 13                                     ,1113,P,3105
+3114,Praha 14                                     ,1114,P,3109
+3115,Praha 15                                     ,1115,P,3110
+3116,Praha 16                                     ,1116,P,3105
+3117,Praha 17                                     ,1117,P,3106
+3118,Praha 18                                     ,1118,P,3109
+3119,Praha 19                                     ,1119,P,3109
+3102,Praha 2,1102,P,3102
+3120,Praha 20                                     ,1120,P,3109
+3121,Praha 21                                     ,1121,P,3109
+3122,Praha 22,1122,P,3110
+3103,Praha 3,1103,P,3103
+3104,Praha 4,1104,P,3104
+3105,Praha 5,1105,P,3105
+3106,Praha 6,1106,P,3106
+3107,Praha 7,1107,P,3107
+3108,Praha 8,1108,P,3108
+3109,Praha 9,1109,P,3109
+3306,Prachatice                                   ,3109,N,3306
+3709,Prostějov                                    ,7108,N,3709
+3651,Přelouč,5311,N,3606
+3808,Přerov                                       ,7109,N,3808
+3452,Přeštice,3210,N,3406
+3211,Příbram,2120,N,3211
+3212,Rakovník,2121,N,3212
+3408,Rokycany,3211,N,3408
+3737,Rosice                                       ,6214,N,3703
+3551,Roudnice nad Labem,4211,N,3506
+3870,Rožnov pod Radhoštěm,7206,N,3810
+3530,Rumburk,4212,N,3502
+3607,Rychnov nad Kněžnou                          ,5213,N,3607
+3826,Rýmařov                                      ,8120,N,3801
+3266,Říčany,2122,N,3209
+3276,Sedlčany,2123,N,3211
+3608,Semily                                       ,5107,N,3608
+3235,Slaný,2124,N,3203
+3781,Slavkov u Brna                               ,6215,N,3712
+3360,Soběslav                                     ,3110,N,3308
+3409,Sokolov                                      ,4107,N,3409
+3453,Stod,3212,N,3406
+3307,Strakonice                                   ,3111,N,3307
+10,Středočeský kraj                             ,,K,3101
+3470,Stříbro,3213,N,3410
+3441,Sušice,3214,N,3404
+3626,Světlá nad Sázavou,6111,N,3601
+3609,Svitavy,5312,N,3609
+3738,Šlapanice                                    ,6216,N,3703
+3846,Šternberk                                    ,7110,N,3805
+3809,Šumperk                                      ,7111,N,3809
+3410,Tachov,3215,N,3410
+3540,Tanvald                                      ,5108,N,3504
+3308,Tábor                                        ,3112,N,3308
+3755,Telč,6112,N,3707
+3509,Teplice,4213,N,3509
+3739,Tišnov                                       ,6217,N,3703
+3325,Trhové Sviny                                 ,3113,N,3301
+3610,Trutnov                                      ,5214,N,3610
+3710,Třebíč,6113,N,3710
+3336,Třeboň                                       ,3114,N,3303
+3832,Třinec                                       ,8121,N,3802
+3661,Turnov                                       ,5109,N,3608
+3326,Týn nad Vltavou                              ,3115,N,3301
+3711,Uherské Hradiště,7207,N,3711
+3775,Uherský Brod,7208,N,3711
+3847,Uničov                                       ,7112,N,3805
+11,Ústecký kraj                                 ,,K,3510
+3510,Ústí nad Labem,4214,N,3510
+3611,Ústí nad Orlicí,5313,N,3611
+3747,Valašské Klobouky,7209,N,3705
+3871,Valašské Meziříčí,7210,N,3810
+3531,Varnsdorf,4215,N,3502
+3792,Velké Meziříčí,6114,N,3714
+3751,Veselí nad Moravou                           ,6218,N,3706
+3350,Vimperk                                      ,3116,N,3306
+3748,Vizovice,7211,N,3705
+3852,Vítkov                                       ,8122,N,3806
+3225,Vlašim,2125,N,3201
+3356,Vodňany                                      ,3117,N,3307
+3226,Votice,2126,N,3201
+3671,Vrchlabí,5215,N,3610
+3810,Vsetín,7212,N,3810
+12,Vysočina kraj                                ,,K,3707
+3678,Vysoké Mýto,5314,N,3611
+3712,Vyškov                                       ,6219,N,3712
+10278,zú Winnipeg                                  ,,Z,0
+10287,zÚ Dortmund                                  ,,Z,0
+3866,Zábřeh                                       ,7113,N,3809
+3705,Zlín,7213,N,3705
+13,Zlínský kraj                                 ,,K,3705
+3713,Znojmo                                       ,6220,N,3713
+10305,Zu Ho Či Minovo Měst                         ,,Z,0
+10279,Zú Astana                                    ,,Z,0
+10293,Zú Asunción                                  ,,Z,0
+10282,Zú Bamako                                    ,,Z,0
+10273,Zú Banjul                                    ,,Z,0
+10288,Zú Bergen                                    ,,Z,0
+10300,Zú Boston                                    ,,Z,0
+10271,Zú Burgas                                    ,,Z,0
+10304,Zú Cardiff                                   ,,Z,0
+10303,Zú Doněck                                    ,,Z,0
+10276,Zú Eilat                                     ,,Z,0
+10283,Zú Fes                                       ,,Z,0
+10294,Zú Funchal                                   ,,Z,0
+10275,Zú Georgetown                                ,,Z,0
+10274,Zú Guatemala                                 ,,Z,0
+10306,Zú Haiphong                                  ,,Z,0
+10295,Zú Chanty-Mansijsk                           ,,Z,0
+10296,Zú Jerez de la Frontera                      ,,Z,0
+10291,Zú Karáčí                                    ,,Z,0
+10266,Zú Kábul                                     ,,Z,0
+10285,Zú Kišiněv                                   ,,Z,0
+10277,Zú Kóbe                                      ,,Z,0
+10290,Zú Lahore                                    ,,Z,0
+10302,Zú Lomé                                      ,,Z,0
+10267,Zú Lutych                                    ,,Z,0
+10286,Zú Maputo                                    ,,Z,0
+10268,Zú Namur                                     ,,Z,0
+10284,Zú Nouakchott                                ,,Z,0
+10297,Zú Palma de Mallorca                         ,,Z,0
+10301,Zú Phuket                                    ,,Z,0
+10281,Zú Pchjongjang                               ,,Z,0
+10298,Zú Pittsburgh                                ,,Z,0
+10272,Zú Podgorica                                 ,,Z,0
+10292,Zú Port Moresby                              ,,Z,0
+10280,Zú Praia                                     ,,Z,0
+10269,Zú Recife                                    ,,Z,0
+10289,Zú Trondheim                                 ,,Z,0
+10270,Zú Varna                                     ,,Z,0
+10176,Zú Varšava, ,Z,0
+10299,Zú West                                      ,,Z,0
+10254,ZÚ Aarhus                                    , ,Z,0
+10157,ZÚ Abidjan                                   , ,Z,0
+10158,ZÚ Abuja                                     , ,Z,0
+10167,ZÚ Abú Dhabí                                 , ,Z,0
+10051,ZÚ Addis Abeba                               , ,Z,0
+10015,ZÚ Adelaide                                  , ,Z,0
+10072,ZÚ Akkra                                     , ,Z,0
+10205,ZÚ Aleppo                                    , ,Z,0
+10053,ZÚ Alexandria                                , ,Z,0
+10116,ZÚ Almaty                                    , ,Z,0
+10003,ZÚ Alžír                                     , ,Z,0
+10107,ZÚ Ammán                                     , ,Z,0
+10160,ZÚ Amsterdam                                 , ,Z,0
+10233,ZÚ Anchorage                                 , ,Z,0
+10225,ZÚ Ankara                                    , ,Z,0
+10223,ZÚ Antalya                                   , ,Z,0
+10028,ZÚ Antverpy                                  , ,Z,0
+10194,ZÚ Athény                                    , ,Z,0
+10234,ZÚ Atlanta                                   , ,Z,0
+10166,ZÚ Auckland                                  , ,Z,0
+10088,ZÚ Bagdád                                    , ,Z,0
+10308,ZÚ Baku                                      ,0,Z,0
+10257,ZÚ Bali                                      , ,Z,0
+10108,ZÚ Bangkok                                   , ,Z,0
+10207,ZÚ Barcelona                                 , ,Z,0
+10118,ZÚ Barranquilla                              , ,Z,0
+10215,ZÚ Basilej                                   , ,Z,0
+10128,ZÚ Bejrút                                    , ,Z,0
+10037,ZÚ Belém                                     , ,Z,0
+10265,ZÚ Belfast                                   , ,Z,0
+10097,ZÚ Benátky                                   , ,Z,0
+10253,ZÚ Benidorm                                  , ,Z,0
+10163,ZÚ Bergen                                    , ,Z,0
+10154,ZÚ Berlín                                    , ,Z,0
+10218,ZÚ Bern                                      , ,Z,0
+10185,ZÚ Bělehrad                                  , ,Z,0
+10258,ZÚ Biškek                                    , ,Z,0
+10120,ZÚ Bogota                                    , ,Z,0
+10153,ZÚ Bonn                                      , ,Z,0
+10041,ZÚ Brasília                                  , ,Z,0
+10200,ZÚ Bratislava                                , ,Z,0
+10016,ZÚ Brisbane                                  , ,Z,0
+10027,ZÚ Brusel                                    , ,Z,0
+10134,ZÚ Budapešť                                  , ,Z,0
+10010,ZÚ Buenos Aires                              , ,Z,0
+10235,ZÚ Buffalo                                   , ,Z,0
+10186,ZÚ Bukurešť                                  , ,Z,0
+10112,ZÚ Calgary                                   , ,Z,0
+10020,ZÚ Canberra                                  , ,Z,0
+10250,ZÚ Caracas                                   , ,Z,0
+10119,ZÚ Cartagena de Indias                       , ,Z,0
+10138,ZÚ Casablanca                                , ,Z,0
+10203,ZÚ Colombo                                   , ,Z,0
+10074,ZÚ Conakry                                   , ,Z,0
+10216,ZÚ Curych                                    , ,Z,0
+10071,ZÚ Dakar                                     , ,Z,0
+10236,ZÚ Dallas                                    , ,Z,0
+10206,ZÚ Damašek                                   , ,Z,0
+10017,ZÚ Darwin                                    , ,Z,0
+10059,ZÚ Davao                                     , ,Z,0
+10025,ZÚ Dháka                                     , ,Z,0
+10083,ZÚ Dillí                                     , ,Z,0
+10110,ZÚ Douala                                    , ,Z,0
+10147,ZÚ Drážďany                                  , ,Z,0
+10090,ZÚ Dublin                                    , ,Z,0
+10052,ZÚ Džibuti                                   , ,Z,0
+10196,ZÚ Džidda                                    , ,Z,0
+10246,ZÚ Edinburgh                                 , ,Z,0
+10093,ZÚ Florencie                                 , ,Z,0
+10237,ZÚ Fort Lauderdale                           , ,Z,0
+10149,ZÚ Frankfurt nad Mohanem                     , ,Z,0
+10211,ZÚ Göteborg                                  , ,Z,0
+10180,ZÚ Graz                                      , ,Z,0
+10141,ZÚ Guadalajara                               , ,Z,0
+10056,ZÚ Guayaquil                                 , ,Z,0
+10162,ZÚ Haag                                      , ,Z,0
+10100,ZÚ Haifa                                     , ,Z,0
+10260,ZÚ Hamburk                                   , ,Z,0
+10252,ZÚ Hanoj                                     , ,Z,0
+10005,ZÚ Harare                                    , ,Z,0
+10123,ZÚ Havana                                    , ,Z,0
+10063,ZÚ Helsinky                                  , ,Z,0
+10190,ZÚ Heraklion                                 , ,Z,0
+10018,ZÚ Hobart                                    , ,Z,0
+10251,ZÚ Hočiminovo město                          , ,Z,0
+10044,ZÚ Hongkong                                  , ,Z,0
+10047,ZÚ Horsens                                   , ,Z,0
+10238,ZÚ Houston                                   , ,Z,0
+10204,ZÚ Chartúm                                   , ,Z,0
+10081,ZÚ Chennai                                   , ,Z,0
+10239,ZÚ Chicago                                   , ,Z,0
+10261,ZÚ Innsbruck                                 , ,Z,0
+10168,ZÚ Islámábád                                 , ,Z,0
+10222,ZÚ Istanbul                                  , ,Z,0
+10224,ZÚ Izmir                                     , ,Z,0
+10087,ZÚ Jakarta                                   , ,Z,0
+10187,ZÚ Jekatěrinburg                             , ,Z,0
+10101,ZÚ Jeruzalém                                 , ,Z,0
+10135,ZÚ Johor Bahru                               , ,Z,0
+10038,ZÚ Joinville                                 , ,Z,0
+10082,ZÚ Kalkata                                   , ,Z,0
+10262,ZÚ Kansas City                               , ,Z,0
+10105,ZÚ Kapské Město                              , ,Z,0
+10172,ZÚ Katovice                                  , ,Z,0
+10054,ZÚ Káhira                                    , ,Z,0
+10155,ZÚ Káthmándú                                 , ,Z,0
+10070,ZÚ Kinshasa                                  , ,Z,0
+10121,ZÚ Kinshasa                                  , ,Z,0
+10181,ZÚ Klagenfurt                                , ,Z,0
+10048,ZÚ Kodaň                                     , ,Z,0
+10199,ZÚ Košice                                    , ,Z,0
+10103,ZÚ Kóbe                                      , ,Z,0
+10136,ZÚ Kuala Lumpur                              , ,Z,0
+10124,ZÚ Kuvajt                                    , ,Z,0
+10226,ZÚ Kyjev                                     , ,Z,0
+10034,ZÚ La Paz                                    , ,Z,0
+10032,ZÚ Lagos                                     , ,Z,0
+10064,ZÚ Lille                                     , ,Z,0
+10171,ZÚ Lima                                      , ,Z,0
+10125,ZÚ Limassol                                  , ,Z,0
+10182,ZÚ Linec                                     , ,Z,0
+10179,ZÚ Lisabon                                   , ,Z,0
+10202,ZÚ Ljubljana                                 , ,Z,0
+10217,ZÚ Locarno                                   , ,Z,0
+10248,ZÚ Londýn                                    , ,Z,0
+10229,ZÚ Los Angeles                               , ,Z,0
+10006,ZÚ Luanda                                    , ,Z,0
+10133,ZÚ Lucemburk                                 , ,Z,0
+10264,ZÚ Lvov                                      , ,Z,0
+10065,ZÚ Lyon                                      , ,Z,0
+10210,ZÚ Madrid                                    , ,Z,0
+10084,ZÚ Makassar                                  , ,Z,0
+10212,ZÚ Malmö                                     , ,Z,0
+10159,ZÚ Managua                                   , ,Z,0
+10039,ZÚ Manaus                                    , ,Z,0
+10247,ZÚ Manchester                                , ,Z,0
+10060,ZÚ Manila                                    , ,Z,0
+10249,ZÚ Maracaibo                                 , ,Z,0
+10068,ZÚ Marseille                                 , ,Z,0
+10014,ZÚ Melbourne                                 , ,Z,0
+10008,ZÚ Mendoza                                   , ,Z,0
+10143,ZÚ Mexiko                                    , ,Z,0
+10092,ZÚ Miláno                                    , ,Z,0
+10240,ZÚ Minneapolis                               , ,Z,0
+10031,ZÚ Minsk                                     , ,Z,0
+10148,ZÚ Mnichov                                   , ,Z,0
+10129,ZÚ Monrovia                                  , ,Z,0
+10144,ZÚ Monte Carlo                               , ,Z,0
+10142,ZÚ Monterrey                                 , ,Z,0
+10228,ZÚ Montevideo                                , ,Z,0
+10111,ZÚ Montreal                                  , ,Z,0
+10189,ZÚ Moskva                                    , ,Z,0
+10080,ZÚ Mumbai                                    , ,Z,0
+10255,ZÚ Mutogras                                  , ,Z,0
+10117,ZÚ Nairobi                                   , ,Z,0
+10066,ZÚ Nancy                                     , ,Z,0
+10067,ZÚ Nantes                                    , ,Z,0
+10137,ZÚ Naxxar                                    , ,Z,0
+10094,ZÚ Neapol                                    , ,Z,0
+10241,ZÚ New Orleans                               , ,Z,0
+10230,ZÚ New York                                  , ,Z,0
+10156,ZÚ Niamey                                    , ,Z,0
+10127,ZÚ Nicosia                                   , ,Z,0
+10126,ZÚ Nikósie                                   , ,Z,0
+10150,ZÚ Norimberk                                 , ,Z,0
+10030,ZÚ Orange Walk Town                          , ,Z,0
+10164,ZÚ Oslo                                      , ,Z,0
+10115,ZÚ Ottawa                                    , ,Z,0
+10061,ZÚ Oulu                                      , ,Z,0
+10208,ZÚ Oviedo                                    , ,Z,0
+10095,ZÚ Palermo                                   , ,Z,0
+10170,ZÚ Panama                                    , ,Z,0
+10069,ZÚ Paříž                                     , ,Z,0
+10046,ZÚ Peking                                    , ,Z,0
+10019,ZÚ Perth                                     , ,Z,0
+10231,ZÚ Philadelphia                              , ,Z,0
+10191,ZÚ Pireus                                    , ,Z,0
+10140,ZÚ Port Louis                                , ,Z,0
+10263,ZÚ Port of Spain                             , ,Z,0
+10242,ZÚ Portland                                  , ,Z,0
+10178,ZÚ Porto                                     , ,Z,0
+10201,ZÚ Portorož                                  , ,Z,0
+10174,ZÚ Poznaň                                    , ,Z,0
+10009,ZÚ Presidencia Roque Sáenz Peňa              , ,Z,0
+10106,ZÚ Pretoria                                  , ,Z,0
+10227,ZÚ Punta del Este                            , ,Z,0
+10139,ZÚ Rabat                                     , ,Z,0
+10169,ZÚ Ramalláh                                  , ,Z,0
+10091,ZÚ Reykjavík                                 , ,Z,0
+10192,ZÚ Rhodos                                    , ,Z,0
+10132,ZÚ Riga                                      , ,Z,0
+10023,ZÚ Rijád                                     , ,Z,0
+10256,ZÚ Rijeka                                    , ,Z,0
+10007,ZÚ Rio de Janeiro                            , ,Z,0
+10151,ZÚ Rostock                                   , ,Z,0
+10161,ZÚ Rotterdam                                 , ,Z,0
+10098,ZÚ Řím                                       , ,Z,0
+10183,ZÚ Salcburk                                  , ,Z,0
+10040,ZÚ Salvador                                  , ,Z,0
+10232,ZÚ San Francisco                             , ,Z,0
+10075,ZÚ San José                                  , ,Z,0
+10177,ZÚ San Juan                                  , ,Z,0
+10195,ZÚ San Salvador                              , ,Z,0
+10104,ZÚ Sanaá                                     , ,Z,0
+10188,ZÚ Sankt Peterburg                           , ,Z,0
+10077,ZÚ Santiago de Chile                         , ,Z,0
+10050,ZÚ Santo Domingo                             , ,Z,0
+10085,ZÚ Sanur                                     , ,Z,0
+10026,ZÚ Sao Paulo                                 , ,Z,0
+10035,ZÚ Sarajevo                                  , ,Z,0
+10198,ZÚ Singapur                                  , ,Z,0
+10307,ZÚ Skopje                                    ,0,Z,0
+10042,ZÚ Sofie                                     , ,Z,0
+10193,ZÚ Soluň                                     , ,Z,0
+10122,ZÚ Soul                                      , ,Z,0
+10078,ZÚ Split                                     , ,Z,0
+10213,ZÚ Stockholm                                 , ,Z,0
+10152,ZÚ Stuttgart                                 , ,Z,0
+10086,ZÚ Surabaya                                  , ,Z,0
+10013,ZÚ Sydney                                    , ,Z,0
+10045,ZÚ Šanghaj                                   , ,Z,0
+10175,ZÚ Štětín                                    , ,Z,0
+10220,ZÚ Taipei                                    , ,Z,0
+10057,ZÚ Tallin                                    , ,Z,0
+10062,ZÚ Tampere                                   , ,Z,0
+10244,ZÚ Taškent                                   , ,Z,0
+10012,ZÚ Tbilisi                                   , ,Z,0
+10076,ZÚ Tegucigalpa                               , ,Z,0
+10089,ZÚ Teherán                                   , ,Z,0
+10099,ZÚ Tel Aviv                                  , ,Z,0
+10209,ZÚ Tenerife                                  , ,Z,0
+10259,ZÚ Tijuana                                   , ,Z,0
+10002,ZÚ Tirana                                    , ,Z,0
+10102,ZÚ Tokio                                     , ,Z,0
+10113,ZÚ Toronto                                   , ,Z,0
+10130,ZÚ Tripolis                                  , ,Z,0
+10221,ZÚ Tunis                                     , ,Z,0
+10096,ZÚ Udine                                     , ,Z,0
+10145,ZÚ Ulánbátar                                 , ,Z,0
+10114,ZÚ Vancouver                                 , ,Z,0
+10245,ZÚ Vatikán                                   , ,Z,0
+10197,ZÚ Victoria                                  , ,Z,0
+10131,ZÚ Vilnius                                   , ,Z,0
+10184,ZÚ Vídeň                                     , ,Z,0
+10173,ZÚ Vratislav                                 , ,Z,0
+10243,ZÚ Washington                                , ,Z,0
+10165,ZÚ Wellington                                , ,Z,0
+10146,ZÚ Windhoek                                  , ,Z,0
+10079,ZÚ Záhřeb                                    , ,Z,0
+10214,ZÚ Ženeva                                    , ,Z,0
+3679,Žamberk,5315,N,3611
+3556,Žatec,4216,N,3507
+3714,Žďár nad Sázavou,6115,N,3714
+3541,Železný Brod                                 ,5110,N,3504
+3901,Židlochovice                                 ,6221,N,3703
