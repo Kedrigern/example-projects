@@ -20,10 +20,10 @@ def load(file_obce, file_orp, connection):
     c = connection.cursor()
     c.execute('''CREATE TABLE obce (
         id int,
-        name varchar,
-        orp_id int,
-        okres_id int,
-        typ varchar(1),
+        name varchar,   -- název obce bez bílých znaků okolo
+        orp_id int,     -- id obce s rozšířenou působností (orp) z tabulky orp
+        okres_id int,   -- id okresu
+        typ varchar(1), -- hodnoty: O, M, T, U, S, H
         csu_id int,
         pcd_id int
     ) ''')
@@ -37,7 +37,7 @@ def load(file_obce, file_orp, connection):
             c.execute('INSERT INTO obce VALUES (?, ?, ?, ?, ?, ?, ?)', values)
 
     c.execute('''CREATE TABLE orp (
-        id int,
+        id int,     
         name varchar,
         csu_id int,
         typ varchar(1),
@@ -85,11 +85,12 @@ def examples(connection):
     obce = c.execute("SELECT * FROM obce WHERE name LIKE 'vejvanov%'").fetchall()
     print("Obce jejiž jméno začíná vejvanov\n", obce)
 
+    answer = c.execute("SELECT DISTINCT(typ) FROM obce;")
+    print("Typy obcí:\n", [t[0] for t in answer.fetchall()])
+
     answer = c.execute("SELECT name FROM obce WHERE orp_id IN (SELECT id FROM orp WHERE name = 'Černošice' or name = 'Beroun' )")
-    obce = []
-    for a in answer.fetchall():
-        obce.append(a[0])
-    print("Obce jejiž ORP jsou Černošice nebo Beroun:\n", obce)
+    print("Obce jejiž ORP jsou Černošice nebo Beroun:\n", [r[0] for r in answer.fetchall()])
+
 
     answer = c.execute("SELECT * FROM people WHERE name LIKE '_ana'").fetchall()
     print("Jména _ana:\n", answer)

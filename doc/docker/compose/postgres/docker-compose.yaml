@@ -15,7 +15,7 @@ services:
                         - "5432:5432"
                 environment:
                         POSTGRES_USER: keddie
-                        POSTGRES_PASSWORD: keddie
+                        POSTGRES_PASSWORD: pass
         api:
                 image: begriffs/postgrest:v0.3.2.0
                 restart: always
