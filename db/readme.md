@@ -104,13 +104,15 @@ Je univerzální dotazovací jazyk pro relační databáze. Naneštěstí každ�
 
 Budeme pracovat s ukázkovou tabulkou:
 
-|id | name | salary | born       |
-|---|------|--------|------------|
-| 1 | Ala  | 20 800 | 1990-09-20 |
-| 2 | Alan | 21 600 | 1989-10-20 |
-| 3 | Anna | 22 500 | 1988-11-15 |
-| 4 | Lala | 23 500 | 1987-12-01 |
-| 5 | Leo  | 22 100 | 1986-05-13 |
+|id | name | salary | born       | department |
+|---|------|--------|------------|------------|
+| 1 | Ala  | 20 800 | 1990-09-20 | A          |
+| 2 | Alan | 21 600 | 1989-10-20 | A          |
+| 3 | Anna | 22 500 | 1988-11-15 | A          |
+| 4 | Lala | 23 500 | 1987-12-01 | L          |
+| 5 | Leo  | 22 100 | 1986-05-13 | L          |
+
+U SQLite není id autoincrement, ale vnitřně vždy existuje sloupec `rowid`, vyvoláme ho: `SELECT rowid, * FROM people;`
 
 ### Create DB and insert
 
@@ -119,15 +121,16 @@ CREATE TABLE people (
  id serial primary key,
  name varchar(50),
  salary real,
- born date
+ born date,
+ department varchar(50)
 );
 
-INSERT INTO people (name, salary, born) VALUES
- ('Ala',  20800, '1990-09-20'),
- ('Alan', 21600, '1989-10-20'),
- ('Anna', 22500, '1988-11-15'),
- ('Lala', 23500, '1987-12-01'),
- ('Leo',  22100, '1986-05-13');
+INSERT INTO people (name, salary, born, department) VALUES
+ ('Ala',  20800, '1990-09-20', 'A'),
+ ('Alan', 21600, '1989-10-20', 'A'),
+ ('Anna', 22500, '1988-11-15', 'A'),
+ ('Lala', 23500, '1987-12-01', 'L'),
+ ('Leo',  22100, '1986-05-13', 'L');
 ```
 
 U MySQL je třeba nahradit typ `serial` za `int` (autoincrement je doplněn automaticky).
@@ -183,6 +186,48 @@ SELECT * FROM people WHERE born BETWEEN '1987-01-01' AND '1989-01-01';
 ### Update
 
 ```sql
-UPDATE people SET salary = 22900 WHERE id = 5;
-UPDATE people SET id = id + 100;
+UPDATE people SET salary=22900 WHERE id=5;
+UPDATE people SET id=id+100;
+```
+
+### Group by
+
+```sql
+SELECT department, count(name) AS 'num of people', sum(salary) as 'total salary' FROM people GROUP BY department;
+SELECT born<'1988-1-1', count(name), sum(salary) FROM people GROUP BY born<'1988-1-1';
+```
+
+### Join
+
+![](sql-joins.png)
+
+
+Přidáme si tabulku `department`:
+
+| id | name | nanager_id |
+|----|------|------------|
+|  1 | A    | 3          |
+|  2 | L    | 4          |
+
+```sql
+CREATE TABLE department (
+	id int,
+	name varchar(50),
+	manager_id int
+);
+INSERT INTO department (name, manager_id) VALUES
+ ('A', 3),
+ ('L', 4);
+```
+
+```sql
+SELECT people.name, salary, born, department, (SELECT people.name from people WHERE people.rowid=department.manager_id) AS Manager
+FROM people LEFT JOIN department ON people.department = department.name;
+```
+### Create view
+
+```sql
+CREATE VIEW summary AS
+SELECT people.name, salary, born, department, (SELECT people.name from people WHERE people.rowid=department.manager_id) AS Manager
+FROM people LEFT JOIN department ON people.department = department.name;
 ```
