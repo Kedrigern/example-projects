@@ -166,7 +166,7 @@ U MySQL je třeba nahradit typ `serial` za `int` (autoincrement je doplněn auto
     <td>
     U MySQL je třeba nastavit příslušná práva uživateli: <code>grant file on *.* to keddie identified by 'keddie';</code>
     </td>
-    <td/>
+    <td />
   </tr>
 </table>
 
@@ -193,7 +193,9 @@ UPDATE people SET id=id+100;
 ### Group by
 
 ```sql
-SELECT department, count(name) AS 'num of people', sum(salary) as 'total salary' FROM people GROUP BY department;
+SELECT department, count(name) AS 'num of people', sum(salary) as 'total salary'
+FROM people GROUP BY department;
+
 SELECT born<'1988-1-1', count(name), sum(salary) FROM people GROUP BY born<'1988-1-1';
 ```
 
@@ -221,13 +223,15 @@ INSERT INTO department (name, manager_id) VALUES
 ```
 
 ```sql
-SELECT people.name, salary, born, department, (SELECT people.name from people WHERE people.rowid=department.manager_id) AS Manager
+SELECT people.name, salary, born, department,
+ (SELECT people.name from people WHERE people.rowid=department.manager_id) AS Manager
 FROM people LEFT JOIN department ON people.department = department.name;
 ```
 ### Create view
 
 ```sql
 CREATE VIEW summary AS
-SELECT people.name, salary, born, department, (SELECT people.name from people WHERE people.rowid=department.manager_id) AS Manager
+SELECT people.name, salary, born, department,
+ (SELECT people.name from people WHERE people.rowid=department.manager_id) AS Manager
 FROM people LEFT JOIN department ON people.department = department.name;
 ```
