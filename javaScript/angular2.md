@@ -1,4 +1,4 @@
-# Angular 2 
+# Angular 2
 
 Angular 2 je rozdílný oproti Angularu 1. Je psán v typescriptu, čili je silně typovaný a vychází z ES6. Organizačně rozlišuje pouze:
 
@@ -14,9 +14,10 @@ Struktura je relativně složitá a míra provázanosti souborů velká a proto 
 - přidat komponentu: `ng generate component <name> `
 - přidat service `ng generate service <name>`
 - nápověda `ng help <cmd>`
-- apod 
+- apod
 
-Velmi dobrý [tutorial][] a [cheat sheet][]. Podrobnější vysvětlení [http][http example]. Pro vývoj se velmi hodí mít lokální [json server], který nám umožní snadno simulovat data. Nebo data dáme do složky assets.
+Velmi dobrý [tutorial][] a [cheat sheet][]. Podrobnější vysvětlení [http][http example]. Jsony pro vývoj je možné umístit do složky `assets` a následně jsou po `ng serve` přístupné.[^1]
+
 
 Instalace: `npm install -g @angular/cli`, projekt vygenerujeme: `ng new --minimal --skip-test <name>`
 ```
@@ -45,7 +46,7 @@ Instalace: `npm install -g @angular/cli`, projekt vygenerujeme: `ng new --minima
 
 `styles.css`: Globální styly, též můžeme vygnerovat SASS apod.
 
-`app/app.module.ts`: 
+`app/app.module.ts`:
 
 ```ts
 import { BrowserModule } from '@angular/platform-browser';
@@ -55,7 +56,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [ AppComponent ], // where you declare the components and directives that belong to the current module.
-  imports: [ BrowserModule ], // where you declare your module dependencies, for instance, browser, forms, routing or http. 
+  imports: [ BrowserModule ], // where you declare your module dependencies, for instance, browser, forms, routing or http.
   providers: [],
   bootstrap: [ AppComponent ] // that identifies the root component that Angular 2 should use to bootstrap your application.
 })
@@ -74,12 +75,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'app works!';                 // proměnná použitelná v šabloně pomocí {{title}}
-  
+
   constructor() {}
   ngOnInit() {}
 }
 ```
 
+[^1]: Pokud chcete větší izolaci (např. nechcete, aby se vám data motala v aplikaci), ale tak doporučuji lokální [json server][], který nám data (primárně jsony) dodá.
 
 [tutorial]: https://www.barbarianmeetscoding.com/blog/2016/03/25/getting-started-with-angular-2-step-by-step-1-your-first-component/
 [cheat sheet]: https://www.cheatography.com/gregfinzer/cheat-sheets/angular-2/
