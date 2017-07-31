@@ -109,4 +109,5 @@ Můžeme použít 2 patterny - observable nebo promise.
 [tutorial]: https://www.barbarianmeetscoding.com/blog/2016/03/25/getting-started-with-angular-2-step-by-step-1-your-first-component/
 [cheat sheet]: https://www.cheatography.com/gregfinzer/cheat-sheets/angular-2/
 [http example]: http://www.concretepage.com/angular-2/angular-2-http-get-example
+[combine streams]: http://www.syntaxsuccess.com/viewarticle/combining-multiple-rxjs-streams-in-angular-2.0
 [json server]: https://github.com/typicode/json-server
