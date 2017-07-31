@@ -16,7 +16,7 @@ Struktura je relativně složitá a míra provázanosti souborů velká a proto 
 - nápověda `ng help <cmd>`
 - apod 
 
-Velmi dobrý [tutorial][] a [cheat sheet][]. Podrobnější vysvětlení [http][http example]. Pro vývoj se velmi hodí mít lokální [json server], který nám umožní snadno simulovat data.
+Velmi dobrý [tutorial][] a [cheat sheet][]. Podrobnější vysvětlení [http][http example]. Pro vývoj se velmi hodí mít lokální [json server], který nám umožní snadno simulovat data. Nebo data dáme do složky assets.
 
 Instalace: `npm install -g @angular/cli`, projekt vygenerujeme: `ng new --minimal --skip-test <name>`
 ```
