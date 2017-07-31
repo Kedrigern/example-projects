@@ -11,13 +11,14 @@ Struktura je relativně složitá a míra provázanosti souborů velká a proto 
 - vytvořit nový projekt `ng new [--minimal] [--skip-tests] [--routing] <name>`
 - běh aplikace `ng serve [-o]`
 - kompilaci aplikace pro produkci `ng build`
-- přidat komponentu: `ng generate component <name> `
+- přidat komponentu: `ng generate component [--inline-template] [--inline-style] <name> `
 - přidat service `ng generate service <name>`
 - nápověda `ng help <cmd>`
 - apod
 
 Velmi dobrý [tutorial][] a [cheat sheet][]. Podrobnější vysvětlení [http][http example]. Jsony pro vývoj je možné umístit do složky `assets` a následně jsou po `ng serve` přístupné.[^1]
 
+## Základy
 
 Instalace: `npm install -g @angular/cli`, projekt vygenerujeme: `ng new --minimal --skip-test <name>`
 ```
@@ -80,6 +81,28 @@ export class AppComponent implements OnInit {
   ngOnInit() {}
 }
 ```
+
+## Předávání proměnných mezi komponentami
+
+V nadřazené komponntě: `<app-person-details [person]="selectedPerson"></app-person-details>`
+
+V odkazované komponentě:
+
+```ts
+import { Component, Input } from '@angular/core'; // přidáme
+
+export class PersonDetailsComponent {
+  // decorator
+  @Input() person : Person;
+}
+```
+
+## Získávání dat
+
+Můžeme použít 2 patterny - observable nebo promise.
+
+`http.get()` nám vždy vrátí `Observable<Response>`
+
 
 [^1]: Pokud chcete větší izolaci (např. nechcete, aby se vám data motala v aplikaci), ale tak doporučuji lokální [json server][], který nám data (primárně jsony) dodá.
 
