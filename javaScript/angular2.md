@@ -8,7 +8,7 @@ Angular 2 je rozdílný oproti Angularu 1. Je psán v typescriptu, čili je siln
 
 Struktura je relativně složitá a míra provázanosti souborů velká a proto se používá angular-cli, což je cmd utilita, která nám pomáhá:
 
-- vytvořit nový projekt `ng new [--minimal] [--skip-tests] [--routing] <name>`
+- vytvořit nový projekt `ng new [--minimal] [--skip-tests] [--skip-git] [--routing] <name>`
 - běh aplikace `ng serve [-o]`
 - kompilaci aplikace pro produkci `ng build`
 - přidat komponentu: `ng generate component [--inline-template] [--inline-style] <name> `
