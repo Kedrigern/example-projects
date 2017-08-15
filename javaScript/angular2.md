@@ -8,7 +8,7 @@ Angular 2 je rozdílný oproti Angularu 1. Je psán v typescriptu, čili je siln
 
 Struktura je relativně složitá a míra provázanosti souborů velká a proto se používá angular-cli, což je cmd utilita, která nám pomáhá:
 
-- vytvořit nový projekt `ng new [--minimal] [--skip-tests] [--routing] <name>`
+- vytvořit nový projekt `ng new [--minimal] [--skip-tests] [--skip-git] [--routing] <name>`
 - běh aplikace `ng serve [-o]`
 - kompilaci aplikace pro produkci `ng build`
 - přidat komponentu: `ng generate component [--inline-template] [--inline-style] <name> `
@@ -109,4 +109,5 @@ Můžeme použít 2 patterny - observable nebo promise.
 [tutorial]: https://www.barbarianmeetscoding.com/blog/2016/03/25/getting-started-with-angular-2-step-by-step-1-your-first-component/
 [cheat sheet]: https://www.cheatography.com/gregfinzer/cheat-sheets/angular-2/
 [http example]: http://www.concretepage.com/angular-2/angular-2-http-get-example
+[combine streams]: http://www.syntaxsuccess.com/viewarticle/combining-multiple-rxjs-streams-in-angular-2.0
 [json server]: https://github.com/typicode/json-server
