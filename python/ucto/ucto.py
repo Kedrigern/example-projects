@@ -7,6 +7,8 @@ scp <path>/data.sqlite ucto2.db
 2. Nejdřívě je třeba převést sqlite2 do sqlite3:
 sqlite ucto2.db .dump | sqlite3 ucto3.db   # konverze sqlite 2 do sqlite 3
 3. Potom spustit tento skript
+
+Parsování přímo z webu: https://github.com/pirati-byro/fo-vydaje2017 (zbytečně vytěžující a zdlouhavé)
 """
 
 import csv
