@@ -235,3 +235,31 @@ SELECT people.name, salary, born, department,
  (SELECT people.name from people WHERE people.rowid=department.manager_id) AS Manager
 FROM people LEFT JOIN department ON people.department = department.name;
 ```
+
+### Komplexní dotazy
+
+Mějme:
+
+| id | key | val |
+|----|-----|-----|
+|  1 | a   | a1  |
+|  1 | b   | b1  |
+|  2 | a   | a2  |
+|  2 | b   | b2  |
+|  3 | a   | a3  |
+|  3 | b   | b3  |
+
+```sql
+insert into t1 (id, key, val ) values
+  (1, 'a', 'a1'), (1, 'b', 'b1'), (2, 'a', 'a2'), (2, 'b', 'b3'), (3, 'a', 'a3'), (3, 'b', 'b3');
+```
+
+A chceme:
+
+| id | a | b |
+|----|---|---|
+|  1 | a1| b1|
+|  2 | a2| b2|
+|  3 | a3| b3|
+
+...
