@@ -238,7 +238,7 @@ FROM people LEFT JOIN department ON people.department = department.name;
 
 ### Komplexní dotazy
 
-Mějme:
+Pokud máme data uložená jako [EAV](https://en.wikipedia.org/wiki/Entity%E2%80%93attribute%E2%80%93value_model):
 
 | id | key | val |
 |----|-----|-----|
@@ -250,11 +250,12 @@ Mějme:
 |  3 | b   | b3  |
 
 ```sql
+create table t1 ( id, key, val );
 insert into t1 (id, key, val ) values
   (1, 'a', 'a1'), (1, 'b', 'b1'), (2, 'a', 'a2'), (2, 'b', 'b3'), (3, 'a', 'a3'), (3, 'b', 'b3');
 ```
 
-A chceme:
+A chceme dostat klasickou tabulku:
 
 | id | a | b |
 |----|---|---|
@@ -262,4 +263,50 @@ A chceme:
 |  2 | a2| b2|
 |  3 | a3| b3|
 
-...
+```sql
+select ent.id, a.val a, b.val b from
+  (select distinct id from t1) ent
+  left join t1 a on a.id = ent.id and a.key = 'a'
+  left join t1 b on b.id = ent.id and b.key = 'b';
+```
+
+----
+
+| id | num | date       |
+|----|-----|------------|
+| 1  |  50 | 2017-01-10 |
+| 1  |   0 | 2017-02-10 |
+| 2  |  60 | 2017-01-10 |
+| 2  |   0 | 2017-02-10 |
+
+| id | comment           |
+|----|-------------------|
+|  1 | first line for 1  |
+|  1 | second line for 1 |
+|  2 | comment text for 2|
+
+
+```sql
+create table record ( id, num, date );
+create table comment ( id, comment );
+insert into record values (1, 50, '2017-01-10'), (1, 0, '2017-02-10'), (2, 60, '2017-01-10'), (2, 0, '2017-02-10');
+insert into comment values (1, 'first line for 1'), (1, 'second line for 1'), (2, 'comment text for 2');
+
+-- Potřebuji spojit následující dva pohledy:
+
+select id, group_concat(comment) as comment from comment group by id;
+select * from record where num > 0;
+
+-- Čehož docílím:
+select r.id, r.num, r.date, c.comment
+  from record r left join
+    (select id, group_concat(comment) as comment from comment group by id) c
+    on c.id = r.id
+  where num > 0;
+```
+A výsledek:
+
+| id  | num  |   date     |   comment                          |
+|-----|------|------------|------------------------------------|
+| 1   |   50 | 2017-01-10 | first line for 1,second line for 1 |
+| 2   |   60 | 2017-01-10 | comment text for 2                 |
