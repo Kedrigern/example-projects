@@ -14,8 +14,9 @@ Parsování přímo z webu: https://github.com/pirati-byro/fo-vydaje2017 (zbyte�
 import csv
 import sqlite3
 
+year = '2017'
 dbfile = 'ucto3.db'
-csvfile = 'ucto.csv'
+csvfile = 'ucto' + year + '.csv'
 vydaje = []
 
 def parsePolozka(pol):
@@ -69,8 +70,9 @@ def processVydaj(records, results):
 
 with sqlite3.connect(dbfile) as conn:
     c = conn.cursor()
-
-    pids = c.execute("select pid from pages where page like 'fo:vydaje:fo_%_2017';").fetchall()
+    namespace = 'fo:vydaje:fo_%_' + year
+    args = (namespace,)
+    pids = c.execute("select pid from pages where page like ?;", args).fetchall()
     for row in pids:
         pid = row[0]
         records = c.execute("select * from data where pid = '%d'" % pid).fetchall()
@@ -78,8 +80,12 @@ with sqlite3.connect(dbfile) as conn:
 
 with open(csvfile, 'w') as csvw:
     fieldnames = ['značka', 'středisko', 'položka', 'částka', 'podáno', 'proplaceno', 'redmine', 'popis'] # jakub
-    fieldnames = ['značka', 'středisko', 'položka', 'částka', 'podáno', 'proplaceno', 'souhlas', 'usnesení', 'název', 'vs', 'příjemce', 'záměr', 'doklad', 'ks', 'rok', 'druh', 'ss', 'účet', 'číslo', 'účtováno', 'hospodář', 'rest', 'zdroj', 'složka'] # full
+    fieldnames = ['značka', 'středisko', 'položka', 'částka', 'podáno', 'proplaceno', 'souhlas', 'usnesení', 'název', 'vs', 'příjemce', 'záměr', 'doklad', 'ks', 'rok', 'druh', 'ss', 'účet', 'číslo', 'účtováno', 'hospodář', 'rest', 'zdroj', 'složka', 'účel'] # full
     writer = csv.DictWriter(csvw, fieldnames=fieldnames)
     writer.writeheader()
     for vydaj in vydaje:
-        writer.writerow(vydaj)
+        try:
+            writer.writerow(vydaj)
+        except ValueError as e:
+            print(vydaj)
+            print(e)

@@ -251,7 +251,7 @@ Pokud máme data uložená jako [EAV](https://en.wikipedia.org/wiki/Entity%E2%80
 
 ```sql
 create table t1 ( id, key, val );
-insert into t1 (id, key, val ) values
+insert into t1 values
   (1, 'a', 'a1'), (1, 'b', 'b1'), (2, 'a', 'a2'), (2, 'b', 'b3'), (3, 'a', 'a3'), (3, 'b', 'b3');
 ```
 
@@ -269,7 +269,6 @@ select ent.id, a.val a, b.val b from
   left join t1 a on a.id = ent.id and a.key = 'a'
   left join t1 b on b.id = ent.id and b.key = 'b';
 ```
-
 ----
 
 | id | num | date       |
@@ -300,7 +299,7 @@ select * from record where num > 0;
 -- Čehož docílím:
 select r.id, r.num, r.date, c.comment
   from record r left join
-    (select id, group_concat(comment) as comment from comment group by id) c
+    (select id, group_concat(comment, ',') as comment from comment group by id) c
     on c.id = r.id
   where num > 0;
 ```
