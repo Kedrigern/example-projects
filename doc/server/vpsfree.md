@@ -48,11 +48,12 @@ Oficiální návod: https://kb.vpsfree.cz/navody/vps/kvm
   virsh --connect qemu:///system list --all
   ```
   A zde dostanu chybu 1.
+
 8. Nastavíme bridge
-	https://www.linux.com/learn/intro-to-linux/2017/5/creating-virtual-machines-kvm-part-1
-	https://www.linux.com/learn/intro-to-linux/2017/5/creating-virtual-machines-kvm-part-2-networking
-	https://help.ubuntu.com/community/KVM/Networking
-9. Na lokálním PC spustíme virt-manager a připojíme se přes SSH. Nyní máme i grafickou obrazovku, čili můžeme snadno nainstalovat příslušný stroj
+	- https://www.linux.com/learn/intro-to-linux/2017/5/creating-virtual-machines-kvm-part-1
+	- https://www.linux.com/learn/intro-to-linux/2017/5/creating-virtual-machines-kvm-part-2-networking
+	- https://help.ubuntu.com/community/KVM/Networking
+9. Na lokálním PC spustíme `virt-manager` a připojíme se přes SSH. Nyní máme i grafickou obrazovku, čili můžeme snadno nainstalovat příslušný stroj.
 
 ### Chyba 1
 
@@ -78,6 +79,8 @@ Dec 10 12:11:48 kvmhost libvirtd[349]: internal error: Child process (/usr/sbin/
 ```
 
 ### Debian 9
+
+Nefunkční...
 
 ```
 apt install qemu-kvm libvirt-clients libvirt-daemon-system libvirt-daemon virt-manager
