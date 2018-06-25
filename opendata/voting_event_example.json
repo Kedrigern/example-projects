@@ -1,0 +1,1602 @@
+[
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Volný",
+        "vote_event_id": 67890,
+        "voter_id": 6166,
+        "voter_given_name": "Jan",
+        "option": "absent"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Polanský",
+        "vote_event_id": 67890,
+        "voter_id": 6529,
+        "voter_given_name": "Ondřej",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Staněk",
+        "vote_event_id": 67890,
+        "voter_id": 6501,
+        "voter_given_name": "Pavel",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Farhan",
+        "vote_event_id": 67890,
+        "voter_id": 6447,
+        "voter_given_name": "Kamal",
+        "option": "no"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Janda",
+        "vote_event_id": 67890,
+        "voter_id": 6459,
+        "voter_given_name": "Jakub",
+        "option": "yes"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Majerová Zahradníková",
+        "vote_event_id": 67890,
+        "voter_id": 6467,
+        "voter_given_name": "Zuzana",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Bláha",
+        "vote_event_id": 67890,
+        "voter_id": 6439,
+        "voter_given_name": "Jiří",
+        "option": "no"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Vích",
+        "vote_event_id": 67890,
+        "voter_id": 6495,
+        "voter_given_name": "Radovan",
+        "option": "abstain"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Holomčík",
+        "vote_event_id": 67890,
+        "voter_id": 6454,
+        "voter_given_name": "Radek",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Fridrich",
+        "vote_event_id": 67890,
+        "voter_id": 6451,
+        "voter_given_name": "Stanislav",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Vondráček",
+        "vote_event_id": 67890,
+        "voter_id": 6165,
+        "voter_given_name": "Radek",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Babišová",
+        "vote_event_id": 67890,
+        "voter_id": 6428,
+        "voter_given_name": "Andrea",
+        "option": "no"
+    },
+    {
+        "group_name": "KDU-ČSL",
+        "voter_family_name": "Juránek",
+        "vote_event_id": 67890,
+        "voter_id": 5847,
+        "voter_given_name": "Stanislav",
+        "option": "no"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Nevludová",
+        "vote_event_id": 67890,
+        "voter_id": 6478,
+        "voter_given_name": "Ivana",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Kubíček",
+        "vote_event_id": 67890,
+        "voter_id": 6215,
+        "voter_given_name": "Roman",
+        "option": "no"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Jelínek",
+        "vote_event_id": 67890,
+        "voter_id": 6461,
+        "voter_given_name": "Pavel",
+        "option": "absent"
+    },
+    {
+        "group_name": "ČSSD",
+        "voter_family_name": "Foldyna",
+        "vote_event_id": 67890,
+        "voter_id": 5911,
+        "voter_given_name": "Jaroslav",
+        "option": "absent"
+    },
+    {
+        "group_name": "STAN",
+        "voter_family_name": "Pávek",
+        "vote_event_id": 67890,
+        "voter_id": 6541,
+        "voter_given_name": "Petr",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Rais",
+        "vote_event_id": 67890,
+        "voter_id": 6158,
+        "voter_given_name": "Karel",
+        "option": "no"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Benda",
+        "vote_event_id": 67890,
+        "voter_id": 4,
+        "voter_given_name": "Marek",
+        "option": "yes"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Klaus",
+        "vote_event_id": 67890,
+        "voter_id": 6498,
+        "voter_given_name": "Václav",
+        "option": "absent"
+    },
+    {
+        "group_name": "KSČM",
+        "voter_family_name": "Grospič",
+        "vote_event_id": 67890,
+        "voter_id": 4778,
+        "voter_given_name": "Stanislav",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Pour",
+        "vote_event_id": 67890,
+        "voter_id": 6539,
+        "voter_given_name": "Milan",
+        "option": "no"
+    },
+    {
+        "group_name": "ČSSD",
+        "voter_family_name": "Valachová",
+        "vote_event_id": 67890,
+        "voter_id": 6337,
+        "voter_given_name": "Kateřina",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Kohoutek",
+        "vote_event_id": 67890,
+        "voter_id": 6506,
+        "voter_given_name": "Tomáš",
+        "option": "no"
+    },
+    {
+        "group_name": "KDU-ČSL",
+        "voter_family_name": "Bartošek",
+        "vote_event_id": 67890,
+        "voter_id": 6178,
+        "voter_given_name": "Jan",
+        "option": "absent"
+    },
+    {
+        "group_name": "ČSSD",
+        "voter_family_name": "Chovanec",
+        "vote_event_id": 67890,
+        "voter_id": 6200,
+        "voter_given_name": "Milan",
+        "option": "absent"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Skopeček",
+        "vote_event_id": 67890,
+        "voter_id": 6418,
+        "voter_given_name": "Jan",
+        "option": "absent"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Svoboda",
+        "vote_event_id": 67890,
+        "voter_id": 6007,
+        "voter_given_name": "Bohuslav",
+        "option": "yes"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Rozvoral",
+        "vote_event_id": 67890,
+        "voter_id": 6521,
+        "voter_given_name": "Radek",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Sadovský",
+        "vote_event_id": 67890,
+        "voter_id": 6518,
+        "voter_given_name": "Petr",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Adámková",
+        "vote_event_id": 67890,
+        "voter_id": 6254,
+        "voter_given_name": "Věra",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Němcová",
+        "vote_event_id": 67890,
+        "voter_id": 401,
+        "voter_given_name": "Miroslava",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Vojtěch",
+        "vote_event_id": 67890,
+        "voter_id": 6491,
+        "voter_given_name": "Adam",
+        "option": "absent"
+    },
+    {
+        "group_name": "KSČM",
+        "voter_family_name": "Valenta",
+        "vote_event_id": 67890,
+        "voter_id": 6169,
+        "voter_given_name": "Jiří",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Kupka",
+        "vote_event_id": 67890,
+        "voter_id": 6538,
+        "voter_given_name": "Martin",
+        "option": "yes"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Mašek",
+        "vote_event_id": 67890,
+        "voter_id": 6534,
+        "voter_given_name": "Jiří",
+        "option": "no"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Rozner",
+        "vote_event_id": 67890,
+        "voter_id": 6522,
+        "voter_given_name": "Miloslav",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Maxová",
+        "vote_event_id": 67890,
+        "voter_id": 6221,
+        "voter_given_name": "Radka",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Vyzula",
+        "vote_event_id": 67890,
+        "voter_id": 6161,
+        "voter_given_name": "Rostislav",
+        "option": "no"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Bartoň",
+        "vote_event_id": 67890,
+        "voter_id": 6432,
+        "voter_given_name": "Lukáš",
+        "option": "no"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Bauer",
+        "vote_event_id": 67890,
+        "voter_id": 5379,
+        "voter_given_name": "Jan",
+        "option": "absent"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Bojko",
+        "vote_event_id": 67890,
+        "voter_id": 6440,
+        "voter_given_name": "Marian",
+        "option": "abstain"
+    },
+    {
+        "group_name": "TOP09",
+        "voter_family_name": "Feri",
+        "vote_event_id": 67890,
+        "voter_id": 6449,
+        "voter_given_name": "Dominik",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Balaštíková",
+        "vote_event_id": 67890,
+        "voter_id": 6177,
+        "voter_given_name": "Margita",
+        "option": "no"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Hrnčíř",
+        "vote_event_id": 67890,
+        "voter_id": 6455,
+        "voter_given_name": "Jan",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Zlesák",
+        "vote_event_id": 67890,
+        "voter_id": 6480,
+        "voter_given_name": "Radek",
+        "option": "no"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Martinů",
+        "vote_event_id": 67890,
+        "voter_id": 5945,
+        "voter_given_name": "Jaroslav",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Fialová",
+        "vote_event_id": 67890,
+        "voter_id": 6457,
+        "voter_given_name": "Eva",
+        "option": "no"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Krejza",
+        "vote_event_id": 67890,
+        "voter_id": 6510,
+        "voter_given_name": "Karel",
+        "option": "yes"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Plzák",
+        "vote_event_id": 67890,
+        "voter_id": 6171,
+        "voter_given_name": "Pavel",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Růžička",
+        "vote_event_id": 67890,
+        "voter_id": 6520,
+        "voter_given_name": "Pavel",
+        "option": "no"
+    },
+    {
+        "group_name": "KSČM",
+        "voter_family_name": "Pawlas",
+        "vote_event_id": 67890,
+        "voter_id": 6485,
+        "voter_given_name": "Daniel",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Stropnický",
+        "vote_event_id": 67890,
+        "voter_id": 443,
+        "voter_given_name": "Martin",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Štolpa",
+        "vote_event_id": 67890,
+        "voter_id": 6484,
+        "voter_given_name": "David",
+        "option": "no"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Hyťhová",
+        "vote_event_id": 67890,
+        "voter_id": 6456,
+        "voter_given_name": "Tereza",
+        "option": "abstain"
+    },
+    {
+        "group_name": "KSČM",
+        "voter_family_name": "Luzar",
+        "vote_event_id": 67890,
+        "voter_id": 6279,
+        "voter_given_name": "Leo",
+        "option": "absent"
+    },
+    {
+        "group_name": "KDU-ČSL",
+        "voter_family_name": "Kaňkovský",
+        "vote_event_id": 67890,
+        "voter_id": 6207,
+        "voter_given_name": "Vít",
+        "option": "yes"
+    },
+    {
+        "group_name": "KDU-ČSL",
+        "voter_family_name": "Čižinský",
+        "vote_event_id": 67890,
+        "voter_id": 6443,
+        "voter_given_name": "Jan",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Dostálová",
+        "vote_event_id": 67890,
+        "voter_id": 6430,
+        "voter_given_name": "Klára",
+        "option": "no"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Bartoš",
+        "vote_event_id": 67890,
+        "voter_id": 6433,
+        "voter_given_name": "Ivan",
+        "option": "no"
+    },
+    {
+        "group_name": "TOP09",
+        "voter_family_name": "Langšádlová",
+        "vote_event_id": 67890,
+        "voter_id": 5943,
+        "voter_given_name": "Helena",
+        "option": "no"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Jarošová",
+        "vote_event_id": 67890,
+        "voter_id": 6460,
+        "voter_given_name": "Monika",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Brabec",
+        "vote_event_id": 67890,
+        "voter_id": 6184,
+        "voter_given_name": "Richard",
+        "option": "no"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Baxa",
+        "vote_event_id": 67890,
+        "voter_id": 6435,
+        "voter_given_name": "Martin",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ČSSD",
+        "voter_family_name": "Chvojka",
+        "vote_event_id": 67890,
+        "voter_id": 5926,
+        "voter_given_name": "Jan",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Jáč",
+        "vote_event_id": 67890,
+        "voter_id": 6458,
+        "voter_given_name": "Ivan",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Vildumetzová",
+        "vote_event_id": 67890,
+        "voter_id": 6471,
+        "voter_given_name": "Jana",
+        "option": "absent"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Lipavský",
+        "vote_event_id": 67890,
+        "voter_id": 6537,
+        "voter_given_name": "Jan",
+        "option": "no"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Levová",
+        "vote_event_id": 67890,
+        "voter_id": 6502,
+        "voter_given_name": "Jana",
+        "option": "absent"
+    },
+    {
+        "group_name": "KDU-ČSL",
+        "voter_family_name": "Jurečka",
+        "vote_event_id": 67890,
+        "voter_id": 6205,
+        "voter_given_name": "Marian",
+        "option": "absent"
+    },
+    {
+        "group_name": "ČSSD",
+        "voter_family_name": "Veselý",
+        "vote_event_id": 67890,
+        "voter_id": 6494,
+        "voter_given_name": "Ondřej",
+        "option": "yes"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Vrecionová",
+        "vote_event_id": 67890,
+        "voter_id": 6052,
+        "voter_given_name": "Veronika",
+        "option": "yes"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Schiller",
+        "vote_event_id": 67890,
+        "voter_id": 6517,
+        "voter_given_name": "Jan",
+        "option": "no"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Profant",
+        "vote_event_id": 67890,
+        "voter_id": 6526,
+        "voter_given_name": "Ondřej",
+        "option": "no"
+    },
+    {
+        "group_name": "KSČM",
+        "voter_family_name": "Pojezný",
+        "vote_event_id": 67890,
+        "voter_id": 6233,
+        "voter_given_name": "Ivo",
+        "option": "absent"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Koten",
+        "vote_event_id": 67890,
+        "voter_id": 6508,
+        "voter_given_name": "Radek",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Hájek",
+        "vote_event_id": 67890,
+        "voter_id": 6139,
+        "voter_given_name": "Josef",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Juříček",
+        "vote_event_id": 67890,
+        "voter_id": 6496,
+        "voter_given_name": "Pavel",
+        "option": "no"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Fiala",
+        "vote_event_id": 67890,
+        "voter_id": 6074,
+        "voter_given_name": "Petr",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Vondrák",
+        "vote_event_id": 67890,
+        "voter_id": 6492,
+        "voter_given_name": "Ivo",
+        "option": "absent"
+    },
+    {
+        "group_name": "KSČM",
+        "voter_family_name": "Dolejš",
+        "vote_event_id": 67890,
+        "voter_id": 5261,
+        "voter_given_name": "Jiří",
+        "option": "abstain"
+    },
+    {
+        "group_name": "KSČM",
+        "voter_family_name": "Matušovská",
+        "vote_event_id": 67890,
+        "voter_id": 5938,
+        "voter_given_name": "Květa",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Kořanová",
+        "vote_event_id": 67890,
+        "voter_id": 6464,
+        "voter_given_name": "Barbora",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Pražák",
+        "vote_event_id": 67890,
+        "voter_id": 6527,
+        "voter_given_name": "David",
+        "option": "no"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Kobza",
+        "vote_event_id": 67890,
+        "voter_id": 6503,
+        "voter_given_name": "Jiří",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Faltýnek",
+        "vote_event_id": 67890,
+        "voter_id": 6190,
+        "voter_given_name": "Jaroslav",
+        "option": "no"
+    },
+    {
+        "group_name": "KSČM",
+        "voter_family_name": "Filip",
+        "vote_event_id": 67890,
+        "voter_id": 303,
+        "voter_given_name": "Vojtěch",
+        "option": "absent"
+    },
+    {
+        "group_name": "KSČM",
+        "voter_family_name": "Aulická Jírovcová",
+        "vote_event_id": 67890,
+        "voter_id": 6149,
+        "voter_given_name": "Hana",
+        "option": "no"
+    },
+    {
+        "group_name": "KSČM",
+        "voter_family_name": "Vostrá",
+        "vote_event_id": 67890,
+        "voter_id": 5268,
+        "voter_given_name": "Miloslava",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Richter",
+        "vote_event_id": 67890,
+        "voter_id": 6500,
+        "voter_given_name": "Jan",
+        "option": "absent"
+    },
+    {
+        "group_name": "ČSSD",
+        "voter_family_name": "Hanzel",
+        "vote_event_id": 67890,
+        "voter_id": 6452,
+        "voter_given_name": "Tomáš",
+        "option": "absent"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Munzar",
+        "vote_event_id": 67890,
+        "voter_id": 6486,
+        "voter_given_name": "Vojtěch",
+        "option": "yes"
+    },
+    {
+        "group_name": "TOP09",
+        "voter_family_name": "Válek",
+        "vote_event_id": 67890,
+        "voter_id": 6482,
+        "voter_given_name": "Vlastimil",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Malá",
+        "vote_event_id": 67890,
+        "voter_id": 6468,
+        "voter_given_name": "Taťána",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Kasal",
+        "vote_event_id": 67890,
+        "voter_id": 6209,
+        "voter_given_name": "David",
+        "option": "no"
+    },
+    {
+        "group_name": "ČSSD",
+        "voter_family_name": "Běhounek",
+        "vote_event_id": 67890,
+        "voter_id": 6002,
+        "voter_given_name": "Jiří",
+        "option": "absent"
+    },
+    {
+        "group_name": "KDU-ČSL",
+        "voter_family_name": "Bělobrádek",
+        "vote_event_id": 67890,
+        "voter_id": 6138,
+        "voter_given_name": "Pavel",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Oborná",
+        "vote_event_id": 67890,
+        "voter_id": 6475,
+        "voter_given_name": "Monika",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Rutová",
+        "vote_event_id": 67890,
+        "voter_id": 6379,
+        "voter_given_name": "Miloslava",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Ratiborský",
+        "vote_event_id": 67890,
+        "voter_id": 6523,
+        "voter_given_name": "Michal",
+        "option": "no"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Jiránek",
+        "vote_event_id": 67890,
+        "voter_id": 6462,
+        "voter_given_name": "Martin",
+        "option": "no"
+    },
+    {
+        "group_name": "TOP09",
+        "voter_family_name": "Kalousek",
+        "vote_event_id": 67890,
+        "voter_id": 377,
+        "voter_given_name": "Miroslav",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Kolovratník",
+        "vote_event_id": 67890,
+        "voter_id": 6211,
+        "voter_given_name": "Martin",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Špičák",
+        "vote_event_id": 67890,
+        "voter_id": 6505,
+        "voter_given_name": "Julius",
+        "option": "no"
+    },
+    {
+        "group_name": "STAN",
+        "voter_family_name": "Gazdík",
+        "vote_event_id": 67890,
+        "voter_id": 5914,
+        "voter_given_name": "Petr",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Vrána",
+        "vote_event_id": 67890,
+        "voter_id": 6490,
+        "voter_given_name": "Petr",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Okleštěk",
+        "vote_event_id": 67890,
+        "voter_id": 6172,
+        "voter_given_name": "Ladislav",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Ožanová",
+        "vote_event_id": 67890,
+        "voter_id": 6474,
+        "voter_given_name": "Zuzana",
+        "option": "no"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Černochová",
+        "vote_event_id": 67890,
+        "voter_id": 5903,
+        "voter_given_name": "Jana",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Králíček",
+        "vote_event_id": 67890,
+        "voter_id": 6509,
+        "voter_given_name": "Robert",
+        "option": "no"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Volný",
+        "vote_event_id": 67890,
+        "voter_id": 6481,
+        "voter_given_name": "Lubomír",
+        "option": "abstain"
+    },
+    {
+        "group_name": "STAN",
+        "voter_family_name": "Krutáková",
+        "vote_event_id": 67890,
+        "voter_id": 6466,
+        "voter_given_name": "Jana",
+        "option": "no"
+    },
+    {
+        "group_name": "KSČM",
+        "voter_family_name": "Koníček",
+        "vote_event_id": 67890,
+        "voter_id": 5313,
+        "voter_given_name": "Vladimír",
+        "option": "yes"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Kohoutek",
+        "vote_event_id": 67890,
+        "voter_id": 6504,
+        "voter_given_name": "Jiří",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Adamec",
+        "vote_event_id": 67890,
+        "voter_id": 5700,
+        "voter_given_name": "Ivan",
+        "option": "yes"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Šafránková",
+        "vote_event_id": 67890,
+        "voter_id": 6479,
+        "voter_given_name": "Lucie",
+        "option": "abstain"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Kopřiva",
+        "vote_event_id": 67890,
+        "voter_id": 6499,
+        "voter_given_name": "František",
+        "option": "no"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Martínek",
+        "vote_event_id": 67890,
+        "voter_id": 6535,
+        "voter_given_name": "Tomáš",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Petrtýl",
+        "vote_event_id": 67890,
+        "voter_id": 6409,
+        "voter_given_name": "František",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Kott",
+        "vote_event_id": 67890,
+        "voter_id": 6246,
+        "voter_given_name": "Josef",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Blaha",
+        "vote_event_id": 67890,
+        "voter_id": 6438,
+        "voter_given_name": "Stanislav",
+        "option": "absent"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Ferjenčík",
+        "vote_event_id": 67890,
+        "voter_id": 6450,
+        "voter_given_name": "Mikuláš",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Brázdil",
+        "vote_event_id": 67890,
+        "voter_id": 6185,
+        "voter_given_name": "Milan",
+        "option": "no"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Vymazal",
+        "vote_event_id": 67890,
+        "voter_id": 6489,
+        "voter_given_name": "Tomáš",
+        "option": "no"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Okamura",
+        "vote_event_id": 67890,
+        "voter_id": 6105,
+        "voter_given_name": "Tomio",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ČSSD",
+        "voter_family_name": "Staněk",
+        "vote_event_id": 67890,
+        "voter_id": 6516,
+        "voter_given_name": "Antonín",
+        "option": "absent"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Pošvář",
+        "vote_event_id": 67890,
+        "voter_id": 6528,
+        "voter_given_name": "Jan",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Kalous",
+        "vote_event_id": 67890,
+        "voter_id": 6497,
+        "voter_given_name": "Adam",
+        "option": "abstain"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Fiala",
+        "vote_event_id": 67890,
+        "voter_id": 5459,
+        "voter_given_name": "Radim",
+        "option": "abstain"
+    },
+    {
+        "group_name": "STAN",
+        "voter_family_name": "Rakušan",
+        "vote_event_id": 67890,
+        "voter_id": 6524,
+        "voter_given_name": "Vít",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Babiš",
+        "vote_event_id": 67890,
+        "voter_id": 6150,
+        "voter_given_name": "Andrej",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Řehounek",
+        "vote_event_id": 67890,
+        "voter_id": 6519,
+        "voter_given_name": "Jan",
+        "option": "no"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Stanjura",
+        "vote_event_id": 67890,
+        "voter_id": 5969,
+        "voter_given_name": "Zbyněk",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Procházková",
+        "vote_event_id": 67890,
+        "voter_id": 6472,
+        "voter_given_name": "Věra",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Matyášová",
+        "vote_event_id": 67890,
+        "voter_id": 6540,
+        "voter_given_name": "Eva",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Ťok",
+        "vote_event_id": 67890,
+        "voter_id": 6291,
+        "voter_given_name": "Dan",
+        "option": "absent"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Zahradník",
+        "vote_event_id": 67890,
+        "voter_id": 5844,
+        "voter_given_name": "Jan",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Berkovec",
+        "vote_event_id": 67890,
+        "voter_id": 6143,
+        "voter_given_name": "Stanislav",
+        "option": "no"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Ventruba",
+        "vote_event_id": 67890,
+        "voter_id": 6493,
+        "voter_given_name": "Jiří",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Bžoch",
+        "vote_event_id": 67890,
+        "voter_id": 6441,
+        "voter_given_name": "Jaroslav",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Juchelka",
+        "vote_event_id": 67890,
+        "voter_id": 6463,
+        "voter_given_name": "Aleš",
+        "option": "no"
+    },
+    {
+        "group_name": "ČSSD",
+        "voter_family_name": "Onderka",
+        "vote_event_id": 67890,
+        "voter_id": 6532,
+        "voter_given_name": "Roman",
+        "option": "no"
+    },
+    {
+        "group_name": "STAN",
+        "voter_family_name": "Kovářová",
+        "vote_event_id": 67890,
+        "voter_id": 6214,
+        "voter_given_name": "Věra",
+        "option": "abstain"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Pikal",
+        "vote_event_id": 67890,
+        "voter_id": 6531,
+        "voter_given_name": "Vojtěch",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Bělica",
+        "vote_event_id": 67890,
+        "voter_id": 6437,
+        "voter_given_name": "Josef",
+        "option": "no"
+    },
+    {
+        "group_name": "ČSSD",
+        "voter_family_name": "Zaorálek",
+        "vote_event_id": 67890,
+        "voter_id": 252,
+        "voter_given_name": "Lubomír",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Mališ",
+        "vote_event_id": 67890,
+        "voter_id": 6536,
+        "voter_given_name": "Přemysl",
+        "option": "absent"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Balcarová",
+        "vote_event_id": 67890,
+        "voter_id": 6429,
+        "voter_given_name": "Dana",
+        "option": "abstain"
+    },
+    {
+        "group_name": "TOP09",
+        "voter_family_name": "Pekarová Adamová",
+        "vote_event_id": 67890,
+        "voter_id": 6147,
+        "voter_given_name": "Markéta",
+        "option": "no"
+    },
+    {
+        "group_name": "ČSSD",
+        "voter_family_name": "Hamáček",
+        "vote_event_id": 67890,
+        "voter_id": 5462,
+        "voter_given_name": "Jan",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Kubík",
+        "vote_event_id": 67890,
+        "voter_id": 6511,
+        "voter_given_name": "Jan",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Pastuchová",
+        "vote_event_id": 67890,
+        "voter_id": 6225,
+        "voter_given_name": "Jana",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Dražilová",
+        "vote_event_id": 67890,
+        "voter_id": 6431,
+        "voter_given_name": "Lenka",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Hnilička",
+        "vote_event_id": 67890,
+        "voter_id": 6453,
+        "voter_given_name": "Milan",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Šlechtová",
+        "vote_event_id": 67890,
+        "voter_id": 6287,
+        "voter_given_name": "Karla",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Janulík",
+        "vote_event_id": 67890,
+        "voter_id": 6201,
+        "voter_given_name": "Miloslav",
+        "option": "absent"
+    },
+    {
+        "group_name": "ČSSD",
+        "voter_family_name": "Dolínek",
+        "vote_event_id": 67890,
+        "voter_id": 6444,
+        "voter_given_name": "Petr",
+        "option": "abstain"
+    },
+    {
+        "group_name": "KDU-ČSL",
+        "voter_family_name": "Benešík",
+        "vote_event_id": 67890,
+        "voter_id": 6179,
+        "voter_given_name": "Ondřej",
+        "option": "absent"
+    },
+    {
+        "group_name": "TOP09",
+        "voter_family_name": "Vácha",
+        "vote_event_id": 67890,
+        "voter_id": 6137,
+        "voter_given_name": "František",
+        "option": "no"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Maříková",
+        "vote_event_id": 67890,
+        "voter_id": 6469,
+        "voter_given_name": "Karla",
+        "option": "absent"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Kytýr",
+        "vote_event_id": 67890,
+        "voter_id": 6512,
+        "voter_given_name": "Jaroslav",
+        "option": "no"
+    },
+    {
+        "group_name": "KSČM",
+        "voter_family_name": "Černý",
+        "vote_event_id": 67890,
+        "voter_id": 5307,
+        "voter_given_name": "Alexander",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ČSSD",
+        "voter_family_name": "Birke",
+        "vote_event_id": 67890,
+        "voter_id": 6182,
+        "voter_given_name": "Jan",
+        "option": "absent"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Blažek",
+        "vote_event_id": 67890,
+        "voter_id": 6079,
+        "voter_given_name": "Pavel",
+        "option": "yes"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Podal",
+        "vote_event_id": 67890,
+        "voter_id": 6530,
+        "voter_given_name": "Zdeněk",
+        "option": "absent"
+    },
+    {
+        "group_name": "ČSSD",
+        "voter_family_name": "Sklenák",
+        "vote_event_id": 67890,
+        "voter_id": 5965,
+        "voter_given_name": "Roman",
+        "option": "no"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Mauritzová",
+        "vote_event_id": 67890,
+        "voter_id": 6470,
+        "voter_given_name": "Ilona",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ČSSD",
+        "voter_family_name": "Gajdůšková",
+        "vote_event_id": 67890,
+        "voter_id": 5703,
+        "voter_given_name": "Alena",
+        "option": "absent"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Holík",
+        "vote_event_id": 67890,
+        "voter_id": 6198,
+        "voter_given_name": "Jaroslav",
+        "option": "absent"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Žáček",
+        "vote_event_id": 67890,
+        "voter_id": 5226,
+        "voter_given_name": "Pavel",
+        "option": "yes"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Michálek",
+        "vote_event_id": 67890,
+        "voter_id": 6477,
+        "voter_given_name": "Jakub",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Pustějovský",
+        "vote_event_id": 67890,
+        "voter_id": 6525,
+        "voter_given_name": "Pavel",
+        "option": "no"
+    },
+    {
+        "group_name": "ODS",
+        "voter_family_name": "Beitl",
+        "vote_event_id": 67890,
+        "voter_id": 6436,
+        "voter_given_name": "Petr",
+        "option": "absent"
+    },
+    {
+        "group_name": "KDU-ČSL",
+        "voter_family_name": "Výborný",
+        "vote_event_id": 67890,
+        "voter_id": 6513,
+        "voter_given_name": "Marek",
+        "option": "abstain"
+    },
+    {
+        "group_name": "KDU-ČSL",
+        "voter_family_name": "Golasowská",
+        "vote_event_id": 67890,
+        "voter_id": 6292,
+        "voter_given_name": "Pavla",
+        "option": "yes"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Dvořák",
+        "vote_event_id": 67890,
+        "voter_id": 6445,
+        "voter_given_name": "Jaroslav",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Nacher",
+        "vote_event_id": 67890,
+        "voter_id": 6487,
+        "voter_given_name": "Patrik",
+        "option": "no"
+    },
+    {
+        "group_name": "KSČM",
+        "voter_family_name": "Kováčik",
+        "vote_event_id": 67890,
+        "voter_id": 309,
+        "voter_given_name": "Pavel",
+        "option": "no"
+    },
+    {
+        "group_name": "STAN",
+        "voter_family_name": "Farský",
+        "vote_event_id": 67890,
+        "voter_id": 5909,
+        "voter_given_name": "Jan",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Brzobohatá",
+        "vote_event_id": 67890,
+        "voter_id": 6434,
+        "voter_given_name": "Andrea",
+        "option": "no"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Kolářík",
+        "vote_event_id": 67890,
+        "voter_id": 6507,
+        "voter_given_name": "Lukáš",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Válková",
+        "vote_event_id": 67890,
+        "voter_id": 6168,
+        "voter_given_name": "Helena",
+        "option": "no"
+    },
+    {
+        "group_name": "KSČM",
+        "voter_family_name": "Ondráček",
+        "vote_event_id": 67890,
+        "voter_id": 6224,
+        "voter_given_name": "Zdeněk",
+        "option": "absent"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Richterová",
+        "vote_event_id": 67890,
+        "voter_id": 6473,
+        "voter_given_name": "Olga",
+        "option": "no"
+    },
+    {
+        "group_name": "KSČM",
+        "voter_family_name": "Grebeníček",
+        "vote_event_id": 67890,
+        "voter_id": 305,
+        "voter_given_name": "Miroslav",
+        "option": "no"
+    },
+    {
+        "group_name": "KDU-ČSL",
+        "voter_family_name": "Mihola",
+        "vote_event_id": 67890,
+        "voter_id": 6222,
+        "voter_given_name": "Jiří",
+        "option": "no"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Peksa",
+        "vote_event_id": 67890,
+        "voter_id": 6488,
+        "voter_given_name": "Mikuláš",
+        "option": "no"
+    },
+    {
+        "group_name": "TOP09",
+        "voter_family_name": "Schwarzenberg",
+        "vote_event_id": 67890,
+        "voter_id": 5558,
+        "voter_given_name": "Karel",
+        "option": "no"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Třešňák",
+        "vote_event_id": 67890,
+        "voter_id": 6483,
+        "voter_given_name": "Petr",
+        "option": "abstain"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Kozlová",
+        "vote_event_id": 67890,
+        "voter_id": 6465,
+        "voter_given_name": "Lenka",
+        "option": "no"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Černohorský",
+        "vote_event_id": 67890,
+        "voter_id": 6442,
+        "voter_given_name": "Lukáš",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Melková",
+        "vote_event_id": 67890,
+        "voter_id": 6476,
+        "voter_given_name": "Marcela",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Tureček",
+        "vote_event_id": 67890,
+        "voter_id": 6240,
+        "voter_given_name": "Karel",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Pelikán",
+        "vote_event_id": 67890,
+        "voter_id": 6318,
+        "voter_given_name": "Robert",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Strýček",
+        "vote_event_id": 67890,
+        "voter_id": 6515,
+        "voter_given_name": "Jiří",
+        "option": "no"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Feranec",
+        "vote_event_id": 67890,
+        "voter_id": 6448,
+        "voter_given_name": "Milan",
+        "option": "no"
+    },
+    {
+        "group_name": "Piráti",
+        "voter_family_name": "Elfmark",
+        "vote_event_id": 67890,
+        "voter_id": 6446,
+        "voter_given_name": "František",
+        "option": "no"
+    },
+    {
+        "group_name": "SPD",
+        "voter_family_name": "Španěl",
+        "vote_event_id": 67890,
+        "voter_id": 6514,
+        "voter_given_name": "Lubomír",
+        "option": "abstain"
+    },
+    {
+        "group_name": "ANO",
+        "voter_family_name": "Novák",
+        "vote_event_id": 67890,
+        "voter_id": 6533,
+        "voter_given_name": "Marek",
+        "option": "no"
+    }
+]
