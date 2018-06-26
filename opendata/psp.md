@@ -1,29 +1,32 @@
 
 ## Formát
 
-UTF-8
+Kódování textu v **UTF-8**, starší kódování (CP1250) jsou zbytečné komplikace navíc. JSON to dokonce přímo vyžaduje.
 
-xml vs json
+Nejlepším formátem je **JSON**, jelikož je opravdu jednoduchý a v moderních webových aplikacích se s ním pracuje rovnou. XML má velký overhead (strašně moc znaků) a díky tomu je méně přehledné. Samozřejmě i XML je lepší něž nic.
 
 ## Co zveřejnit
 
 - sněmovní tisky
--- výpis s odkazy na dokumenty
--- existuje již RSS: http://www.psp.cz/rss/tisky.rss
--- RSS ne vždy má celou historii, lze udělat i RSS se stránkováním
--- ale spíš bych udělal vedle XML výpis ve stejném formátu
+  - výpis s odkazy na dokumenty
+  - existuje již [RSS](http://www.psp.cz/rss/tisky.rss)
+  - RSS ne vždy má celou historii, lze udělat i RSS se stránkováním
+  - ale spíš bych udělal vedle XML výpis ve stejném formátu
 - hlasování
--- obdobně jako na webu
--- standard: TODO
+  - obdobně jako na webu
+  - [standard popolo](http://www.popoloproject.com/specs/motion.html)
+  - [příklad JSON dle popolo](./motion_example.json)
 - výpis poslanců: prostý výpis s odkazy
--- profil poslance:
---- rozcestník ala: http://www.psp.cz/sqw/detail.sqw?id=6526
---- funkce: členství ve výborech, podvýborech, komisích a delegacích
---- předkladatel tisků / zákonů
---- zpravodajované tisky / zákony
---- písemné pozměňovací návrhy
---- ústní interpelace
---- řeč ve sněmovně
+  - profil poslance:
+    - [standard popolo](http://www.popoloproject.com/specs/person.html)
+    - [příklad JSON dle popolo](./person_example.json)
+    - rozcestník ala: http://www.psp.cz/sqw/detail.sqw?id=6526
+    - funkce: členství ve výborech, podvýborech, komisích a delegacích
+    - předkladatel tisků / zákonů
+    - zpravodajované tisky / zákony
+    - písemné pozměňovací návrhy
+    - ústní interpelace
+    - řeč ve sněmovně
 
 ## Příklady
 
@@ -54,14 +57,6 @@ tisky.xml, vychází z RSSS:
     <pubDate>Fri, 22 Jun 2018 10:56:00 GMT</pubDate>
   </item>
 </tisky>
-```
-
-tisky.json:
-
-```json
-{
-  [ {} ]
-}
 ```
 
 ### Poslanci
