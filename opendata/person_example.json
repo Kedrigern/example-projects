@@ -1,0 +1,142 @@
+{
+    "id": 6526,
+    "given_name": "Ondřej",
+    "family_name": "Profant",
+    "birth_date": "1988-05-02",
+    "gender": "male",
+    "image": "http://www.psp.cz/eknih/cdrom/2017ps/eknih/2017ps/poslanci/i6526.jpg",
+    "candidate_list": "Piráti",
+    "constituency": "Hlavní město Praha",
+    "email": "profanto@psp.cz",
+    "website": "https://www.profant.eu/",
+    "assistents": [
+        {
+            "name": "Stanislava Pajerová"
+        },
+        {
+            "name": "RNDr. Martin Rejman, Ph.D."
+        },
+        {
+            "name": "Adam Skořepa",
+        },
+        {
+            "name": "Mgr. Matěj Soukup"
+        }
+    ],
+    "memberships": [
+        {
+            "organization_id": "snemovna-192",
+            "organization_classification": "sněmovna",
+            "organization_name": "Poslanecká sněmovna Parlamentu ČR",
+            "start_date": "2017-10-21"
+        }
+        {
+            "organization_id": 1315,
+            "organization_classification": "výbor",
+            "organization_name": "Výbor pro veřejnou správu a regionální rozvoj",
+            "start_date": "2017-11-28",
+            "posts": [
+                {
+                    "label": "ověřovatel výboru",
+                    "start_date": "2017-11-29"
+                }
+            ]
+        },
+        {
+            "organization_id": 1383,
+            "organization_classification": "podvýbor",
+            "organization_name": "Podvýbor pro digitalizaci justice a e-Sbírku",
+            "start_date": "2018-02-14"
+        },
+        {
+            "organization_id": 1351,
+            "organization_classification": "podvýbor",
+            "organization_name": "Podvýbor pro elektronizaci ve zdravotnictví",
+            "start_date": "2018-02-14",
+            "posts": [
+                {
+                    "label": "místopředseda",
+                    "start_date": "2018-02-14"
+                }
+            ]
+        },
+        {
+            "organization_id": 1368,
+            "organization_classification": "podvýbor",
+            "organization_name": "Podvýbor pro obrannou, kybernetickou a bezpečnostní politiku a strategické koncepce ČR",
+            "start_date": "2018-02-14"
+        },
+        {
+            "organization_id": 1351,
+            "organization_classification": "podvýbor",
+            "organization_name": "Podvýbor pro e – Government",
+            "start_date": "2018-03-15",
+            "posts": [
+                {
+                    "label": "předseda",
+                    "start_date": "2018-03-15"
+                }
+            ]
+        },
+        {
+            "organization_id": 1372,
+            "organization_classification": "podvýbor",
+            "organization_name": "Podvýbor pro informační technologie a dávkové systémy",
+            "start_date": "2018-03-29"
+        },
+        {
+            "organization_id": 1330,
+            "organization_classification": "komise",
+            "organization_name": "Stálá komise pro kontrolu činnosti Národního úřadu pro kybernetickou a informační bezpečnost,",
+            "start_date": "2017-12-12",
+            "posts": [
+                {
+                    "label": "místopředseda",
+                    "start_date": "2018-01-31"
+                }
+            ]
+        },
+        {
+            "organization_id": 1320,
+            "organization_classification": "komise",
+            "organization_name": "Stálá komise pro práci Kanceláře Poslanecké sněmovny",
+            "start_date": "2017-12-12"
+        },
+        {
+            "organization_id": 1300,
+            "organization_classification": "klub",
+            "organization_name": "Poslanecký klub České pirátské strany",
+            "start_date": "2017-10-22"
+        },
+        {
+            "organization_id": 1419,
+            "organization_classification": "meziparlamentní skupina",
+            "organization_name": "Skupina ČR - Rakousko",
+            "start_date": "2018-03-07"
+        },
+        {
+            "organization_id": 1418,
+            "organization_classification": "meziparlamentní skupina",
+            "organization_name": "Skupina ČR - Spolková republika Německo",
+            "start_date": "2018-03-07"
+        },
+        {
+            "organization_id": 1444,
+            "organization_classification": "meziparlamentní skupina",
+            "organization_name": "Skupina ČR - Švýcarsko",
+            "start_date": "2018-03-09"
+        },
+        {
+            "organization_id": 1438,
+            "organization_classification": "meziparlamentní skupina",
+            "organization_name": "Skupina ČR - Řecko",
+            "start_date": "2018-03-21"
+        },
+        {
+            "organization_id": 1456,
+            "organization_classification": "meziparlamentní skupina",
+            "organization_name": "Skupina ČR - Nepál",
+            "start_date": "2018-04-11"
+        }
+    ]
+}
