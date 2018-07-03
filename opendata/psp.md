@@ -38,7 +38,7 @@ Dobrou praxí je také do url uvést číslo verze API. Důvodem je, abychom moh
 
 ### Sněmovní tisky
 
-tisky.xml, vychází z RSSS:
+tisky.xml, vychází z RSS:
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
