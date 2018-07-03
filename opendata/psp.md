@@ -3,6 +3,8 @@
 
 Zákon [106/1999](https://www.zakonyprolidi.cz/cs/1999-106) nařizuje otevřená data zveřejňovat v Národním katalogu otevřených dat (**NKOD**). Viz https://opendata.gov.cz/nastroj:narodni-katalog-otevrenych-dat
 
+V případě potíží je nejjednodušší se obrátit na Michala Kubáně z MVČR, který je národním koordinátorem opendat.
+
 ## Formát
 
 Kódování textu v **UTF-8**, starší kódování (CP1250) jsou zbytečné komplikace navíc. JSON to dokonce přímo vyžaduje.
