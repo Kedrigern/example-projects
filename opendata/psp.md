@@ -1,11 +1,17 @@
 
+## NKOD
+
+Zákon [106/1999](https://www.zakonyprolidi.cz/cs/1999-106) nařizuje otevřená data zveřejňovat v Národním katalogu otevřených dat (**NKOD**). Viz https://opendata.gov.cz/nastroj:narodni-katalog-otevrenych-dat
+
 ## Formát
 
 Kódování textu v **UTF-8**, starší kódování (CP1250) jsou zbytečné komplikace navíc. JSON to dokonce přímo vyžaduje.
 
-Nejlepším formátem je **JSON**, jelikož je opravdu jednoduchý a v moderních webových aplikacích se s ním pracuje rovnou. XML má velký overhead (strašně moc znaků) a díky tomu je méně přehledné. Samozřejmě i XML je lepší něž nic.
+Nejlepším formátem je **JSON**, jelikož je opravdu jednoduchý a v moderních webových aplikacích se s ním pracuje rovnou. XML má velký overhead (strašně moc znaků) a díky tomu je méně přehledné. Samozřejmě i **XML** je lepší něž nic.
 
-## Co zveřejnit
+Dobrou praxí je také do url uvést číslo verze API. Důvodem je, abychom mohli měnit obsah / strukturu dat, ale nerozbili jsme zpětnou kompatibilitu (čili např. 2 verze API fungují současně). Např.: `http://www.psp.cz/sqw/detail.sqw?id=6526&o=8&l=cz&format=json&version=0.1`
+
+## Co zveřejnit (seznam)
 
 - sněmovní tisky
   - výpis s odkazy na dokumenty
