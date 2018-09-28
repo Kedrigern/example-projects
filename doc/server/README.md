@@ -14,21 +14,35 @@ Nastavení základní VPS.
 
 ```bash
 apt update
+apt upgrade
 apt install ufw apache2 ffmpeg zip postgresql php libapache2-mod-php php-mysql php-pgsql \
 php-fpm php-gd php-json php-curl php-mbstring php-intl php-imagick php-xml php-zip php-log php-bz2 php-gmp php-memcached php-redis
 ```
-
+- zamrzá mi post install script u postgres
 - php-**mcrypt** je obsolete
-- stává se mi, že instalace postgresql zamrzne okolo 96%, ale v reálu se vše v pořádku nainstaluje
 - [Ubuntu 18 package web browser](https://packages.ubuntu.com/)
 
 # 3. Apache: basic
 
 Vše by mělo ihned v pořádku běžet. Pokud zadáme IP adresu serveru do browseru, tak uvidíme default welcome page.
 
+Aktivujeme modyly:
+
+```
+a2enmod rewrite
+a2enmod headers
+systemctl restart apache2
+```
+
 # 4\. Source code
 
-Vytvoříme `/var/www/test/index.php`:
+```
+mkdir /var/www/test
+chown -R  www-data:www-data test/
+touch /var/www/test/index.php
+```
+
+Soubor `index.php` má následující obsah:
 
 ```html
 <!doctype html>
@@ -40,11 +54,11 @@ Vytvoříme `/var/www/test/index.php`:
         <body>
         <h1>DB and virtualhost test</h1>
 <?php
-echo("<p>php!</p>\n");
+echo("<p>PHP jede!</p>\n");
 
 $host        = "host = 127.0.0.1";
 $port        = "port = 5432";
-$dbname      = "dbname = ptest
+$dbname      = "dbname = ptest";
 $credentials = "user = ptest password=ptest";
 
 $db = pg_connect( "$host $port $dbname $credentials"  );
@@ -80,11 +94,13 @@ sudo -u postgres psql
 \q
 ```
 
-Obecně operace s DB provádíme pod tímto uživatelem. Vytvoříme usera a k němu příslušnou DB:
+Obecně operace s DB provádíme pod tímto uživatelem. 
+
+Vytvoříme usera a k němu příslušnou DB:
 
 ```
-createuser
-createdb <username>
+createuser ptest
+createdb ptest
 ```
 
 Následně potřebujeme ještě stejně pojmenovaného usera v systému:
@@ -93,8 +109,27 @@ Následně potřebujeme ještě stejně pojmenovaného usera v systému:
 sudo adduser <username>
 ```
 
+A nastavíme heslo:
+```
+su ptest
+psql
+\password
+```
+
 https://github.com/Kedrigern/example-projects/tree/master/db
 
 
 
 # 7\. SSL
+
+Pro využití let's encrypt potřebujeme cerbota:
+
+```
+apt-get install software-properties-common
+add-apt-repository ppa:certbot/certbot
+apt update 
+apt install python-certbot-apache
+certbot --apache # nás provede instalací (sám rozpozná virtualhost apod)
+```
+
+Ještě je dobré vyzkoušet: `certbot renew --dry-run` aby nám správně chodilo automatické přegenerování certifikátu.
