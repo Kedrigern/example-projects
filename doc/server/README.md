@@ -133,3 +133,12 @@ certbot --apache # nás provede instalací (sám rozpozná virtualhost apod)
 ```
 
 Ještě je dobré vyzkoušet: `certbot renew --dry-run` aby nám správně chodilo automatické přegenerování certifikátu.
+
+
+# Odkazy
+
+Digital ocean:
+- [LAMP](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04)
+- [UFW](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-18-04)
+- [Postgres](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04)
+- [Lets Encrypt](https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-18-04)
