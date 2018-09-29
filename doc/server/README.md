@@ -72,7 +72,7 @@ if(!$db) {
 </html>
 ```
 
-# 5\. Apache: virtualhost and php
+# 5\. Apache: virtualhost, php, httaccess
 
 1. **Zkopírujeme** soubor `000-default.conf`: 
     ```cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/010-test.conf```
@@ -84,6 +84,8 @@ if(!$db) {
 3. **Aktivujeme** pomocí symlinku:
     ```ln -s /etc/apache2/sites-available/010-test.conf /etc/apache2/sites-enabled/010-test.conf```
 4. **Vyzkoušíme** v prohlížeči, např. `test.profant.eu`, zatím se nepůjde připojit k DB.
+
+TODO: httaccess
 
 # 6\. Postgresql
 
