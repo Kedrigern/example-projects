@@ -40,6 +40,11 @@ systemctl restart apache2
 mkdir /var/www/test
 chown -R  www-data:www-data test/
 touch /var/www/test/index.php
+touch /var/www/test/nonindex.html
+touch /var/www/test/.htaccess
+mkdir -p /var/www/test/secret
+touch /var/www/test/secret/index.html
+touch /var/www/test/secret/.htaccess
 ```
 
 Soubor `index.php` má následující obsah:
@@ -53,9 +58,20 @@ Soubor `index.php` má následující obsah:
         </head>
         <body>
         <h1>DB and virtualhost test</h1>
-<?php
-echo("<p>PHP jede!</p>\n");
+        <h2>.htaccess redirect</h2>
+        <ul>
+                <li><a href="nonindex.html">nonindex.html</a> (redirect to index.php)</li>
+        </ul>
 
+        <h2>.htaccess deny</h2>
+        <ul><li><a href="secret/">secret/</a> (403 if active)</li></ul>
+
+        <h2>PHP</h2>
+<?php
+echo("<p>Hello from php!</p>\n");
+?>
+        <h2>Connect to PostgreSQL</h2>
+<?php
 $host        = "host = 127.0.0.1";
 $port        = "port = 5432";
 $dbname      = "dbname = ptest";
@@ -139,6 +155,7 @@ Ještě je dobré vyzkoušet: `certbot renew --dry-run` aby nám správně chodi
 
 # Odkazy
 
+[Directory inside or outside VirtualHosts?](https://serverfault.com/questions/267583/directory-inside-or-outside-virtualhosts)
 Digital ocean:
 - [LAMP](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04)
 - [UFW](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-18-04)
