@@ -7,6 +7,7 @@ Ta slouží k úpravám tabulkových dat.
 """
 
 import sqlite3
+import math
 import pandas as pd
 
 datafile1 = "datafile.csv"
@@ -15,7 +16,7 @@ to_del = ['d']              # remove column d
 
 def load_csv():
     """1. Můžeme načíst csv a rovnou v něm profiltrovat řádky či sloupce."""
-    
+
     # Use only some cols
     t1 = pd.read_csv(datafile1, sep=',', usecols=use_cols)
 
@@ -29,7 +30,7 @@ def load_csv():
 
 def load_sql():
     """2. Načítání z SQL"""
-    
+
     # Fill DB with the data
     conn = sqlite3.connect(':memory:')
     c = conn.cursor()
@@ -47,35 +48,34 @@ def load_sql():
 
 def view():
     """3. Můžeme snadno vyfiltrovat řádky:"""
-    
+
     t1 = pd.read_csv(datafile1)
 
     print(view.__doc__)
 
     print('t1[t1.index != 2]')
     print( t1[t1.index != 2] )
-    
+
     print('t1.drop(t1.index[[2,3]])')
     print( t1.drop(t1.index[[2,3]]) )
 
 def transform():
     """4. Transformování sloupce či řádku."""
+
     t1 = pd.read_csv(datafile1)
-    
+
     print(transform.__doc__)
 
-    print("String concat of two columns:")
-    print(t1['a']+t1['b'])
-
-    print("Sum (add columnt to another column):")
-    print(t1['c']+t1['c'])
-
     print("Apply labda:")
-    addpipe = lambda x: x+"|"
-    addone = lambda x: x+1
-    print(t1['a'].apply(addpipe))
-    print(t1['c'].apply(addone))
+    t1['ab'] = t1['a']+t1['b']
+    t1['c+c'] = t1['c']+t1['c']
+    t1['addone'] = t1['c'].apply(lambda x: x+1)
+    t1['pow2'] = t1['c'].apply(lambda x: int(math.pow(x,2)))
+    t1['pipe'] = t1['a'].apply(lambda x: x+"|")
+    print(t1)
 
+    print("Append one dataframe to another:")
+    print(t1.append(t1))
 
 def main():
     print(__doc__)
