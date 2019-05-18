@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}END{% endblock %}</h1>
+  <h1>{% block title %}EN{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-  <p>EN</p>
+  <p>{% for cislo in cislovky %}{{cislo.en}}, {% endfor %}</p>
 {% endblock %}

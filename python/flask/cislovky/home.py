@@ -11,15 +11,33 @@ bp = Blueprint('home', __name__, url_prefix='/')
 
 @bp.route('/', methods=('GET',))
 def home():
-    return render_template('home/home.html')
+    db = get_db()
+    cislovky = db.execute(
+        "SELECT id, rome, cs, en"
+        " FROM cislovky"
+        " ORDER BY id ASC"
+    ).fetchall()
+    return render_template('home/home.html', cislovky=cislovky)
 
 
 @bp.route('/en', methods=('GET',))
 def en():
-    return render_template('home/en.html')
+    db = get_db()
+    cislovky = db.execute(
+        "SELECT id, en"
+        " FROM cislovky"
+        " ORDER BY id ASC"
+    ).fetchall()
+    return render_template('home/en.html', cislovky=cislovky)
 
 
 @bp.route('/cs', methods=('GET',))
-def cd():
-    return render_template('home/cs.html')
+def cs():
+    db = get_db()
+    cislovky = db.execute(
+        "SELECT id, cs"
+        " FROM cislovky"
+        " ORDER BY id ASC"
+    ).fetchall()
+    return render_template('home/cs.html', cislovky=cislovky)
 

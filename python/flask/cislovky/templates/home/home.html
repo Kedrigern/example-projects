@@ -5,5 +5,26 @@
 {% endblock %}
 
 {% block content %}
-  <p>Home</p>
+  <p>Home page!</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Římská</th>
+        <th>Česky</th>
+        <th>Anglicky</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for cislo in cislovky %}
+      <tr>
+        <td>{{cislo.id}}</td>
+        <td>{{cislo.rome}}</td>
+        <td>{{cislo.cs}}</td>
+        <td>{{cislo.en}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 {% endblock %}
