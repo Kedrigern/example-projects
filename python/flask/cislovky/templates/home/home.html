@@ -5,26 +5,22 @@
 {% endblock %}
 
 {% block content %}
-  <p>Home page!</p>
+<p>Home page!</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th>Římská</th>
-        <th>Česky</th>
-        <th>Anglicky</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for cislo in cislovky %}
-      <tr>
-        <td>{{cislo.id}}</td>
-        <td>{{cislo.rome}}</td>
-        <td>{{cislo.cs}}</td>
-        <td>{{cislo.en}}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+<h2>Config</h2>
+
+<p>Instance path: <code>{{in_path}}</code></p>
+<p>SQLite path: <code>{{cfg["DATABASE"]}}</code></p>
+<p>Instance folder content: <code>{% for file in dirs %}{{file}}{% endfor %}</code></p>
+
+
+<table>
+{% for key, val in cfg.items() %}
+  <tr>
+    <td>{{key}}</td>
+    <td>{{val}}</td>
+  </tr>
+{% endfor %}
+</table>
+
 {% endblock %}

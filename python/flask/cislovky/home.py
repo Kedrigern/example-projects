@@ -1,23 +1,31 @@
-import functools
+import functools, os
 
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, session, url_for
 )
+from flask import current_app
 
 from cislovky.db import get_db
 
 bp = Blueprint('home', __name__, url_prefix='/')
 
-
 @bp.route('/', methods=('GET',))
 def home():
+    instance_path = current_app.instance_path
+    cfg = current_app.config
+    dirs = os.listdir( current_app.instance_path )
+    return render_template('home/home.html', in_path=instance_path, cfg=cfg, dirs=dirs)
+
+
+@bp.route('/all', methods=('GET',))
+def all():
     db = get_db()
     cislovky = db.execute(
         "SELECT id, rome, cs, en"
         " FROM cislovky"
         " ORDER BY id ASC"
     ).fetchall()
-    return render_template('home/home.html', cislovky=cislovky)
+    return render_template('home/all.html', cislovky=cislovky)
 
 
 @bp.route('/en', methods=('GET',))

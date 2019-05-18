@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}ALL{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Římská</th>
+        <th>Česky</th>
+        <th>Anglicky</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for cislo in cislovky %}
+      <tr>
+        <td>{{cislo.id}}</td>
+        <td>{{cislo.rome}}</td>
+        <td>{{cislo.cs}}</td>
+        <td>{{cislo.en}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
