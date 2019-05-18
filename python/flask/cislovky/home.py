@@ -1,5 +1,5 @@
-import functools, os
-
+import functools, os, sys
+import flask
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, session, url_for
 )
@@ -14,7 +14,9 @@ def home():
     instance_path = current_app.instance_path
     cfg = current_app.config
     dirs = os.listdir( current_app.instance_path )
-    return render_template('home/home.html', in_path=instance_path, cfg=cfg, dirs=dirs)
+    pyversion = sys.version
+    flaskversion = flask.__version__
+    return render_template('home/home.html', in_path=instance_path, cfg=cfg, dirs=dirs, pyversion=pyversion, flaskversion=flaskversion)
 
 
 @bp.route('/all', methods=('GET',))
