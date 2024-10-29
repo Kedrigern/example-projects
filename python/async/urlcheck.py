@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Checks bunch of urls
 """
@@ -6,13 +7,16 @@ import asyncio
 import requests
 
 async def checkUrl(url: str) -> None:
+
+    code: int = 0
+
     try:
-        r = requests.get(url)
+        code = requests.get(url).status_code
     except requests.exceptions.ConnectionError:
         print(f"[FAIL] connection error to domain {url}")
         return
 
-    match r.status_code:
+    match code:
         case 200:
             print(f"[OK] {url}")
         case 300:
@@ -22,7 +26,7 @@ async def checkUrl(url: str) -> None:
 
 
 async def main() -> None:
-    urls = [
+    urls: list[str] = [
         "https://httpstat.us/200",
         "https://httpstat.us/300",
         "https://httpstat.us/400",
@@ -30,15 +34,15 @@ async def main() -> None:
         "https://www.python.org/",
         "https://www.python.cz/",
         "https://pythex.org/",
-        "https://pyladies.cz/",#,
+        "https://pyladies.cz/",
         "https://pyladies.czz/"
     ]
 
-    tasks = []
+    tasks: list[asyncio.Task] = []
 
     for url in urls:
-        tasks.push(asyncio.create_task(checkUrl(url)))
+        tasks.append(asyncio.create_task(checkUrl(url)))
 
-    await asyncio.gather(tasks)
+    await asyncio.gather(*tasks)
 
 asyncio.run(main())
