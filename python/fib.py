@@ -3,7 +3,6 @@
 Fibonacci sequence in modern Python with types, pattern matching, cache and pytest.
 """
 
-from ast import arg
 import sys
 import math
 import functools
